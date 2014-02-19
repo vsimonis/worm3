@@ -1,9 +1,10 @@
 import numpy as np
 
 class WormFinder ( object ):
-    def __init__( self, method ):
+    def __init__( self, method, verbosity ):
 
         self._method = method #lazy, etc...
+        self._v = verbosity #True or False
 
         self._ref = None
         
@@ -56,7 +57,7 @@ class WormFinder ( object ):
                 self._colRef, self._rowRef = np.nonzero ( sub == np.min( sub ) )
 
             self._colWorm, self._rowWorm = np.nonzero ( sub == np.max( sub ) ) #worm location
-            print 'Worm row: %d\t\tcol: %d' % ( self._rowWorm[0] , self._colWorm[0] ) 
+            if self._v: print 'Worm row: %d\t\tcol: %d' % ( self._rowWorm[0] , self._colWorm[0] ) 
 
             self._colDistances.append(self._colRef[0] - self._colWorm[0])
             self._rowDistances.append(self._rowRef[0] - self._rowWorm[0])

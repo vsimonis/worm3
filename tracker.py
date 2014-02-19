@@ -7,7 +7,7 @@ class Tracker ( object ):
     def __init__( self ):
         self._windowManager = WindowManager( 'Tracker', self.onKeypress)
         self._captureManager = CaptureManager( cv2.VideoCapture(0), self._windowManager, True )
-        self._wormFinder = WormFinder('lazy')
+        self._wormFinder = WormFinder('lazy', True)
 
 
     def run( self ):
