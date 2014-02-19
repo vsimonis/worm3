@@ -34,7 +34,7 @@ class Cameo ( object ):
             self._captureManager.writeImage('screenshot.png')
         elif keycode == 9: #tab
             if not self._captureManager.isWritingVideo:
-                self._captureManager.startWritingVideo('screencast.avi', 
+                self._captureManager.startWritingVideo('screencast.mjpg', 
                          cv2.cv.CV_FOURCC('M','J','P','G') )
             else:
                 self._captureManager.stopWritingVideo()

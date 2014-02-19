@@ -151,7 +151,7 @@ class CaptureManager( object ):
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
                                                  self._videoEncoding, fps, size )
             
-            self._videoWriter.write(self._frame)
+        self._videoWriter.write(self._frame)
 
 
 
