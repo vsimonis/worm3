@@ -4,13 +4,15 @@ import time
 
 
 class CaptureManager( object ):
-    def __init__( self, capture, previewWindowManager = None, 
-                  shouldMirrorPreview = False):
+    def __init__( self, capture, previewWindowManager, 
+                  shouldMirrorPreview, debugMode):
         self._capture = capture
-        
+        self._d = debugMode
         self._previewWindowManager = previewWindowManager
         self._shouldMirrorPreview = shouldMirrorPreview
-
+        
+        if self._d: 
+            print '%s\t Mirror Preview: %s' % (time.ctime(time.time()),  str(self._shouldMirrorPreview))
         self._channel = 0
         self._enteredFrame = False
         self._frame = None
@@ -119,7 +121,6 @@ class CaptureManager( object ):
         self._videoFilename = filename
         self._videoEncoding = encoding
         
-        print '%s\t start writing video -- vidwriter = None' % ( time.ctime( time.time() ) )
 
     def stopWritingVideo ( self ):
         self._videoFilename = None
@@ -129,7 +130,6 @@ class CaptureManager( object ):
 
     def _writeVideoFrame( self ):
         if not self.isWritingVideo:
-            print '%s\tnot is writing video' % ( time.ctime( time.time() ) )
             return
 
         if self._videoWriter is None:
