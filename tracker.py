@@ -9,15 +9,21 @@ import cv
 class Tracker ( object ):
     
     def __init__( self ):
+
+
+        self._sampleFreq = 0.5 #in sec
+
         #self.captureSource = 'led_move1.avi'
         self.captureSource = 0
         self.bugs = False
         self.debugMode = True
         self.mirroredPreview = False
         self.method = 'lazy'#'full' #'lazy'
+        
+        self.cambug = False
+        self.changeRes = False
 
-
-        self._windowManager = WindowManager( 'Tracker', self.onKeypress)
+        self._windowManager = WindowManager( 'Tracker', self.onKeypress )
         self._captureManager = CaptureManager( cv2.VideoCapture(self.captureSource), self._windowManager, self.mirroredPreview, self.debugMode )
         self._wormFinder = WormFinder(self.method, self.debugMode)
 
@@ -25,7 +31,7 @@ class Tracker ( object ):
         self._bugWindowManager = WindowManager( 'Debugger', self.onKeypress )
 
         self._startTime = time.time()
-        self._sampleFreq = 0.1 #in sec
+
         self._lastCheck = self._startTime - self._sampleFreq
         #self.localSub = 
 
@@ -33,11 +39,15 @@ class Tracker ( object ):
         self._windowManager.createWindow()
         
         if self.debugMode: self._bugWindowManager.createWindow()
-        
+        if self.cambug and self.changeRes:
+            self._captureManager.setProps()
         while self._windowManager.isWindowCreated:
             
             self._captureManager.enterFrame()
             frame = self._captureManager.frame
+
+            if self.cambug:
+                self._captureManager.getProps()
 
             if time.time() - self._lastCheck >= self._sampleFreq:
                 
@@ -62,8 +72,8 @@ class Tracker ( object ):
                     
                     if self.debugMode:
                         self._bugWindowManager.show(self.localSub)
-
-            self._wormFinder.drawDebuggingPoint( frame )                
+            if self.debugMode:
+                self._wormFinder.drawDebuggingPoint( frame )                
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
 
@@ -81,13 +91,18 @@ class Tracker ( object ):
             self._captureManager.writeImage('screenshot.png')
         elif keycode == 9: #tab
             if not self._captureManager.isWritingVideo:
-                self._captureManager.startWritingVideo('screencast.avi', 
+                self._captureManager.startWritingVideo('worm%s.avi' % time.ctime(time.time()) , 
                          cv2.cv.CV_FOURCC('M','J','P','G') )
             else:
                 self._captureManager.stopWritingVideo()
         elif keycode == 27: #escape
             self._windowManager.destroyWindow()
-
+        
+        if keycode == 9: #backspace
+            if self.debugMode:
+                self.debugMode = True
+            else:
+                self.debugMode = False
 
 if __name__ == "__main__":
     Tracker().run()

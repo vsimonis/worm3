@@ -8,6 +8,13 @@ import cv2
 class WormFinder ( object ):
     def __init__( self, method, debugMode ):
 
+        self.gsize = 45
+        self.gsig = 10
+
+        self._window = 3
+        self._boundRow = 100
+        self._boundCol = 300
+
 
         self._bugs = False
         self._method = method #lazy, etc...
@@ -27,9 +34,6 @@ class WormFinder ( object ):
         self._meanColDistances = 0
         self._meanRowDistances = 0
 
-        self._window = 10
-        self._boundRow = 200
-        self._boundCol = 200
 
     #@property
     def hasReference ( self ):
@@ -61,7 +65,7 @@ class WormFinder ( object ):
             self._sub = self._img - self._ref
             
             #Gaussian blur
-            self._sub  = cv2.GaussianBlur( self._sub, (45, 45) , 10 )
+            self._sub  = cv2.GaussianBlur( self._sub, (self.gsize, self.gsize) , self.gsig )
             
             if not self.hasReferenceLocation: #only process ref image first time 'round
                 x, y = np.nonzero ( self._sub == np.min( self._sub ) )

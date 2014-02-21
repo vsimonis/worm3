@@ -140,19 +140,27 @@ class CaptureManager( object ):
                     # wait for more frames to get good estimate
                     return
                 else: 
-                    fps = self._fpsEstimate
+                    fps = self._fpsEstimate            
 
-            print 'fps: %d' % fps
-            size = ( int( self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH) ),
-                     int( self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) ) )
-            print 'size: %d %d' % (size[0] , size[1] )
-            
+            size = ( int (self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_WIDTH )), 
+                     int( self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) ))
+
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
                                                  self._videoEncoding, fps, size )
             
         self._videoWriter.write(self._frame)
 
+    def getProps ( self ):
+        w = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
+        h = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
+        f = self._capture.get( cv2.cv.CV_CAP_PROP_FPS )
+        print 'width:%d\theight:%d\tfps:%0.3f' % (w, h, f)
+
+
+    def setProps ( self ):
+        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 1280)
+        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 960)
 
 
 
@@ -191,5 +199,7 @@ class WindowManager ( object ):
             #Discard non-ASCII info encoded by GTK
             keycode &= 0xFF
             self.keypressCallback(keycode)
+
+        
 
         
