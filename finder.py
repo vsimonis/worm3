@@ -1,7 +1,9 @@
 import numpy as np
 import utils
 import time
+from imgProc import imgProc
 from managers import WindowManager
+import cv2
 
 class WormFinder ( object ):
     def __init__( self, method, debugMode ):
@@ -12,6 +14,7 @@ class WormFinder ( object ):
         self._d = debugMode #True or False
         self._ref = None
         self._sub = None
+
         self._colRef = -1
         self._rowRef = -1
         
@@ -50,13 +53,16 @@ class WormFinder ( object ):
         except ValueError:
             'print not a 3-D array'
         finally:
-            return imgOut
+            return imgOut#.astype(int)
 
 
     def findWormLazy ( self ):
         if self.hasReference():
             self._sub = self._img - self._ref
-
+            
+            #Gaussian blur
+            self._sub  = cv2.GaussianBlur( self._sub, (45, 45) , 10 )
+            
             if not self.hasReferenceLocation: #only process ref image first time 'round
                 x, y = np.nonzero ( self._sub == np.min( self._sub ) )
                 self._colRef, self._rowRef = x[0], y[0]
@@ -79,7 +85,28 @@ class WormFinder ( object ):
 
 
     def findWormFull ( self ):
-        return
+        self._colRef = self._img.shape[1] / 2
+        self._rowRef = self._img.shape[0] / 2
+        
+        x, y, imgOut = imgProc.getCentroidFromRaw( self._img )
+        
+        self._sub = imgOut
+        
+        self._rowWorm = int(y)
+        self._colWorm = int(x)
+
+        self._colDistances.append(self._colRef - self._colWorm)
+        self._rowDistances.append(self._rowRef - self._rowWorm)
+
+        if ( self.lenDistanceArray > self._window ):
+            self._colDistances = self._colDistances[1:] #pop
+            self._rowDistances = self._rowDistances[1:] #pop
+
+
+        self._meanColDistances = int(np.mean(self._colDistances))
+        self._meanRowDistances = int(np.mean(self._rowDistances))
+
+
 
     def findWormPCA ( self ):
         return
@@ -99,28 +126,30 @@ class WormFinder ( object ):
         if self._d: 
             if self._bugs: print '%s\tfinder\tHas reference: %s' % ( time.ctime(time.time()), str(self.hasReference()) )
 
-        if not self.hasReference(): #is this OK???
+        if self._method == 'lazy' and not self.hasReference(): #is this OK???
+
             self._ref = self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
 
             if self._bugs: print 'ref  type: %s\t%s\n' % (str(type(self._ref)), str(self._ref.dtype))
-            self._sub = self._ref ##For display
+            self._sub = np.zeros(self._ref.shape) ##For display
             if self._d and self._bugs:
                 print '%s\tfinder\tNew Reference' % ( time.ctime(time.time()) )
-        else:
+        elif self.hasReference() or self.method == 'full':
             if self._d and self._bugs:
                 print '%s\tfinder\tNew Comparison' % ( time.ctime(time.time()) )
             self._img = self.rgb2grayV( img )
             if self._bugs: print 'img  type: %s\t%s\n' % (str(type(self._img)), str(self._img.dtype))
             #self._sub = self._img ## For display
+            
             try:
                 options[self._method]()
             except KeyError:
                 self.findWormLazy() #default
+
         return self._sub
 
-
     def decideMove ( self ):
-        if self._colRef < 0 :
+        if self._colRef < 0 and self._method == 'lazy':
             if self._bugs: print '!!!!!!!!!!!!!! NO REFERENCE, NEXT FRAME PLZ !!!!!!!!!'
             return
         else:
@@ -144,7 +173,7 @@ class WormFinder ( object ):
         utils.drawPoint(img, self._colRef, self._rowRef, blue)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, green)
 
-    def drawDebuggingPointGS( self, img ):
+    def odrawDebuggingPointGS( self, img ):
         #BRG
        
         utils.drawPoint(img, self._colWorm, self._rowWorm, 255)
