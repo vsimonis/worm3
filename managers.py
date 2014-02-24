@@ -10,9 +10,9 @@ class CaptureManager( object ):
     
 
     def __init__( self, capture, previewWindowManager, 
-                  shouldMirrorPreview, debugMode):
+                  shouldMirrorPreview):
         self._capture = capture
-        self._d = debugMode
+
         self._previewWindowManager = previewWindowManager
         self._shouldMirrorPreview = shouldMirrorPreview
         
@@ -170,7 +170,8 @@ class CaptureManager( object ):
         self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 320)
         self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
 
-
+    def isDebug ( self ):
+        return logc.getEffectiveLevel() <= 10
 
 
 

@@ -4,10 +4,12 @@ to EiBotBoard as well as methods to send commands to the motors
 
 
 """
-
+import logging
 import serial
 import time
 import eggbot_scanlinux
+
+logger = logging.getLogger('eggbot')
 
 class easyEBB:
     def __init__( self ):
@@ -20,7 +22,7 @@ class easyEBB:
         """
         self.serialPort = self.getSerialPort()
         if self.serialPort == None:
-            print "Unable to find serial port"
+            logging.exception( "Servos: Unable to find serial port")
 
     def closeSerial( self ):
         """
@@ -86,10 +88,10 @@ class easyEBB:
         try:
             self.serialPort.write( cmd ) 
             response = self.serialPort.readlines()
-            for line in response:
-                print line
+            #for line in response:
+                #logger.debug(line)
         except:
-            print "fail"
+            logger.exception("fail")
             pass
 
 

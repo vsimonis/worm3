@@ -1,11 +1,14 @@
 import os
+import logging
+
+logger = logging.getLogger('scan')
 
 DEV_TREE = '/dev'
 USB_DEVICE_TREE = '/sys/bus/usb/devices'
 
 def findEiBotBoards():
 	"""Find only those USB devices that declare themselves to be EiBotBoards"""
-
+	
 	# find all USB devices whose product name is 'EiBotBoard'
 	with os.popen( 'fgrep -l EiBotBoard %s/*/product' % USB_DEVICE_TREE ) as pipe:
 		for path in [ os.path.split( path )[0] for path in pipe.readlines()]:
@@ -30,10 +33,10 @@ def findPorts():
 		yield os.path.join( DEV_TREE , device )
 
 if __name__ == '__main__':
-	print "Looking for EiBotBoards"
+	logger.info("Looking for EiBotBoards")
 	for port in findEiBotBoards():
-		print "  ", port
+		logger.info(port)
 
-	print "Looking for COM ports"
+	logger.info("Looking for COM ports")
 	for port in findPorts():
-		print "  ", port
+		logger.info(port)
