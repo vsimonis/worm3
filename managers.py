@@ -1,9 +1,14 @@
 import cv2
 import numpy
 import time
+import logging
 
+logc = logging.getLogger('capture')
+logw = logging.getLogger('window')
 
 class CaptureManager( object ):
+    
+
     def __init__( self, capture, previewWindowManager, 
                   shouldMirrorPreview, debugMode):
         self._capture = capture
@@ -11,8 +16,8 @@ class CaptureManager( object ):
         self._previewWindowManager = previewWindowManager
         self._shouldMirrorPreview = shouldMirrorPreview
         
-        if self._d: 
-            print '%s\t Mirror Preview: %s' % (time.ctime(time.time()),  str(self._shouldMirrorPreview))
+        logc.debug('Mirror Preview: %s' % (str(self._shouldMirrorPreview)))
+        
         self._channel = 0
         self._enteredFrame = False
         self._frame = None
@@ -85,7 +90,7 @@ class CaptureManager( object ):
         else: 
             timeElapsed = time.time() - self._startTime
             self._fpsEstimate = self._framesElapsed / timeElapsed
-
+            #logc.info('fps estimate: %d' % self._fpsEstimate )
         self._framesElapsed += 1
 
 
@@ -120,12 +125,13 @@ class CaptureManager( object ):
                            #encoding = cv2.cv.CV_FOURCC('I', '4', '2', '0') ):
         self._videoFilename = filename
         self._videoEncoding = encoding
-        
+        logc.info( 'Start Writing Video: %s' % filename )
 
     def stopWritingVideo ( self ):
         self._videoFilename = None
         self._videoEncoding = None
         self._videoWriter = None
+        logc.info( 'Stop Writing Video' )
         
 
     def _writeVideoFrame( self ):
@@ -134,17 +140,17 @@ class CaptureManager( object ):
 
         if self._videoWriter is None:
             fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
-
             if fps <= 0.0:
                 if self._framesElapsed < 20: 
                     # wait for more frames to get good estimate
                     return
                 else: 
+                    logc.warning('fps estimate used: %d' % self._fpsEstimate )
                     fps = self._fpsEstimate            
 
             size = ( int (self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_WIDTH )), 
                      int( self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) ))
-
+            logc.warning('size used: %d x %d' % (size[0], size[1]) )
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
                                                  self._videoEncoding, fps, size )
@@ -152,21 +158,24 @@ class CaptureManager( object ):
         self._videoWriter.write(self._frame)
 
     def getProps ( self ):
-        w = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
-        h = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
-        f = self._capture.get( cv2.cv.CV_CAP_PROP_FPS )
-        print 'width:%d\theight:%d\tfps:%0.3f' % (w, h, f)
-
+        try:
+            w = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
+            h = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
+            #f = self._capture.get( cv2.cv.CV_CAP_PROP_FPS )
+            #logc.info( 'width:%d\theight:%d' % (w, h) )
+        except Exception as e :
+            logc.exception(e)
 
     def setProps ( self ):
-        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 1280)
-        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 960)
+        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 320)
+        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
 
 
 
 
 
 class WindowManager ( object ):
+    logw = logging.getLogger('window')
     
     def __init__( self, windowName, keypressCallback = None):
         self.keypressCallback = keypressCallback

@@ -1,3 +1,5 @@
+
+
 from managers import WindowManager, CaptureManager
 from finder import WormFinder
 import numpy as np
@@ -20,8 +22,8 @@ class Tracker ( object ):
         self.mirroredPreview = False
         self.method = 'lazy'#'full' #'lazy'
         
-        self.cambug = False
-        self.changeRes = False
+        self.cambug = True
+        self.changeRes = True
 
         self._windowManager = WindowManager( 'Tracker', self.onKeypress )
         self._captureManager = CaptureManager( cv2.VideoCapture(self.captureSource), self._windowManager, self.mirroredPreview, self.debugMode )
@@ -100,9 +102,10 @@ class Tracker ( object ):
         
         if keycode == 9: #backspace
             if self.debugMode:
-                self.debugMode = True
-            else:
                 self.debugMode = False
+            else:
+                self.debugMode = True
 
 if __name__ == "__main__":
     Tracker().run()
+

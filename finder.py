@@ -4,24 +4,38 @@ import time
 from imgProc import imgProc
 from managers import WindowManager
 import cv2
+import logging
+
+logger = logging.getLogger('finder')
 
 class WormFinder ( object ):
-    def __init__( self, method, debugMode ):
+    '''
+    arguments given:
+    - method
+    - gsize (size of gaussian filter)
+    - gsig (sigma for gaussian filter)
+    - window (number of locations to avg)
+    - boundRow (decision distance for row)
+    - boundCol (decision distance for column)
+    '''
+    def __init__( self, **kwargs ) :
+#method, gsize, gsig, window, boundRow, boundCol):
+        for k in kwargs.keys():
+            if k in ['method', 'gsize', 'gsig', 'window', 'boundRow', 'boundCol']:
+                self.__setattr__(k, kwargs[k])
+        #vars(self).update((k,v) for k,v in vars().items
+        #self.__dict__.update(kw)
 
-        self.gsize = 45
-        self.gsig = 10
-
-        self._window = 3
-        self._boundRow = 100
-        self._boundCol = 300
-
-
-        self._bugs = False
-        self._method = method #lazy, etc...
-        self._d = debugMode #True or False
+        #for arg in args:
+        #    print arg
+        #for k in kw:
+        #    print k
+    
+        ### 'lazy' Parameters
         self._ref = None
         self._sub = None
 
+        ## General Parameters
         self._colRef = -1
         self._rowRef = -1
         
@@ -63,7 +77,7 @@ class WormFinder ( object ):
     def findWormLazy ( self ):
         if self.hasReference():
             self._sub = self._img - self._ref
-            
+
             #Gaussian blur
             self._sub  = cv2.GaussianBlur( self._sub, (self.gsize, self.gsize) , self.gsig )
             
@@ -74,12 +88,12 @@ class WormFinder ( object ):
             
             a, b = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
             self._colWorm, self._rowWorm = a[0], b[0]
-            if self._d: print '%s\tfinder\tcol:%d\t\trow:%d' % ( time.ctime(time.time()) , self._rowWorm , self._colWorm )
+            logger.debug( 'Location: col:%d\t\trow:%d' % ( self._rowWorm , self._colWorm ))
 
             self._colDistances.append(self._colRef - self._colWorm)
             self._rowDistances.append(self._rowRef - self._rowWorm)
 
-            if ( self.lenDistanceArray > self._window ):
+            if ( self.lenDistanceArray > self.window ):
                 self._colDistances = self._colDistances[1:] #pop
                 self._rowDistances = self._rowDistances[1:] #pop
 
@@ -127,39 +141,26 @@ class WormFinder ( object ):
             'box'  : self.findWormBox
             }
 
-        if self._d: 
-            if self._bugs: print '%s\tfinder\tHas reference: %s' % ( time.ctime(time.time()), str(self.hasReference()) )
 
-        if self._method == 'lazy' and not self.hasReference(): #is this OK???
-
+        if self.method == 'lazy' and not self.hasReference(): #is this OK???
             self._ref = self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
-
-            if self._bugs: print 'ref  type: %s\t%s\n' % (str(type(self._ref)), str(self._ref.dtype))
             self._sub = np.zeros(self._ref.shape) ##For display
-            if self._d and self._bugs:
-                print '%s\tfinder\tNew Reference' % ( time.ctime(time.time()) )
+
         elif self.hasReference() or self.method == 'full':
-            if self._d and self._bugs:
-                print '%s\tfinder\tNew Comparison' % ( time.ctime(time.time()) )
             self._img = self.rgb2grayV( img )
-            if self._bugs: print 'img  type: %s\t%s\n' % (str(type(self._img)), str(self._img.dtype))
-            #self._sub = self._img ## For display
             
             try:
-                options[self._method]()
+                options[self.method]()
             except KeyError:
                 self.findWormLazy() #default
 
         return self._sub
 
     def decideMove ( self ):
-        if self._colRef < 0 and self._method == 'lazy':
-            if self._bugs: print '!!!!!!!!!!!!!! NO REFERENCE, NEXT FRAME PLZ !!!!!!!!!'
+        if self._colRef < 0 and self.method == 'lazy':
             return
         else:
-            if self._bugs: print '~~~~~~~~~~~~~~ HAS REFERENCE, DECIDE ~~~~~~~~~~~'
-            if ( abs(self._meanColDistances) > self._boundCol or abs(self._meanRowDistances) > self._boundRow ):
-                if self._d: print '%s\tfinder\t!!!!!!!!!!!!!!!!MOVE!!!!!!!!!!!!!!!!' % time.ctime(time.time())
+            if ( abs(self._meanColDistances) > self.boundCol or abs(self._meanRowDistances) > self.boundRow ):
                 self._ref = None
                 self._colRef = -1
                 self._rowRef = -1
@@ -177,9 +178,8 @@ class WormFinder ( object ):
         utils.drawPoint(img, self._colRef, self._rowRef, blue)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, green)
 
-    def odrawDebuggingPointGS( self, img ):
-        #BRG
-       
+    def drawDebuggingPointGS( self, img ):
+        #BRG       
         utils.drawPoint(img, self._colWorm, self._rowWorm, 255)
         utils.drawPoint(img, self._colRef, self._rowRef, 0)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, 255)
