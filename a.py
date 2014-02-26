@@ -61,7 +61,7 @@ class Tracker ( object ):
 
         self._wormFinder = WormFinder( **self.finderArgs )
         
-#        self.servos = easyEBB()
+
 
         ##### Debugging
         self._bugWindowManager = WindowManager( 'Debugger', self.onKeypress )
@@ -115,7 +115,7 @@ class Tracker ( object ):
 
     @property
     def isDebug( self ):
-        return logger.getEffectiveLevel() <= 30
+        return logger.getEffectiveLevel() <= logging.WARNING
 
     def onKeypress ( self, keycode ):
         '''
@@ -137,7 +137,9 @@ class Tracker ( object ):
                 self._captureManager.stopWritingVideo()
         elif keycode == 27: #escape
             self._windowManager.destroyWindow()
-        
+            self._wormFinder.servos.disableMotors()
+            self._wormFinder.servos.closeSerial()
+
         if keycode == 8: #backspace
             if self.isDebug:
                 logger.setLevel(logging.INFO)
@@ -168,7 +170,7 @@ def main():
         method = options.tracker_method          
 
     if options.source is None:
-        source = 0
+        source = 'led_move1.avi'
     else:
         source = options.source
         

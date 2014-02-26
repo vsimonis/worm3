@@ -46,7 +46,7 @@ class WormFinder ( object ):
         self._meanColDistances = 0
         self._meanRowDistances = 0
 
-        self.servos = easyEBB()
+        self.servos = easyEBB((1080, 1080), (5,5), 5)
 #        self.MAXONEFRAME = 30
 #        self.REFPING = 60
 
@@ -197,12 +197,13 @@ class WormFinder ( object ):
                     return
                 else:
                     logger.warning('MOVE!!!')
+                    if self.isDebug:
+                        self.servos.centerWorm(60, self._colWorm, self._rowWorm)
+
                     self.resetRef()
                     self._colWorm = -1
                     self._rowWorm = -1
-                    if not self.isDebug:
-                        self.servos.stepM(duration, xdir, ydir)
-             
+
 #            elif self.hasReference and (self._colRef > 900 or self._rowRef > 900):
 #                self.resetRef()
 #                return
