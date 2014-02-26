@@ -37,9 +37,9 @@ class CaptureManager( object ):
         self._fpsEstimate = None
         #logc.debug('done initializing capture')
         
-        self.setResolution()
-        self.setExposure( 1 )
-        self.getExposure()
+       # self.setResolution()
+#        self.setExposure( 1 )
+#        self.getExposure()
 
     def setExposure( self, setting ):
         try:
@@ -221,7 +221,7 @@ class WindowManager ( object ):
         return self._isWindowCreated
 
     def createWindow ( self ):
-        cv2.namedWindow( self._windowName, cv2.cv.CV_WINDOW_NORMAL)
+        cv2.namedWindow( self._windowName)#, cv2.cv.CV_WINDOW_NORMAL)
         self._isWindowCreated = True 
 
     def show ( self, frame ):

@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 import utils
 import time
-import cv
+#import cv
 
 logt = logging.getLogger('')
 
@@ -20,7 +20,7 @@ class Tracker ( object ):
         self._sampleFreq = 0.1 #in sec
         
         ### Set Camera params
-        self.resolution = (800, 600)
+        self.resolution = (1280, 960 )
 
         source = {
             0:0, 
@@ -37,7 +37,7 @@ class Tracker ( object ):
         self._lastCheck = self._startTime - self._sampleFreq
 
         ### Display params
-        self.mirroredPreview = False 
+        self.mirroredPreview = False
 
 
         ### Initialize Objects       
@@ -52,7 +52,7 @@ class Tracker ( object ):
             self._windowManager, 
             self.mirroredPreview, self.resolution)
 
-        actualCols, actualRows = self._captureManager.getResolution()
+#        actualCols, actualRows = self._captureManager.getResolution()
         ## from here on out use this resolution 
         
         ### Arguments for finder
@@ -68,8 +68,8 @@ class Tracker ( object ):
             'MAXONEFRAME': 500,
             'REFPING' : 120,
             'MAXREF': 1000,
-            'capCols': actualCols,
-            'capRows': actualRows
+            'capCols': 640,
+            'capRows': 480,
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     

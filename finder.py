@@ -43,6 +43,8 @@ class WormFinder ( object ):
             self.servos = easyEBB((self.capCols, self.capRows), (5,5), 5)
 
             
+    def isDebug( self ):
+        return logger.getEffectiveLevel() <= logging.INFO
  
     def drawDebuggingPointCroppedDemo( self, img ):
         #BRG
@@ -374,9 +376,11 @@ class WormFinder ( object ):
         green = [0, 255, 0]
         red = [0, 0, 255]
         blue = [255, 0, 0]
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
-        utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
-        utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), green)
+       # utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
+       # utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
+        #utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), green)
+        utils.drawPoint(img, 200, 300, green)
+        utils.drawPoint(img, 320, 240, red)
        
     def drawDebuggingPointCropped( self, img ):
         #BRG
@@ -395,8 +399,6 @@ class WormFinder ( object ):
         utils.drawPoint(img, self._colRef, self._rowRef, 0)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, 255)
 
-    def isDebug( self ):
-        return logger.getEffectiveLevel() <= logging.INFO
     
 
     def resetRef( self ):

@@ -14,7 +14,7 @@ logger = logging.getLogger('eggbot')
 UMSTEP = 200
 
 class easyEBB:
-    def __init__( self, resolution = (1080,1080), sizeMM = (5,5), stepMode = 5 ):
+    def __init__( self, resolution = (640,480), sizeMM = (6.4,4.8), stepMode = 5 ):
         """
         Initializes an easyEBB object
         """
@@ -35,10 +35,10 @@ class easyEBB:
         logger.debug('Size in pix:\tcol %d\trow  %d' %
                      (self.colNumPix, self.rowNumPix) )
 
-        self.pixUmStepConversions()
+        self.pixUmStepConversions(stepMode)
         self.enableMotors()
         
-    def pixUmStepConversions( self ):
+    def pixUmStepConversions( self, stepMode ):
         """ 
         Uses resolution and size in mm to convert pixel measurements 
         to steps (unit of servos)
@@ -55,7 +55,11 @@ class easyEBB:
                      (self.colPixSpacing, self.rowPixSpacing))
         
         ### Step mode settings
-        self.stepOpts = {1: 1./16, 2: 1./8, 3: 1./4, 4: 1./2, 5: 1}
+        self.stepOpts = {1: 1./16, 
+                         2: 1./8, 
+                         3: 1./4, 
+                         4: 1./2, 
+                         5: 1}
         self.stepMode = stepMode #from keys of stepOpts
         
         ### Get um per step (1 step = ? um)
@@ -82,9 +86,9 @@ class easyEBB:
         xInstPix = self.colMid - colWormPix
         yInstPix = self.rowMid - rowWormPix
 
-        rowSteps = yInstPix / self.colPixStep
-        colSteps = xInstPix / self.rowPixStep
-        return colSteps, rowSteps
+        rowSteps = int(yInstPix / self.colPixStep)
+        colSteps = int(xInstPix / self.rowPixStep)
+        return colSteps, -rowSteps
         
    
     def centerWorm( self, duration, colWormPix, rowWormPix ):
@@ -98,9 +102,9 @@ class easyEBB:
          xInstPix = self.colMid - colWormPix
          yInstPix = self.rowMid - rowWormPix
          
-         rowSteps = yInstPix / self.colPixStep
-         colSteps = xInstPix / self.rowPixStep
-         self.move( duration, colSteps, rowSteps)
+         rowSteps = int(yInstPix / self.colPixStep)
+         colSteps = int(xInstPix / self.rowPixStep)
+         self.move( duration, colSteps, -rowSteps) #adjusted for orientation
 
         
     def move(self, duration, xstep, ystep):
