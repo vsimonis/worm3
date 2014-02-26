@@ -10,7 +10,7 @@ import utils
 import time
 import cv
 
-logger = logging.getLogger('tracker')
+logt = logging.getLogger('')
 
 class Tracker ( object ):
     
@@ -19,29 +19,19 @@ class Tracker ( object ):
         ### Sensitivity of tracker params
         self._sampleFreq = 0.1 #in sec
         
-        ### Arguments for finder
-        self.finderArgs = {
-            'method' : method,
-            'gsize' :  45,
-            'gsig' : 9,
-            'window' : 3,
-            'boundRow' : 200,
-            'boundCol' : 200,
-            'MAXONEFRAME': 1000,
-            'REFPING' : 30,
-            'MAXREF': 1000
+        ### Set Camera params
+        self.resolution = (800, 600)
+
+        source = {
+            0:0, 
+            1:1, 
+            2:'led_move1.avi', 
+            3:'screencast.avi', 
+            4:'screencast 1.avi'
             }
-            
-
-        ### Camera params
-        self.changeRes = True
-        source = {0:0, 1:1, 2:'led_move1.avi', 3:'screencast.avi', 4:'screencast 1.avi'}
-        self.captureSource = source[int(src)]
-        #self.captureSource = 1
         
-        ### Debugging params
-        self.cambug = True
-
+        self.captureSource = source[int(src)]
+        
         ### Timing initialization
         self._startTime = time.time()
         self._lastCheck = self._startTime - self._sampleFreq
@@ -50,41 +40,57 @@ class Tracker ( object ):
         self.mirroredPreview = False 
 
 
-        ### Initialize Objects
-        ##### Standard
+        ### Initialize Objects       
+
+        ##### Windows
+
         self._windowManager = WindowManager( 'Tracker', self.onKeypress )
 
+        ### Capture -- resolution set here
         self._captureManager = CaptureManager( 
             cv2.VideoCapture(self.captureSource), 
             self._windowManager, 
-            self.mirroredPreview)
+            self.mirroredPreview, self.resolution)
 
-        self._wormFinder = WormFinder( **self.finderArgs )
+        actualCols, actualRows = self._captureManager.getProps()
+        ## from here on out use this resolution 
         
+        ### Arguments for finder
+        self.finderArgs = {
+            'method' : method,
+            'gsize' :  45,
+            'gsig' : 9,
+            'window' : 3,
+            'boundBoxRow' : 400,
+            'boundBoxCol' : 400,
+            'limRow' : 200,
+            'limCol' : 200,
+            'MAXONEFRAME': 500,
+            'REFPING' : 120,
+            'MAXREF': 1000,
+            'capCols': actualCols,
+            'capRows': actualRows
+            }
 
+        self._wormFinder = WormFinder( **self.finderArgs )     
 
         ##### Debugging
         self._bugWindowManager = WindowManager( 'Debugger', self.onKeypress )
 
     def run( self ):
+
         self._windowManager.createWindow()
-        
+
         if self.isDebug:
             self._bugWindowManager.createWindow()
-        
-        if self.cambug and self.changeRes:
-            self._captureManager.setProps()
-        
+
         while self._windowManager.isWindowCreated:    
             self._captureManager.enterFrame()
             frame = self._captureManager.frame
 
-            if self.cambug:
-                self._captureManager.getProps()
-
             if time.time() - self._lastCheck >= self._sampleFreq:
                 ###### LAZY ######
-                if self.finderArgs['method'] == 'lazy':
+                if self.finderArgs['method'] == 'lazy' or  self.finderArgs['method'] == 'lazyc' or self.finderArgs['method'] == 'lazyd':
                     ### Possibly move this to a different thread :(
                     self.localSub = self._wormFinder.processFrame( frame )
                     self._wormFinder.decideMove()                
@@ -108,14 +114,19 @@ class Tracker ( object ):
                         self._bugWindowManager.show(self.localSub)
 
             if self.isDebug:
-                self._wormFinder.drawDebuggingPoint( frame )                
-                self._wormFinder.drawDebuggingPoint( self.localSub )
+                if self.finderArgs['method'] == 'lazy':
+                    self._wormFinder.drawDebuggingPoint( frame )                
+                if self.finderArgs['method'] == 'lazyc':
+                    self._wormFinder.drawDebuggingPointCropped( frame )         
+                if self.finderArgs['method'] == 'lazyd':
+                    self._wormFinder.drawDebuggingPointCroppedDemo( frame )
+
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
 
     @property
     def isDebug( self ):
-        return logger.getEffectiveLevel() <= logging.WARNING
+        return logt.getEffectiveLevel() <= logging.INFO
 
     def onKeypress ( self, keycode ):
         '''
@@ -135,19 +146,17 @@ class Tracker ( object ):
                     cv2.cv.CV_FOURCC('M','J','P','G'))
             else:
                 self._captureManager.stopWritingVideo()
+
         elif keycode == 27: #escape
             self._windowManager.destroyWindow()
-            self._wormFinder.servos.disableMotors()
-            self._wormFinder.servos.closeSerial()
-
-        if keycode == 8: #backspace
-            if self.isDebug:
-                logger.setLevel(logging.INFO)
-            else:
-                logger.setLevel(logging.DEBUG)
-
+            if not self.isDebug:
+                try:
+                    self._wormFinder.servos.disableMotors()
+                    self._wormFinder.servos.closeSerial()
+                except Exception as e:
+                    logt.exception(str(e))
 def main():
-    logger = logging.getLogger('tracker')
+
     LOGGING_LEVELS = {'critical': logging.CRITICAL,
              'error': logging.ERROR,
              'warning': logging.WARNING,
@@ -170,17 +179,23 @@ def main():
         method = options.tracker_method          
 
     if options.source is None:
-        source = 'led_move1.avi'
+        source = 0
     else:
         source = options.source
         
-    logging.basicConfig(level=logging_level, filename=options.logging_file,
-                 format='%(asctime)s\t%(levelname)s\t%(name)s\t\t%(message)s',
-                 datefmt='%Y-%m-%d %H:%M:%S')
+    ## Set up logging
+    logging.basicConfig(
+        level=logging_level, 
+        filename=options.logging_file,
+        format='%(asctime)s\t%(levelname)s\t%(name)s\t\t%(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
 
+    logt = logging.getLogger('')
     t = Tracker(method,source)
+    
     t.run()
 
 if __name__ == '__main__':
     main()
-#    Tracker().run()
+

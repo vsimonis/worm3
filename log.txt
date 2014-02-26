@@ -1,0 +1,3316 @@
+2014-02-25 18:59:25	DEBUG	capture		Mirror Preview: False
+2014-02-25 18:59:25	DEBUG	finder		Debug level: 10
+2014-02-25 18:59:25	DEBUG	finder		is Debug?: True
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:25	DEBUG	finder		Blur time: 0.0048
+2014-02-25 18:59:25	DEBUG	finder		Reference: col:199		row:151
+2014-02-25 18:59:25	DEBUG	finder		Worm: col:177		row:168
+2014-02-25 18:59:25	INFO	finder		runtime: 0.010
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:25	DEBUG	finder		Blur time: 0.0055
+2014-02-25 18:59:25	DEBUG	finder		Worm: col:80		row:23
+2014-02-25 18:59:25	INFO	finder		runtime: 0.010
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:25	DEBUG	finder		Blur time: 0.0046
+2014-02-25 18:59:25	DEBUG	finder		Worm: col:175		row:169
+2014-02-25 18:59:25	INFO	finder		runtime: 0.007
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:25	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0054
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:178		row:168
+2014-02-25 18:59:26	INFO	finder		runtime: 0.008
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0060
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:175		row:169
+2014-02-25 18:59:26	INFO	finder		runtime: 0.009
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0058
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:199		row:167
+2014-02-25 18:59:26	INFO	finder		runtime: 0.009
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0057
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:177		row:169
+2014-02-25 18:59:26	INFO	finder		runtime: 0.008
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0034
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:80		row:23
+2014-02-25 18:59:26	INFO	finder		runtime: 0.006
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:199		row:166
+2014-02-25 18:59:26	INFO	finder		runtime: 0.009
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:176		row:168
+2014-02-25 18:59:26	INFO	finder		runtime: 0.010
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0072
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:199		row:167
+2014-02-25 18:59:26	INFO	finder		runtime: 0.011
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:26	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:26	DEBUG	finder		Worm: col:111		row:70
+2014-02-25 18:59:26	INFO	finder		runtime: 0.010
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:26	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0057
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:176		row:169
+2014-02-25 18:59:27	INFO	finder		runtime: 0.008
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0063
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:199		row:99
+2014-02-25 18:59:27	INFO	finder		runtime: 0.010
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0060
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:80		row:23
+2014-02-25 18:59:27	INFO	finder		runtime: 0.008
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:199		row:154
+2014-02-25 18:59:27	INFO	finder		runtime: 0.010
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0054
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:176		row:169
+2014-02-25 18:59:27	INFO	finder		runtime: 0.008
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0051
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:175		row:168
+2014-02-25 18:59:27	INFO	finder		runtime: 0.008
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:177		row:169
+2014-02-25 18:59:27	INFO	finder		runtime: 0.009
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:27	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:27	DEBUG	finder		Blur time: 0.0064
+2014-02-25 18:59:27	DEBUG	finder		Worm: col:199		row:133
+2014-02-25 18:59:27	INFO	finder		runtime: 0.010
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:27	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0068
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:199		row:167
+2014-02-25 18:59:28	INFO	finder		runtime: 0.010
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0052
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:173		row:170
+2014-02-25 18:59:28	INFO	finder		runtime: 0.007
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0044
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:80		row:23
+2014-02-25 18:59:28	INFO	finder		runtime: 0.007
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0056
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:184		row:199
+2014-02-25 18:59:28	INFO	finder		runtime: 0.008
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0065
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:179		row:168
+2014-02-25 18:59:28	INFO	finder		runtime: 0.010
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0058
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:178		row:167
+2014-02-25 18:59:28	INFO	finder		runtime: 0.009
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0061
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:199		row:168
+2014-02-25 18:59:28	INFO	finder		runtime: 0.008
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0054
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:175		row:169
+2014-02-25 18:59:28	INFO	finder		runtime: 0.008
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:28	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:28	DEBUG	finder		Blur time: 0.0068
+2014-02-25 18:59:28	DEBUG	finder		Worm: col:199		row:152
+2014-02-25 18:59:28	INFO	finder		runtime: 0.010
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:28	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0034
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:97		row:63
+2014-02-25 18:59:29	INFO	finder		runtime: 0.006
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0058
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:178		row:169
+2014-02-25 18:59:29	INFO	finder		runtime: 0.008
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0058
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:183		row:199
+2014-02-25 18:59:29	INFO	finder		runtime: 0.009
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0043
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:177		row:167
+2014-02-25 18:59:29	INFO	finder		runtime: 0.006
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0053
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:177		row:168
+2014-02-25 18:59:29	INFO	finder		runtime: 0.008
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0050
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:175		row:169
+2014-02-25 18:59:29	INFO	finder		runtime: 0.007
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0054
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:177		row:169
+2014-02-25 18:59:29	INFO	finder		runtime: 0.008
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	DEBUG	finder		Pre-crop size: ncol 480 x nrow 640
+2014-02-25 18:59:29	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 18:59:29	DEBUG	finder		Blur time: 0.0036
+2014-02-25 18:59:29	DEBUG	finder		Worm: col:199		row:155
+2014-02-25 18:59:29	INFO	finder		runtime: 0.006
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 18:59:29	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:01:32	DEBUG	finder		Debug level: 10
+2014-02-25 19:01:32	DEBUG	finder		is Debug?: True
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0052
+2014-02-25 19:01:32	DEBUG	finder		Reference: col:0		row:0
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.012
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0059
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.011
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0054
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.008
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0056
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.008
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.010
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0033
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.006
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:32	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:32	INFO	finder		runtime: 0.010
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	INFO	capture		width:640	height:480
+2014-02-25 19:01:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:32	DEBUG	finder		Blur time: 0.0063
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.009
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.010
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0039
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.006
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0055
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.008
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0065
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.010
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0043
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.007
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0055
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.008
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0060
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.010
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:33	DEBUG	finder		Blur time: 0.0055
+2014-02-25 19:01:33	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:33	INFO	finder		runtime: 0.009
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:33	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0058
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.010
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0058
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0054
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0050
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.008
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0061
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0069
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0033
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.006
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:34	DEBUG	finder		Blur time: 0.0056
+2014-02-25 19:01:34	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:34	INFO	finder		runtime: 0.009
+2014-02-25 19:01:34	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0062
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.010
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0058
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.009
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0044
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.007
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0052
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.008
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0065
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.010
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0041
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.007
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0073
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.012
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:35	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:35	DEBUG	finder		Blur time: 0.0055
+2014-02-25 19:01:35	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:35	INFO	finder		runtime: 0.008
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:35	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0058
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.008
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0063
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.009
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0044
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.007
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0053
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.009
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0070
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.010
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0059
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.008
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.009
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:36	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:36	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:36	INFO	finder		runtime: 0.010
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	INFO	capture		width:640	height:480
+2014-02-25 19:01:36	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:36	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:37	DEBUG	finder		Blur time: 0.0064
+2014-02-25 19:01:37	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:37	INFO	finder		runtime: 0.010
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:01:37	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:01:37	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:01:37	DEBUG	finder		Blur time: 0.0063
+2014-02-25 19:01:37	DEBUG	finder		Worm: col:0		row:0
+2014-02-25 19:01:37	INFO	finder		runtime: 0.010
+2014-02-25 19:01:37	INFO	capture		width:640	height:480
+2014-02-25 19:02:06	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:02:06	DEBUG	finder		Debug level: 10
+2014-02-25 19:02:06	DEBUG	finder		is Debug?: True
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:07	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:02:07	DEBUG	finder		Reference: col:35		row:138
+2014-02-25 19:02:07	DEBUG	finder		Worm: col:22		row:25
+2014-02-25 19:02:07	INFO	finder		runtime: 0.006
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:07	DEBUG	finder		Blur time: 0.0042
+2014-02-25 19:02:07	DEBUG	finder		Worm: col:113		row:0
+2014-02-25 19:02:07	INFO	finder		runtime: 0.007
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:07	DEBUG	finder		Worm: col:0		row:45
+2014-02-25 19:02:07	INFO	finder		runtime: 0.005
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:07	DEBUG	finder		Worm: col:0		row:45
+2014-02-25 19:02:07	INFO	finder		runtime: 0.005
+2014-02-25 19:02:07	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0038
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:4		row:44
+2014-02-25 19:02:08	INFO	finder		runtime: 0.006
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:3		row:35
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:3		row:31
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:30
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:29
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:29
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:27
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:26
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	INFO	capture		width:640	height:480
+2014-02-25 19:02:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:08	DEBUG	finder		Worm: col:1		row:26
+2014-02-25 19:02:08	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:2		row:26
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:2		row:26
+2014-02-25 19:02:09	INFO	finder		runtime: 0.006
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:2		row:27
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:3		row:26
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:1		row:26
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:1		row:27
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:3		row:26
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:09	DEBUG	finder		Worm: col:1		row:27
+2014-02-25 19:02:09	INFO	finder		runtime: 0.005
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	INFO	capture		width:640	height:480
+2014-02-25 19:02:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:10	DEBUG	finder		Worm: col:1		row:26
+2014-02-25 19:02:10	INFO	finder		runtime: 0.005
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:10	DEBUG	finder		Worm: col:2		row:27
+2014-02-25 19:02:10	INFO	finder		runtime: 0.005
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:10	DEBUG	finder		Worm: col:1		row:27
+2014-02-25 19:02:10	INFO	finder		runtime: 0.005
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:02:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:02:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:02:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:02:10	DEBUG	finder		Worm: col:3		row:26
+2014-02-25 19:02:10	INFO	finder		runtime: 0.005
+2014-02-25 19:02:10	INFO	capture		width:640	height:480
+2014-02-25 19:04:06	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:04:06	DEBUG	finder		Debug level: 10
+2014-02-25 19:04:06	DEBUG	finder		is Debug?: True
+2014-02-25 19:04:06	INFO	capture		width:640	height:480
+2014-02-25 19:04:06	INFO	capture		width:640	height:480
+2014-02-25 19:04:06	INFO	capture		width:640	height:480
+2014-02-25 19:04:06	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0045
+2014-02-25 19:04:07	DEBUG	finder		Reference: col:0		row:126
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:13
+2014-02-25 19:04:07	INFO	finder		runtime: 0.008
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:63
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:5		row:69
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:49
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:42
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:36
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0038
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:33
+2014-02-25 19:04:07	INFO	finder		runtime: 0.006
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:07	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:07	INFO	finder		runtime: 0.005
+2014-02-25 19:04:07	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0036
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.006
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.006
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0044
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.007
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	INFO	capture		width:640	height:480
+2014-02-25 19:04:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:08	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:04:08	INFO	finder		runtime: 0.005
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:09	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:04:09	INFO	finder		runtime: 0.005
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:09	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:04:09	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:04:09	INFO	finder		runtime: 0.005
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:09	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:04:09	INFO	finder		runtime: 0.005
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	INFO	capture		width:640	height:480
+2014-02-25 19:04:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:04:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:04:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:04:09	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:04:09	INFO	finder		runtime: 0.005
+2014-02-25 19:07:24	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:07:24	DEBUG	finder		Debug level: 10
+2014-02-25 19:07:24	DEBUG	finder		is Debug?: True
+2014-02-25 19:07:24	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:07:24	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:07:24	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:07:25	DEBUG	finder		Reference: col:0		row:14
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:148		row:136
+2014-02-25 19:07:25	INFO	finder		runtime: 0.006
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:0		row:55
+2014-02-25 19:07:25	INFO	finder		runtime: 0.005
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:9		row:68
+2014-02-25 19:07:25	INFO	finder		runtime: 0.005
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:0		row:52
+2014-02-25 19:07:25	INFO	finder		runtime: 0.005
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:0		row:38
+2014-02-25 19:07:25	INFO	finder		runtime: 0.005
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0070
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:0		row:36
+2014-02-25 19:07:25	INFO	finder		runtime: 0.009
+2014-02-25 19:07:25	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:25	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:25	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:07:25	DEBUG	finder		Worm: col:0		row:33
+2014-02-25 19:07:25	INFO	finder		runtime: 0.005
+2014-02-25 19:07:26	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:26	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:07:26	DEBUG	finder		Worm: col:0		row:33
+2014-02-25 19:07:26	INFO	finder		runtime: 0.005
+2014-02-25 19:07:26	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:26	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:26	DEBUG	finder		Worm: col:0		row:32
+2014-02-25 19:07:26	INFO	finder		runtime: 0.005
+2014-02-25 19:07:26	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:07:26	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:07:26	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:07:26	DEBUG	finder		Worm: col:0		row:32
+2014-02-25 19:07:26	INFO	finder		runtime: 0.005
+2014-02-25 19:09:00	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:09:00	DEBUG	finder		Debug level: 10
+2014-02-25 19:09:00	DEBUG	finder		is Debug?: True
+2014-02-25 19:09:00	DEBUG	tracker		get and set and get props
+2014-02-25 19:09:00	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:09:00	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:09:00	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:01	DEBUG	finder		Reference: col:113		row:199
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:17		row:8
+2014-02-25 19:09:01	INFO	finder		runtime: 0.006
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:13		row:77
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:11		row:68
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:0		row:48
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:0		row:40
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:0		row:35
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:0		row:33
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:01	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:01	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:01	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:01	DEBUG	finder		Worm: col:0		row:32
+2014-02-25 19:09:01	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:02	INFO	finder		runtime: 0.005
+2014-02-25 19:09:02	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:02	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:02	DEBUG	finder		Blur time: 0.0040
+2014-02-25 19:09:02	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:02	INFO	finder		runtime: 0.006
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0075
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:03	INFO	finder		runtime: 0.011
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:03	DEBUG	finder		Worm: col:148		row:141
+2014-02-25 19:09:03	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:127		row:157
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:148		row:176
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:04	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:04	INFO	finder		runtime: 0.005
+2014-02-25 19:09:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:09:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:09:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:09:05	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:09:05	INFO	finder		runtime: 0.005
+2014-02-25 19:10:02	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:10:02	DEBUG	finder		Debug level: 10
+2014-02-25 19:10:02	DEBUG	finder		is Debug?: True
+2014-02-25 19:11:02	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:11:02	DEBUG	finder		Debug level: 10
+2014-02-25 19:11:02	DEBUG	finder		is Debug?: True
+2014-02-25 19:11:02	DEBUG	tracker		get and set and get props
+2014-02-25 19:11:02	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:11:02	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:11:02	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:11:03	DEBUG	finder		Reference: col:0		row:13
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:199		row:87
+2014-02-25 19:11:03	INFO	finder		runtime: 0.006
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:0		row:52
+2014-02-25 19:11:03	INFO	finder		runtime: 0.005
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:0		row:65
+2014-02-25 19:11:03	INFO	finder		runtime: 0.005
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:0		row:47
+2014-02-25 19:11:03	INFO	finder		runtime: 0.005
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:0		row:46
+2014-02-25 19:11:03	INFO	finder		runtime: 0.005
+2014-02-25 19:11:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:03	DEBUG	finder		Worm: col:0		row:40
+2014-02-25 19:11:03	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:36
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:35
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:33
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:32
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:11:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:11:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:11:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:11:04	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:11:04	INFO	finder		runtime: 0.005
+2014-02-25 19:12:21	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:12:21	DEBUG	finder		Debug level: 10
+2014-02-25 19:12:21	DEBUG	finder		is Debug?: True
+2014-02-25 19:12:21	DEBUG	tracker		Creating Window
+2014-02-25 19:12:21	DEBUG	tracker		get and set and get props
+2014-02-25 19:12:21	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:12:21	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:12:21	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:12:21	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:21	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:21	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:12:21	DEBUG	finder		Reference: col:104		row:38
+2014-02-25 19:12:21	DEBUG	finder		Worm: col:80		row:43
+2014-02-25 19:12:21	INFO	finder		runtime: 0.006
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:22		row:39
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:0		row:62
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:15		row:45
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:18		row:35
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:0		row:34
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:0		row:32
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:22	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:22	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:22	DEBUG	finder		Blur time: 0.0030
+2014-02-25 19:12:22	DEBUG	finder		Worm: col:23		row:32
+2014-02-25 19:12:22	INFO	finder		runtime: 0.005
+2014-02-25 19:12:23	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:23	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:23	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:12:23	DEBUG	finder		Worm: col:23		row:33
+2014-02-25 19:12:23	INFO	finder		runtime: 0.005
+2014-02-25 19:12:23	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:23	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:23	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:23	DEBUG	finder		Worm: col:22		row:32
+2014-02-25 19:12:23	INFO	finder		runtime: 0.005
+2014-02-25 19:12:23	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:23	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:23	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:23	DEBUG	finder		Worm: col:16		row:33
+2014-02-25 19:12:23	INFO	finder		runtime: 0.005
+2014-02-25 19:12:23	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:12:23	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:12:23	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:12:23	DEBUG	finder		Worm: col:23		row:32
+2014-02-25 19:12:23	INFO	finder		runtime: 0.005
+2014-02-25 19:14:11	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:14:11	DEBUG	finder		Debug level: 10
+2014-02-25 19:14:11	DEBUG	finder		is Debug?: True
+2014-02-25 19:14:11	DEBUG	tracker		start tracker
+2014-02-25 19:14:11	DEBUG	tracker		Creating Window
+2014-02-25 19:14:11	DEBUG	tracker		get and set and get props
+2014-02-25 19:14:11	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:14:11	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:14:11	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:14:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:11	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:14:11	DEBUG	finder		Reference: col:33		row:16
+2014-02-25 19:14:11	DEBUG	finder		Worm: col:0		row:8
+2014-02-25 19:14:11	INFO	finder		runtime: 0.006
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:20		row:43
+2014-02-25 19:14:12	INFO	finder		runtime: 0.005
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:0		row:61
+2014-02-25 19:14:12	INFO	finder		runtime: 0.005
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0040
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:0		row:44
+2014-02-25 19:14:12	INFO	finder		runtime: 0.006
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:12		row:37
+2014-02-25 19:14:12	INFO	finder		runtime: 0.005
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0041
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:33		row:39
+2014-02-25 19:14:12	INFO	finder		runtime: 0.007
+2014-02-25 19:14:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:14:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:14:12	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:14:12	DEBUG	finder		Worm: col:9		row:33
+2014-02-25 19:14:12	INFO	finder		runtime: 0.005
+2014-02-25 19:15:04	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:15:04	DEBUG	finder		Debug level: 10
+2014-02-25 19:15:04	DEBUG	finder		is Debug?: True
+2014-02-25 19:15:04	DEBUG	tracker		start tracker
+2014-02-25 19:15:04	DEBUG	tracker		Creating Window
+2014-02-25 19:15:04	DEBUG	tracker		get and set and get props
+2014-02-25 19:15:04	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:15:04	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:15:04	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:15:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:15:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:15:05	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:15:05	DEBUG	finder		Reference: col:13		row:0
+2014-02-25 19:15:05	DEBUG	finder		Worm: col:24		row:19
+2014-02-25 19:15:05	INFO	finder		runtime: 0.006
+2014-02-25 19:15:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:15:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:15:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:15:05	DEBUG	finder		Worm: col:26		row:52
+2014-02-25 19:15:05	INFO	finder		runtime: 0.005
+2014-02-25 19:23:48	DEBUG	tracker		initialize objs
+2014-02-25 19:23:48	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:23:48	DEBUG	finder		Debug level: 10
+2014-02-25 19:23:48	DEBUG	finder		is Debug?: True
+2014-02-25 19:25:21	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:25:21	DEBUG	finder		Debug level: 10
+2014-02-25 19:25:21	DEBUG	finder		is Debug?: True
+2014-02-25 19:25:21	DEBUG	tracker		start tracker
+2014-02-25 19:25:21	DEBUG	tracker		initialize objs
+2014-02-25 19:25:48	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:25:48	DEBUG	finder		Debug level: 10
+2014-02-25 19:25:48	DEBUG	finder		is Debug?: True
+2014-02-25 19:25:48	DEBUG	tracker		start tracker
+2014-02-25 19:25:48	DEBUG	tracker		initialize objs
+2014-02-25 19:25:48	DEBUG	tracker		Creating Window
+2014-02-25 19:26:02	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:26:02	DEBUG	finder		Debug level: 10
+2014-02-25 19:26:02	DEBUG	finder		is Debug?: True
+2014-02-25 19:26:02	DEBUG	tracker		start tracker
+2014-02-25 19:26:02	DEBUG	tracker		initialize objs
+2014-02-25 19:26:02	DEBUG	tracker		Creating Window
+2014-02-25 19:26:02	DEBUG	tracker		get and set and get props
+2014-02-25 19:26:02	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:26:02	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:26:02	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:26:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:03	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:03	DEBUG	finder		Reference: col:43		row:13
+2014-02-25 19:26:03	DEBUG	finder		Worm: col:0		row:20
+2014-02-25 19:26:03	INFO	finder		runtime: 0.007
+2014-02-25 19:26:03	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:03	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:03	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:03	DEBUG	finder		Worm: col:31		row:197
+2014-02-25 19:26:03	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:0		row:63
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:9		row:39
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0030
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:19		row:37
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:25		row:34
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:26		row:33
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:04	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:04	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:04	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:04	DEBUG	finder		Worm: col:26		row:31
+2014-02-25 19:26:04	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:24		row:31
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:05	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:05	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:05	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:05	DEBUG	finder		Worm: col:28		row:31
+2014-02-25 19:26:05	INFO	finder		runtime: 0.005
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0048
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.007
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.005
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.005
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0073
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.011
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:27		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.005
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0038
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:24		row:31
+2014-02-25 19:26:06	INFO	finder		runtime: 0.006
+2014-02-25 19:26:06	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:06	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:06	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:06	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:06	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:07	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:07	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:07	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:07	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:07	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:25		row:31
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:25		row:31
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:08	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:08	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:08	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:08	DEBUG	finder		Worm: col:24		row:31
+2014-02-25 19:26:08	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:09	INFO	capture		Start Writing Video: wormTue Feb 25 19:26:09 2014.avi
+2014-02-25 19:26:09	WARNING	capture		fps estimate used: 20
+2014-02-25 19:26:09	WARNING	capture		size used: 640 x 480
+2014-02-25 19:26:09	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:09	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:09	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:09	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:09	INFO	finder		runtime: 0.005
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.005
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.005
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.005
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.005
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.006
+2014-02-25 19:26:10	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:10	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:10	DEBUG	finder		Blur time: 0.0048
+2014-02-25 19:26:10	DEBUG	finder		Worm: col:27		row:30
+2014-02-25 19:26:10	INFO	finder		runtime: 0.007
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:11	INFO	finder		runtime: 0.006
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:25		row:31
+2014-02-25 19:26:11	INFO	finder		runtime: 0.005
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:11	INFO	finder		runtime: 0.005
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0043
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:11	INFO	finder		runtime: 0.007
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0032
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:11	INFO	finder		runtime: 0.006
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:11	INFO	finder		runtime: 0.005
+2014-02-25 19:26:11	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:11	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:11	DEBUG	finder		Blur time: 0.0036
+2014-02-25 19:26:11	DEBUG	finder		Worm: col:25		row:31
+2014-02-25 19:26:11	INFO	finder		runtime: 0.006
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:27		row:31
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:12	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:12	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:12	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:12	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:12	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:13	DEBUG	finder		Blur time: 0.0030
+2014-02-25 19:26:13	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:13	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.006
+2014-02-25 19:26:14	INFO	capture		Stop Writing Video
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:25		row:31
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:14	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:14	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:14	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:27		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0048
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.007
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:15	DEBUG	finder		Worm: col:24		row:30
+2014-02-25 19:26:15	INFO	finder		runtime: 0.005
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:26		row:30
+2014-02-25 19:26:16	INFO	finder		runtime: 0.005
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:16	INFO	finder		runtime: 0.005
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:16	INFO	finder		runtime: 0.005
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0073
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:16	INFO	finder		runtime: 0.010
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:16	INFO	finder		runtime: 0.005
+2014-02-25 19:26:16	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:16	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:16	DEBUG	finder		Blur time: 0.0026
+2014-02-25 19:26:16	DEBUG	finder		Worm: col:24		row:31
+2014-02-25 19:26:16	INFO	finder		runtime: 0.005
+2014-02-25 19:26:17	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:17	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:17	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:17	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:17	INFO	finder		runtime: 0.005
+2014-02-25 19:26:17	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:26:17	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:26:17	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:26:17	DEBUG	finder		Worm: col:25		row:30
+2014-02-25 19:26:17	INFO	finder		runtime: 0.005
+2014-02-25 19:32:18	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:32:18	DEBUG	finder		Debug level: 10
+2014-02-25 19:32:18	DEBUG	finder		is Debug?: True
+2014-02-25 19:32:18	DEBUG	root		start tracker
+2014-02-25 19:33:12	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:33:12	DEBUG	finder		Debug level: 10
+2014-02-25 19:33:12	DEBUG	finder		is Debug?: True
+2014-02-25 19:33:12	DEBUG	root		start tracker
+2014-02-25 19:33:12	DEBUG	root		initialize objs
+2014-02-25 19:33:12	DEBUG	root		Creating Window
+2014-02-25 19:33:12	DEBUG	root		get and set and get props
+2014-02-25 19:33:12	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:33:12	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:33:12	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Reference: col:108		row:111
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:0		row:18
+2014-02-25 19:33:13	INFO	finder		runtime: 0.006
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:1		row:44
+2014-02-25 19:33:13	INFO	finder		runtime: 0.005
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:0		row:64
+2014-02-25 19:33:13	INFO	finder		runtime: 0.005
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:0		row:42
+2014-02-25 19:33:13	INFO	finder		runtime: 0.005
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:0		row:44
+2014-02-25 19:33:13	INFO	finder		runtime: 0.005
+2014-02-25 19:33:13	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:13	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:13	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:13	DEBUG	finder		Worm: col:0		row:36
+2014-02-25 19:33:13	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:31
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:30
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:29
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:28
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:14	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:14	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:14	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:14	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:14	INFO	finder		runtime: 0.005
+2014-02-25 19:33:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:15	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:15	INFO	finder		runtime: 0.005
+2014-02-25 19:33:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:15	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:33:15	DEBUG	finder		Worm: col:0		row:27
+2014-02-25 19:33:15	INFO	finder		runtime: 0.005
+2014-02-25 19:33:15	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:33:15	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:33:15	DEBUG	finder		Blur time: 0.0030
+2014-02-25 19:33:15	DEBUG	finder		Worm: col:0		row:26
+2014-02-25 19:33:15	INFO	finder		runtime: 0.005
+2014-02-25 19:36:31	DEBUG	capture		Mirror Preview: False
+2014-02-25 19:36:31	DEBUG	finder		Debug level: 10
+2014-02-25 19:36:31	DEBUG	finder		is Debug?: True
+2014-02-25 19:36:31	DEBUG	root		start tracker
+2014-02-25 19:36:31	DEBUG	root		initialize objs
+2014-02-25 19:36:31	DEBUG	root		Creating Window
+2014-02-25 19:36:31	DEBUG	root		get and set and get props
+2014-02-25 19:36:31	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:36:31	INFO	capture		Set Props: cols:1080	rows:1080
+2014-02-25 19:36:31	INFO	capture		Get Props: cols:640ows:480
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:32	DEBUG	finder		Reference: col:89		row:145
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:58		row:6
+2014-02-25 19:36:32	INFO	finder		runtime: 0.006
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:35		row:36
+2014-02-25 19:36:32	INFO	finder		runtime: 0.005
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:13		row:61
+2014-02-25 19:36:32	INFO	finder		runtime: 0.005
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:41		row:38
+2014-02-25 19:36:32	INFO	finder		runtime: 0.005
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:38		row:32
+2014-02-25 19:36:32	INFO	finder		runtime: 0.005
+2014-02-25 19:36:32	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:32	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:32	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:32	DEBUG	finder		Worm: col:42		row:29
+2014-02-25 19:36:32	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:42		row:29
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:39		row:27
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:44		row:28
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:42		row:28
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:45		row:28
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:34		row:28
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:33	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:33	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:33	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:33	DEBUG	finder		Worm: col:43		row:28
+2014-02-25 19:36:33	INFO	finder		runtime: 0.005
+2014-02-25 19:36:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:34	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:34	DEBUG	finder		Worm: col:38		row:27
+2014-02-25 19:36:34	INFO	finder		runtime: 0.005
+2014-02-25 19:36:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:34	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:34	DEBUG	finder		Worm: col:41		row:28
+2014-02-25 19:36:34	INFO	finder		runtime: 0.005
+2014-02-25 19:36:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:34	DEBUG	finder		Blur time: 0.0037
+2014-02-25 19:36:34	DEBUG	finder		Worm: col:41		row:28
+2014-02-25 19:36:34	INFO	finder		runtime: 0.006
+2014-02-25 19:36:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:34	DEBUG	finder		Blur time: 0.0028
+2014-02-25 19:36:34	DEBUG	finder		Worm: col:43		row:28
+2014-02-25 19:36:34	INFO	finder		runtime: 0.005
+2014-02-25 19:36:34	DEBUG	finder		Pre-crop size: ncol 640 x nrow 480
+2014-02-25 19:36:34	DEBUG	finder		POST-crop size: ncol 200 x nrow 200
+2014-02-25 19:36:34	DEBUG	finder		Blur time: 0.0027
+2014-02-25 19:36:34	DEBUG	finder		Worm: col:44		row:28
+2014-02-25 19:36:34	INFO	finder		runtime: 0.005
+2014-02-25 22:22:03	INFO	capture		Set Props: cols:800	rows:600
+2014-02-25 22:22:03	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:22:03	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:22:03	DEBUG	finder		Debug level: 10
+2014-02-25 22:22:03	DEBUG	finder		is Debug?: True
+2014-02-25 22:22:03	DEBUG	root		start tracker
+2014-02-25 22:22:03	DEBUG	root		Creating MAIN Window
+2014-02-25 22:22:03	DEBUG	root		Creating DEBUG Window
+2014-02-25 22:22:03	DEBUG	finder		Reference: col:482		row:271
+2014-02-25 22:22:03	DEBUG	finder		Worm: col:536		row:238
+2014-02-25 22:22:03	INFO	finder		runtime: 0.032
+2014-02-25 22:22:03	WARNING	finder		MOVE!!!
+2014-02-25 22:22:13	INFO	capture		Set Props: cols:800	rows:600
+2014-02-25 22:22:13	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:22:13	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:22:13	DEBUG	finder		Debug level: 10
+2014-02-25 22:22:13	DEBUG	finder		is Debug?: True
+2014-02-25 22:22:13	DEBUG	root		start tracker
+2014-02-25 22:22:13	DEBUG	root		Creating MAIN Window
+2014-02-25 22:22:13	DEBUG	root		Creating DEBUG Window
+2014-02-25 22:22:14	DEBUG	finder		Reference: col:478		row:276
+2014-02-25 22:22:14	DEBUG	finder		Worm: col:536		row:238
+2014-02-25 22:22:14	INFO	finder		runtime: 0.031
+2014-02-25 22:22:14	WARNING	finder		MOVE!!!
+2014-02-25 22:26:21	INFO	capture		Set Props: cols:800	rows:600
+2014-02-25 22:26:21	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:26:21	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:26:21	DEBUG	finder		Debug level: 10
+2014-02-25 22:26:21	DEBUG	finder		is Debug?: True
+2014-02-25 22:26:21	DEBUG	root		start tracker
+2014-02-25 22:26:21	DEBUG	root		Creating MAIN Window
+2014-02-25 22:26:21	DEBUG	root		Creating DEBUG Window
+2014-02-25 22:26:21	DEBUG	finder		Reference: col:480		row:274
+2014-02-25 22:26:21	DEBUG	finder		Worm: col:538		row:237
+2014-02-25 22:26:21	INFO	finder		runtime: 0.031
+2014-02-25 22:26:21	WARNING	finder		MOVE!!!
+2014-02-25 22:26:21	DEBUG	finder		Reference: col:480		row:271
+2014-02-25 22:26:21	DEBUG	finder		Worm: col:539		row:233
+2014-02-25 22:26:21	INFO	finder		runtime: 0.031
+2014-02-25 22:26:21	WARNING	finder		MOVE!!!
+2014-02-25 22:26:22	DEBUG	finder		Reference: col:484		row:261
+2014-02-25 22:26:22	DEBUG	finder		Worm: col:632		row:479
+2014-02-25 22:26:22	INFO	finder		runtime: 0.030
+2014-02-25 22:26:22	WARNING	finder		MOVE!!!
+2014-02-25 22:26:22	DEBUG	finder		Reference: col:543		row:238
+2014-02-25 22:26:22	DEBUG	finder		Worm: col:623		row:479
+2014-02-25 22:26:22	INFO	finder		runtime: 0.032
+2014-02-25 22:26:22	WARNING	finder		MOVE!!!
+2014-02-25 22:26:22	DEBUG	finder		Reference: col:639		row:435
+2014-02-25 22:26:22	DEBUG	finder		Worm: col:639		row:464
+2014-02-25 22:26:22	INFO	finder		runtime: 0.030
+2014-02-25 22:26:22	WARNING	finder		MOVE!!!
+2014-02-25 22:26:22	DEBUG	finder		Reference: col:542		row:235
+2014-02-25 22:26:23	DEBUG	finder		Worm: col:626		row:358
+2014-02-25 22:26:23	INFO	finder		runtime: 0.301
+2014-02-25 22:26:23	WARNING	finder		MOVE!!!
+2014-02-25 22:26:23	DEBUG	finder		Reference: col:639		row:434
+2014-02-25 22:26:23	DEBUG	finder		Worm: col:639		row:463
+2014-02-25 22:26:23	INFO	finder		runtime: 0.031
+2014-02-25 22:26:23	WARNING	finder		MOVE!!!
+2014-02-25 22:26:23	DEBUG	finder		Reference: col:639		row:463
+2014-02-25 22:26:23	DEBUG	finder		Worm: col:639		row:318
+2014-02-25 22:26:23	INFO	finder		runtime: 0.032
+2014-02-25 22:26:23	WARNING	finder		MOVE!!!
+2014-02-25 22:26:23	DEBUG	finder		Reference: col:483		row:267
+2014-02-25 22:26:23	DEBUG	finder		Worm: col:627		row:479
+2014-02-25 22:26:23	INFO	finder		runtime: 0.034
+2014-02-25 22:26:23	WARNING	finder		MOVE!!!
+2014-02-25 22:26:24	DEBUG	finder		Reference: col:630		row:479
+2014-02-25 22:26:24	DEBUG	finder		Worm: col:515		row:234
+2014-02-25 22:26:24	INFO	finder		runtime: 0.034
+2014-02-25 22:26:24	WARNING	finder		MOVE!!!
+2014-02-25 22:26:24	DEBUG	finder		Reference: col:540		row:231
+2014-02-25 22:26:24	DEBUG	finder		Worm: col:631		row:479
+2014-02-25 22:26:24	INFO	finder		runtime: 0.033
+2014-02-25 22:26:24	WARNING	finder		MOVE!!!
+2014-02-25 22:26:24	DEBUG	finder		Reference: col:534		row:237
+2014-02-25 22:26:24	DEBUG	finder		Worm: col:483		row:270
+2014-02-25 22:26:24	INFO	finder		runtime: 0.035
+2014-02-25 22:26:24	WARNING	finder		MOVE!!!
+2014-02-25 22:26:24	DEBUG	finder		Reference: col:623		row:479
+2014-02-25 22:26:24	DEBUG	finder		Worm: col:478		row:275
+2014-02-25 22:26:24	INFO	finder		runtime: 0.031
+2014-02-25 22:26:24	WARNING	finder		MOVE!!!
+2014-02-25 22:26:25	DEBUG	finder		Reference: col:516		row:232
+2014-02-25 22:26:25	DEBUG	finder		Worm: col:477		row:275
+2014-02-25 22:26:25	INFO	finder		runtime: 0.032
+2014-02-25 22:26:25	WARNING	finder		MOVE!!!
+2014-02-25 22:26:25	DEBUG	finder		Reference: col:623		row:479
+2014-02-25 22:26:25	DEBUG	finder		Worm: col:520		row:232
+2014-02-25 22:26:25	INFO	finder		runtime: 0.035
+2014-02-25 22:26:25	WARNING	finder		MOVE!!!
+2014-02-25 22:26:25	DEBUG	finder		Reference: col:520		row:234
+2014-02-25 22:26:25	DEBUG	finder		Worm: col:630		row:479
+2014-02-25 22:26:25	INFO	finder		runtime: 0.036
+2014-02-25 22:26:25	WARNING	finder		MOVE!!!
+2014-02-25 22:26:25	DEBUG	finder		Reference: col:628		row:479
+2014-02-25 22:26:25	DEBUG	finder		Worm: col:632		row:385
+2014-02-25 22:26:25	INFO	finder		runtime: 0.037
+2014-02-25 22:26:25	WARNING	finder		MOVE!!!
+2014-02-25 22:26:26	DEBUG	finder		Reference: col:505		row:231
+2014-02-25 22:26:26	DEBUG	finder		Worm: col:469		row:282
+2014-02-25 22:26:26	INFO	finder		runtime: 0.031
+2014-02-25 22:26:26	WARNING	finder		MOVE!!!
+2014-02-25 22:26:26	DEBUG	finder		Reference: col:497		row:238
+2014-02-25 22:26:26	DEBUG	finder		Worm: col:464		row:291
+2014-02-25 22:26:26	INFO	finder		runtime: 0.033
+2014-02-25 22:26:26	WARNING	finder		MOVE!!!
+2014-02-25 22:26:26	DEBUG	finder		Reference: col:513		row:229
+2014-02-25 22:26:26	DEBUG	finder		Worm: col:465		row:299
+2014-02-25 22:26:26	INFO	finder		runtime: 0.034
+2014-02-25 22:26:26	WARNING	finder		MOVE!!!
+2014-02-25 22:26:26	DEBUG	finder		Reference: col:639		row:438
+2014-02-25 22:26:26	DEBUG	finder		Worm: col:639		row:479
+2014-02-25 22:26:26	INFO	finder		runtime: 0.035
+2014-02-25 22:26:26	WARNING	finder		MOVE!!!
+2014-02-25 22:26:27	DEBUG	finder		Reference: col:466		row:299
+2014-02-25 22:26:27	DEBUG	finder		Worm: col:513		row:228
+2014-02-25 22:26:27	INFO	finder		runtime: 0.031
+2014-02-25 22:26:27	WARNING	finder		MOVE!!!
+2014-02-25 22:26:27	DEBUG	finder		Reference: col:465		row:294
+2014-02-25 22:26:27	DEBUG	finder		Worm: col:631		row:479
+2014-02-25 22:26:27	INFO	finder		runtime: 0.034
+2014-02-25 22:26:27	WARNING	finder		MOVE!!!
+2014-02-25 22:26:27	DEBUG	finder		Reference: col:468		row:284
+2014-02-25 22:26:27	DEBUG	finder		Worm: col:500		row:233
+2014-02-25 22:26:27	INFO	finder		runtime: 0.032
+2014-02-25 22:26:27	WARNING	finder		MOVE!!!
+2014-02-25 22:26:27	DEBUG	finder		Reference: col:629		row:479
+2014-02-25 22:26:27	DEBUG	finder		Worm: col:514		row:263
+2014-02-25 22:26:27	INFO	finder		runtime: 0.034
+2014-02-25 22:26:27	WARNING	finder		MOVE!!!
+2014-02-25 22:26:28	DEBUG	finder		Reference: col:485		row:266
+2014-02-25 22:26:28	DEBUG	finder		Worm: col:513		row:266
+2014-02-25 22:26:28	INFO	finder		runtime: 0.032
+2014-02-25 22:26:28	WARNING	finder		MOVE!!!
+2014-02-25 22:26:28	DEBUG	finder		Reference: col:488		row:255
+2014-02-25 22:26:28	DEBUG	finder		Worm: col:516		row:276
+2014-02-25 22:26:28	INFO	finder		runtime: 0.034
+2014-02-25 22:26:28	WARNING	finder		MOVE!!!
+2014-02-25 22:26:28	DEBUG	finder		Reference: col:490		row:248
+2014-02-25 22:26:28	DEBUG	finder		Worm: col:515		row:256
+2014-02-25 22:26:28	INFO	finder		runtime: 0.030
+2014-02-25 22:26:28	WARNING	finder		MOVE!!!
+2014-02-25 22:26:28	DEBUG	finder		Reference: col:512		row:275
+2014-02-25 22:26:28	DEBUG	finder		Worm: col:529		row:292
+2014-02-25 22:26:28	INFO	finder		runtime: 0.033
+2014-02-25 22:26:28	WARNING	finder		MOVE!!!
+2014-02-25 22:26:29	DEBUG	finder		Reference: col:639		row:435
+2014-02-25 22:26:29	DEBUG	finder		Worm: col:623		row:479
+2014-02-25 22:26:29	INFO	finder		runtime: 0.032
+2014-02-25 22:26:29	WARNING	finder		MOVE!!!
+2014-02-25 22:26:29	DEBUG	finder		Reference: col:504		row:229
+2014-02-25 22:26:29	DEBUG	finder		Worm: col:532		row:312
+2014-02-25 22:26:29	INFO	finder		runtime: 0.035
+2014-02-25 22:26:29	WARNING	finder		MOVE!!!
+2014-02-25 22:26:29	DEBUG	finder		Reference: col:629		row:479
+2014-02-25 22:26:29	DEBUG	finder		Worm: col:525		row:321
+2014-02-25 22:26:29	INFO	finder		runtime: 0.034
+2014-02-25 22:26:29	WARNING	finder		MOVE!!!
+2014-02-25 22:26:29	DEBUG	finder		Reference: col:529		row:316
+2014-02-25 22:26:29	DEBUG	finder		Worm: col:639		row:463
+2014-02-25 22:26:29	INFO	finder		runtime: 0.031
+2014-02-25 22:26:29	WARNING	finder		MOVE!!!
+2014-02-25 22:26:30	DEBUG	finder		Reference: col:530		row:316
+2014-02-25 22:26:30	DEBUG	finder		Worm: col:630		row:479
+2014-02-25 22:26:30	INFO	finder		runtime: 0.032
+2014-02-25 22:26:30	WARNING	finder		MOVE!!!
+2014-02-25 22:29:04	INFO	capture		Set Props: cols:800	rows:600
+2014-02-25 22:29:04	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:29:04	INFO	capture		Get Props: cols:640	rows:480
+2014-02-25 22:29:04	DEBUG	finder		Debug level: 10
+2014-02-25 22:29:04	DEBUG	finder		is Debug?: True
+2014-02-25 22:29:04	DEBUG	root		start tracker
+2014-02-25 22:29:04	DEBUG	root		Creating MAIN Window
+2014-02-25 22:29:04	DEBUG	root		Creating DEBUG Window
+2014-02-25 22:29:04	DEBUG	finder		Reference: col:482		row:271
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:536		row:238
+2014-02-25 22:29:04	INFO	finder		runtime: 0.032
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:537		row:237
+2014-02-25 22:29:04	INFO	finder		runtime: 0.026
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:539		row:235
+2014-02-25 22:29:04	INFO	finder		runtime: 0.032
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:539		row:234
+2014-02-25 22:29:04	INFO	finder		runtime: 0.032
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:540		row:232
+2014-02-25 22:29:04	INFO	finder		runtime: 0.026
+2014-02-25 22:29:04	DEBUG	finder		Worm: col:541		row:231
+2014-02-25 22:29:04	INFO	finder		runtime: 0.027
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:542		row:230
+2014-02-25 22:29:05	INFO	finder		runtime: 0.026
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:541		row:230
+2014-02-25 22:29:05	INFO	finder		runtime: 0.029
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:542		row:230
+2014-02-25 22:29:05	INFO	finder		runtime: 0.030
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:541		row:230
+2014-02-25 22:29:05	INFO	finder		runtime: 0.026
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:542		row:228
+2014-02-25 22:29:05	INFO	finder		runtime: 0.031
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:542		row:229
+2014-02-25 22:29:05	INFO	finder		runtime: 0.028
+2014-02-25 22:29:05	DEBUG	finder		Worm: col:541		row:230
+2014-02-25 22:29:05	INFO	finder		runtime: 0.031
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:539		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.029
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:538		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.028
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:539		row:234
+2014-02-25 22:29:06	INFO	finder		runtime: 0.027
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:540		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.028
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:541		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.031
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:541		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.028
+2014-02-25 22:29:06	DEBUG	finder		Worm: col:541		row:233
+2014-02-25 22:29:06	INFO	finder		runtime: 0.027
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:537		row:234
+2014-02-25 22:29:07	INFO	finder		runtime: 0.031
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:535		row:232
+2014-02-25 22:29:07	INFO	finder		runtime: 0.027
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:639		row:433
+2014-02-25 22:29:07	INFO	finder		runtime: 0.028
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:474		row:279
+2014-02-25 22:29:07	INFO	finder		runtime: 0.030
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:475		row:279
+2014-02-25 22:29:07	INFO	finder		runtime: 0.025
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:474		row:280
+2014-02-25 22:29:07	INFO	finder		runtime: 0.027
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:474		row:279
+2014-02-25 22:29:07	INFO	finder		runtime: 0.027
+2014-02-25 22:29:07	DEBUG	finder		Worm: col:474		row:280
+2014-02-25 22:29:07	INFO	finder		runtime: 0.031
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:474		row:279
+2014-02-25 22:29:08	INFO	finder		runtime: 0.030
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:474		row:279
+2014-02-25 22:29:08	INFO	finder		runtime: 0.028
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:473		row:280
+2014-02-25 22:29:08	INFO	finder		runtime: 0.031
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:474		row:280
+2014-02-25 22:29:08	INFO	finder		runtime: 0.029
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:472		row:280
+2014-02-25 22:29:08	INFO	finder		runtime: 0.028
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:471		row:281
+2014-02-25 22:29:08	INFO	finder		runtime: 0.031
+2014-02-25 22:29:08	DEBUG	finder		Worm: col:470		row:282
+2014-02-25 22:29:08	INFO	finder		runtime: 0.030
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:469		row:283
+2014-02-25 22:29:09	INFO	finder		runtime: 0.029
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:468		row:284
+2014-02-25 22:29:09	INFO	finder		runtime: 0.028
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:468		row:286
+2014-02-25 22:29:09	INFO	finder		runtime: 0.028
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:468		row:286
+2014-02-25 22:29:09	INFO	finder		runtime: 0.027
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:468		row:285
+2014-02-25 22:29:09	INFO	finder		runtime: 0.031
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:469		row:284
+2014-02-25 22:29:09	INFO	finder		runtime: 0.029
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:470		row:282
+2014-02-25 22:29:09	INFO	finder		runtime: 0.027
+2014-02-25 22:29:09	DEBUG	finder		Worm: col:473		row:280
+2014-02-25 22:29:09	INFO	finder		runtime: 0.030
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:473		row:280
+2014-02-25 22:29:10	INFO	finder		runtime: 0.029
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:516		row:251
+2014-02-25 22:29:10	INFO	finder		runtime: 0.027
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:515		row:255
+2014-02-25 22:29:10	INFO	finder		runtime: 0.027
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:515		row:258
+2014-02-25 22:29:10	INFO	finder		runtime: 0.032
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:515		row:257
+2014-02-25 22:29:10	INFO	finder		runtime: 0.028
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:516		row:258
+2014-02-25 22:29:10	INFO	finder		runtime: 0.028
+2014-02-25 22:29:10	DEBUG	finder		Worm: col:516		row:257
+2014-02-25 22:29:10	INFO	finder		runtime: 0.028
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:257
+2014-02-25 22:29:11	INFO	finder		runtime: 0.027
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:261
+2014-02-25 22:29:11	INFO	finder		runtime: 0.030
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:258
+2014-02-25 22:29:11	INFO	finder		runtime: 0.031
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:517		row:259
+2014-02-25 22:29:11	INFO	finder		runtime: 0.027
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:261
+2014-02-25 22:29:11	INFO	finder		runtime: 0.028
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:266
+2014-02-25 22:29:11	INFO	finder		runtime: 0.028
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:266
+2014-02-25 22:29:11	INFO	finder		runtime: 0.031
+2014-02-25 22:29:11	DEBUG	finder		Worm: col:516		row:265
+2014-02-25 22:29:11	INFO	finder		runtime: 0.028
+2014-02-25 22:29:12	DEBUG	finder		Worm: col:517		row:268
+2014-02-25 22:29:12	INFO	finder		runtime: 0.027
+2014-02-25 22:29:12	DEBUG	finder		Worm: col:518		row:270
+2014-02-25 22:29:12	INFO	finder		runtime: 0.031
+2014-02-25 22:29:12	DEBUG	finder		Worm: col:517		row:266
+2014-02-25 22:29:12	INFO	finder		runtime: 0.027
+2014-02-25 22:29:12	DEBUG	finder		Worm: col:517		row:264
+2014-02-25 22:29:12	INFO	finder		runtime: 0.026
+2014-02-25 22:29:12	DEBUG	finder		Worm: col:517		row:261
+2014-02-25 22:29:12	INFO	finder		runtime: 0.027

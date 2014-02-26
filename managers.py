@@ -10,14 +10,20 @@ class CaptureManager( object ):
     
 
     def __init__( self, capture, previewWindowManager, 
-                  shouldMirrorPreview):
+                  shouldMirrorPreview, resolution):
+
+        #logc.debug('initializing capture')
         self._capture = capture
 
         self._previewWindowManager = previewWindowManager
         self._shouldMirrorPreview = shouldMirrorPreview
         
-        logc.debug('Mirror Preview: %s' % (str(self._shouldMirrorPreview)))
+        #logc.debug('Mirror Preview: %s' % (str(self._shouldMirrorPreview)))
         
+        ### RESOLUTION
+        self.desiredCols = resolution[0]
+        self.desiredRows = resolution[1]
+
         self._channel = 0
         self._enteredFrame = False
         self._frame = None
@@ -29,9 +35,10 @@ class CaptureManager( object ):
         self._startTime = None
         self._framesElapsed = long(0)
         self._fpsEstimate = None
-
-
-
+        #logc.debug('done initializing capture')
+        
+        self.setProps()
+        self.getProps()
     @property
     def channel( self ):
         return self._channel
@@ -47,7 +54,8 @@ class CaptureManager( object ):
     @property
     def frame( self ): 
         if self._enteredFrame and self._frame is None:
-            _, self._frame = self._capture.retrieve( channel = self.channel )
+            ###_, self._frame = self._capture.retrieve( channel = self.channel )
+            _, self._frame = self._capture.read()
         return self._frame
 
 
@@ -121,8 +129,6 @@ class CaptureManager( object ):
 
 
     def startWritingVideo( self, filename, encoding ):
-                           #encoding = -1 ):  
-                           #encoding = cv2.cv.CV_FOURCC('I', '4', '2', '0') ):
         self._videoFilename = filename
         self._videoEncoding = encoding
         logc.info( 'Start Writing Video: %s' % filename )
@@ -154,35 +160,42 @@ class CaptureManager( object ):
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
                                                  self._videoEncoding, fps, size )
-            
-        self._videoWriter.write(self._frame)
+            self._videoWriter.write(self._frame)
+
+    def isDebug ( self ):
+        return logc.getEffectiveLevel() <= logging.INFO
+
+
+
 
     def getProps ( self ):
         try:
-            w = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
-            h = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
+            self.actualCols = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
+            self.actualRows = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
             #f = self._capture.get( cv2.cv.CV_CAP_PROP_FPS )
-            #logc.info( 'width:%d\theight:%d' % (w, h) )
+            logc.info( 'Get Props: cols:%d\trows:%d' % (self.actualCols, self.actualRows) )
+            return self.actualCols, self.actualRows
         except Exception as e :
             logc.exception(e)
 
     def setProps ( self ):
-        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 320)
-        self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
-
-    def isDebug ( self ):
-        return logc.getEffectiveLevel() <= 10
-
+        logc.info( 'Set Props: cols:%d\trows:%d' % (self.desiredCols, self.desiredRows) )
+        try:
+            self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, self.desiredCols)
+            self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, self.desiredRows)
+        except Exception as e:
+            logc.exception(e)
 
 
 class WindowManager ( object ):
-    logw = logging.getLogger('window')
     
     def __init__( self, windowName, keypressCallback = None):
+        #logw.debug('initializing window manager')
         self.keypressCallback = keypressCallback
+        #logw.debug('set keypresscallback')
         self._windowName = windowName
         self._isWindowCreated = False
-
+        #logw.debug('done initializing window manager')
 
 
     @property
@@ -190,7 +203,7 @@ class WindowManager ( object ):
         return self._isWindowCreated
 
     def createWindow ( self ):
-        cv2.namedWindow( self._windowName )
+        cv2.namedWindow( self._windowName, cv2.cv.CV_WINDOW_NORMAL)
         self._isWindowCreated = True 
 
     def show ( self, frame ):
