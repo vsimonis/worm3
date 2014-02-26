@@ -1,6 +1,0 @@
-import cv2
-
-def drawPoint( img, col, row, color ):
-    if col is None or row is None:
-        return
-    cv2.circle( img, (col, row), 3 , [255, 0, 0], -1 )
