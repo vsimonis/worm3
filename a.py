@@ -52,7 +52,7 @@ class Tracker ( object ):
             self._windowManager, 
             self.mirroredPreview, self.resolution)
 
-        actualCols, actualRows = self._captureManager.getProps()
+        actualCols, actualRows = self._captureManager.getResolution()
         ## from here on out use this resolution 
         
         ### Arguments for finder
@@ -61,8 +61,8 @@ class Tracker ( object ):
             'gsize' :  45,
             'gsig' : 9,
             'window' : 3,
-            'boundBoxRow' : 400,
-            'boundBoxCol' : 400,
+            'boundBoxRow' : 500,
+            'boundBoxCol' : 500,
             'limRow' : 200,
             'limCol' : 200,
             'MAXONEFRAME': 500,

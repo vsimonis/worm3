@@ -2,7 +2,6 @@
 Class containing methods to open, close and test serial connection
 to EiBotBoard as well as methods to send commands to the motors
 
-
 """
 import logging
 import serial
@@ -11,11 +10,14 @@ import eggbot_scanlinux
 import sys
 
 logger = logging.getLogger('eggbot')
-logger.setLevel(logging.DEBUG)
+#logger.setLevel(logging.DEBUG)
 UMSTEP = 200
 
 class easyEBB:
     def __init__( self, resolution = (1080,1080), sizeMM = (5,5), stepMode = 5 ):
+        """
+        Initializes an easyEBB object
+        """
         self.actualSerialPort = ''
         self.openSerial()
 
@@ -33,9 +35,17 @@ class easyEBB:
         logger.debug('Size in pix:\tcol %d\trow  %d' %
                      (self.colNumPix, self.rowNumPix) )
 
+        self.pixUmStepConversions()
+        self.enableMotors()
+        
+    def pixUmStepConversions( self ):
+        """ 
+        Uses resolution and size in mm to convert pixel measurements 
+        to steps (unit of servos)
+        """
         ### Find center of window
-        self.rowMid = int(self.rowNumPix // 2) #floor div - casting not nec
-        self.colMid = int(self.colNumPix // 2) #floor div       
+        self.rowMid = int(self.rowNumPix // 2) 
+        self.colMid = int(self.colNumPix // 2) 
         
         ### Get pixels per um ie (1 um = ? pixels )
         self.colPixSpacing = self.colNumPix / self.colUM 
@@ -46,25 +56,23 @@ class easyEBB:
         
         ### Step mode settings
         self.stepOpts = {1: 1./16, 2: 1./8, 3: 1./4, 4: 1./2, 5: 1}
-                
         self.stepMode = stepMode #from keys of stepOpts
         
         ### Get um per step (1 step = ? um)
         self.stepUM = ( UMSTEP * self.stepOpts[self.stepMode] )
         
-
         ### Get pixels per step ie (1 step = ? pixels)
         self.colPixStep = self.stepUM * self.colPixSpacing
         self.rowPixStep = self.stepUM * self.rowPixSpacing
-        logger.info('1 step is ? pixels:\tcol: %0.3f\trow: %0.3f' % (self.colPixStep, self.rowPixStep))
-
+        
+        logger.info('1 step is ? pixels:\tcol: %0.3f\trow: %0.3f' % 
+                    (self.colPixStep, self.rowPixStep))
         logger.info('Current stepMode value: %0.4f, EBB stepMode key: %d' % 
                     (self.stepOpts[self.stepMode], self.stepMode ))
         logger.info('1 step = ? um:  %0.4f' % self.stepUM )
 
 
-        self.enableMotors()
-        
+
     def wormPixToStep( self, colWormPix, rowWormPix ):
         """
         For checking validity of step instructions without
@@ -83,6 +91,7 @@ class easyEBB:
          """
          Moves camera from current location to recenter the worm based
          on the worm's column (x) and row (y) position in the image
+         given in pixels
          """
 
          logger.info('Centering Worm')
@@ -96,13 +105,12 @@ class easyEBB:
         
     def move(self, duration, xstep, ystep):
         """
-        Sends command to motor control board
-        ###Enables motors before sending and disables after
-        
+        Sends SM (move!) command to motor control board
+         
         arguments
         duration -- time to complete movement (in ms)
-        xstep -- step directions x (col)
-        ystep -- steop directions y (row)
+        xstep -- step instructions x (col)
+        ystep -- step instructions y (row)
         """ 
               
         #self.enableMotors()

@@ -37,8 +37,26 @@ class CaptureManager( object ):
         self._fpsEstimate = None
         #logc.debug('done initializing capture')
         
-        self.setProps()
-        self.getProps()
+        self.setResolution()
+        self.setExposure( 1 )
+        self.getExposure()
+
+    def setExposure( self, setting ):
+        try:
+            self._capture.set( cv2.cv.CV_CAP_PROP_EXPOSURE, setting )
+            logc.info('Tried to set exposure %s' % str(setting) ) 
+        except Exception as e:
+            logc.exception(str(e))
+            pass
+        
+    def getExposure( self ):
+        try:
+            exp = self._capture.get( cv2.cv.CV_CAP_PROP_EXPOSURE )
+            logc.info('Received exposure %s' % str(exp) )
+        except Exception as e:
+            logc.exception(str(e))
+            pass
+
     @property
     def channel( self ):
         return self._channel
@@ -168,7 +186,7 @@ class CaptureManager( object ):
 
 
 
-    def getProps ( self ):
+    def getResolution ( self ):
         try:
             self.actualCols = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
             self.actualRows = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
@@ -178,7 +196,7 @@ class CaptureManager( object ):
         except Exception as e :
             logc.exception(e)
 
-    def setProps ( self ):
+    def setResolution ( self ):
         logc.info( 'Set Props: cols:%d\trows:%d' % (self.desiredCols, self.desiredRows) )
         try:
             self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, self.desiredCols)

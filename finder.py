@@ -31,45 +31,19 @@ class WormFinder ( object ):
                 self.__setattr__(k, kwargs[k])
 
         self.start = time.time()
-        self.delay = 1
+        self.delay = 2
                 
-        ### 'lazy' Parameters
-        self._ref = None
-        self._sub = None
-        self.lastRefTime = time.time()
- 
-        ##Cropping Parameters
-        self.rpad = (self.capRows - self.boundBoxRow) // 2 
-        self.cpad = (self.capCols - self.boundBoxCol) // 2
-
-        self.extra = 50
-        
-        self.cmin = 0
-        self.cmax = self.capCols
-        self.rmin = 0
-        self.rmax = self.capRows
-        ## General Parameters
-        self._colRef = -1
-        self._rowRef = -1
-
-        self._colRefCenter = self.capCols // 2
-        self._rowRefCenter = self.capRows // 2
-
-        self._colWorm = -1
-        self._rowWorm = -1
-
-        self._colDistances = []
-        self._rowDistances = []
-
-        self._meanColDistances = 0
-        self._meanRowDistances = 0
+        self.setupCropping()
+        self.setupFindingStructures()
         
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
         if not self.isDebug():
-            self.servos = easyEBB((self.actualCols, self.actualRows), (5,5), 5)
+            self.servos = easyEBB((self.capCols, self.capRows), (5,5), 5)
 
+            
+ 
     def drawDebuggingPointCroppedDemo( self, img ):
         #BRG
         green = [0, 255, 0]
@@ -77,7 +51,7 @@ class WormFinder ( object ):
         blue = [255, 0, 0]
         utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
         utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
-        utils.drawPoint(img, 320, 240, green)
+        #utils.drawPoint(img, 320, 240, green)
        # utils.drawPoint(img, int(self._rowRef - self._meanRowDistances),int( self._colRef - self._meanColDistances), green)
         utils.drawRect(img, (int(self.cmin), int(self.rmin)), 
                        (int(self.cmax),int( self.rmax)), green)
@@ -98,8 +72,7 @@ class WormFinder ( object ):
 
                 r, c = np.nonzero ( self._sub == np.min( self._sub ) )
                 self._colRef, self._rowRef = c[0], r[0]
-                logger.debug( 'Reference: col:%d\t\trow:%d' % 
-                         ( self._colRef , self._rowRef ))
+
 
             # CROPPPPPPPPP
             # needs to be centered around worm for demo
@@ -158,7 +131,7 @@ class WormFinder ( object ):
                           ( self._colRef - self._colWorm , 
                             self._rowRef - self._rowWorm ))
 
-            logger.debug('means col %d\trow %d' % (
+            logger.debug('means col %d\t\trow %d' % (
                     self._meanColDistances, self._meanRowDistances))
             #logger.info('runtime: %0.3f' % (time.time() - t) )
         else:
@@ -242,7 +215,7 @@ class WormFinder ( object ):
             self.rmin = self.rpad
             self.rmax = self.rpad + self.boundBoxRow
 
-            self._sub = self._sub[rmin:rmax, cmin:cmax]
+            self._sub = self._sub[self.rmin:self.rmax, self.cmin:self.cmax]
 
             lc, lr = self._sub.shape
             
@@ -425,6 +398,7 @@ class WormFinder ( object ):
     def isDebug( self ):
         return logger.getEffectiveLevel() <= logging.INFO
     
+
     def resetRef( self ):
         self._ref = None
         self._colRef = -1
@@ -437,3 +411,38 @@ class WormFinder ( object ):
         self.rmax = self.capRows
     
     
+    def setupCropping( self ):
+        
+        ##Cropping Parameters
+        self.rpad = (self.capRows - self.boundBoxRow) // 2 
+        self.cpad = (self.capCols - self.boundBoxCol) // 2
+
+        self.extra = 50
+        
+        self.cmin = 0
+        self.cmax = self.capCols
+        self.rmin = 0
+        self.rmax = self.capRows
+
+
+    def setupFindingStructures( self ):
+        ## General Parameters
+        self._colRef = -1
+        self._rowRef = -1
+
+        self._colRefCenter = self.capCols // 2
+        self._rowRefCenter = self.capRows // 2
+
+        self._colWorm = -1
+        self._rowWorm = -1
+
+        self._colDistances = []
+        self._rowDistances = []
+
+        self._meanColDistances = 0
+        self._meanRowDistances = 0
+
+        ### 'lazy' Parameters
+        self._ref = None
+        self._sub = None
+        self.lastRefTime = time.time()

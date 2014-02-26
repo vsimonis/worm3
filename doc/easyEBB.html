@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module easyEBB</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>easyEBB</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/val/aWorm/easyEBB.py">/home/val/aWorm/easyEBB.py</a></font></td></tr></table>
+    <p><tt>Class&nbsp;containing&nbsp;methods&nbsp;to&nbsp;open,&nbsp;close&nbsp;and&nbsp;test&nbsp;serial&nbsp;connection<br>
+to&nbsp;EiBotBoard&nbsp;as&nbsp;well&nbsp;as&nbsp;methods&nbsp;to&nbsp;send&nbsp;commands&nbsp;to&nbsp;the&nbsp;motors</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="eggbot_scanlinux.html">eggbot_scanlinux</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="serial.html">serial</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="easyEBB.html#easyEBB">easyEBB</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="easyEBB">class <strong>easyEBB</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="easyEBB-__init__"><strong>__init__</strong></a>(self, resolution<font color="#909090">=(1080, 1080)</font>, sizeMM<font color="#909090">=(5, 5)</font>, stepMode<font color="#909090">=5</font>)</dt><dd><tt>Initializes&nbsp;an&nbsp;<a href="#easyEBB">easyEBB</a>&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-centerWorm"><strong>centerWorm</strong></a>(self, duration, colWormPix, rowWormPix)</dt><dd><tt>Moves&nbsp;camera&nbsp;from&nbsp;current&nbsp;location&nbsp;to&nbsp;recenter&nbsp;the&nbsp;worm&nbsp;based<br>
+on&nbsp;the&nbsp;worm's&nbsp;column&nbsp;(x)&nbsp;and&nbsp;row&nbsp;(y)&nbsp;position&nbsp;in&nbsp;the&nbsp;image<br>
+given&nbsp;in&nbsp;pixels</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-closeSerial"><strong>closeSerial</strong></a>(self)</dt><dd><tt>Closes&nbsp;the&nbsp;serial&nbsp;connection&nbsp;to&nbsp;the&nbsp;EiBotBoard</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-disableMotors"><strong>disableMotors</strong></a>(self)</dt><dd><tt>Disables&nbsp;both&nbsp;motors&nbsp;on&nbsp;EiBotBoard</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-doCommand"><strong>doCommand</strong></a>(self, cmd)</dt><dd><tt>Sends&nbsp;a&nbsp;string&nbsp;command&nbsp;to&nbsp;EiBotBoard</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-enableMotors"><strong>enableMotors</strong></a>(self)</dt><dd><tt>Disables&nbsp;both&nbsp;motors&nbsp;on&nbsp;EiBotBoard</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-getSerialPort"><strong>getSerialPort</strong></a>(self)</dt><dd><tt>Returns&nbsp;details&nbsp;of&nbsp;the&nbsp;serial&nbsp;connection</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-move"><strong>move</strong></a>(self, duration, xstep, ystep)</dt><dd><tt>Sends&nbsp;SM&nbsp;(move!)&nbsp;command&nbsp;to&nbsp;motor&nbsp;control&nbsp;board<br>
+&nbsp;<br>
+arguments<br>
+duration&nbsp;--&nbsp;time&nbsp;to&nbsp;complete&nbsp;movement&nbsp;(in&nbsp;ms)<br>
+xstep&nbsp;--&nbsp;step&nbsp;instructions&nbsp;x&nbsp;(col)<br>
+ystep&nbsp;--&nbsp;step&nbsp;instructions&nbsp;y&nbsp;(row)</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-openSerial"><strong>openSerial</strong></a>(self)</dt><dd><tt>Opens&nbsp;a&nbsp;serial&nbsp;connection&nbsp;to&nbsp;the&nbsp;EiBotBoard</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-pixUmStepConversions"><strong>pixUmStepConversions</strong></a>(self)</dt><dd><tt>Uses&nbsp;resolution&nbsp;and&nbsp;size&nbsp;in&nbsp;mm&nbsp;to&nbsp;convert&nbsp;pixel&nbsp;measurements&nbsp;<br>
+to&nbsp;steps&nbsp;(unit&nbsp;of&nbsp;servos)</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-testSerialPort"><strong>testSerialPort</strong></a>(self, strComPort)</dt><dd><tt>Return&nbsp;a&nbsp;serial&nbsp;connection&nbsp;to&nbsp;the&nbsp;EiBotBoard<br>
+Note:&nbsp;Need&nbsp;to&nbsp;close&nbsp;serial&nbsp;connection</tt></dd></dl>
+
+<dl><dt><a name="easyEBB-wormPixToStep"><strong>wormPixToStep</strong></a>(self, colWormPix, rowWormPix)</dt><dd><tt>For&nbsp;checking&nbsp;validity&nbsp;of&nbsp;step&nbsp;instructions&nbsp;without<br>
+sending&nbsp;move&nbsp;command.&nbsp;<br>
+Equivalent&nbsp;to&nbsp;center&nbsp;worm</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>UMSTEP</strong> = 200<br>
+<strong>logger</strong> = &lt;logging.Logger object&gt;</td></tr></table>
+</body></html>
