@@ -31,7 +31,7 @@ class WormFinder ( object ):
                 self.__setattr__(k, kwargs[k])
 
         self.start = time.time()
-        self.delay = 2
+        self.delay = 2.5
                 
         self.setupCropping()
         self.setupFindingStructures()
@@ -135,10 +135,10 @@ class WormFinder ( object ):
 
             logger.debug('means col %d\t\trow %d' % (
                     self._meanColDistances, self._meanRowDistances))
-            #logger.info('runtime: %0.3f' % (time.time() - t) )
+            logger.info('%0.4f s\tFind Worm Cropped Demo' % (time.time() - t) )
         else:
             return
-
+    
 
     #@property
     def hasReference ( self ):
@@ -200,7 +200,7 @@ class WormFinder ( object ):
 
             self._meanColDistances = int(np.mean(self._colDistances))
             self._meanRowDistances = int(np.mean(self._rowDistances))
-        logger.info('runtime: %0.3f' % (time.time() - t) )
+        logger.info('%0.3f s\tFind worm lazy' % (time.time() - t) )
 
 
     def findWormLazyCropped ( self ):
@@ -250,7 +250,7 @@ class WormFinder ( object ):
 
             self._meanColDistances = int(np.mean(self._colDistances))
             self._meanRowDistances = int(np.mean(self._rowDistances))
-            logger.debug('runtime: %0.3f' % (time.time() - t) )
+            logger.info('%0.4f s\tfind worm Lazy Cropped runtime' % (time.time() - t) )
         else:
             return
 
@@ -307,7 +307,7 @@ class WormFinder ( object ):
             'pca'  : self.findWormPCA, 
             'box'  : self.findWormBox
             }
-
+        t = time.time()
         if self.method == 'lazy' or self.method == 'lazyc'or self.method == 'lazyd':
             #logger.debug('Confirm lazy')
             if not self.hasReference(): #is this OK???
@@ -322,13 +322,15 @@ class WormFinder ( object ):
                     options[self.method]()
                 except KeyError:
                     self.findWormLazy() #default
+        logger.info('%0.4f s\tTotal: process frame' %( time.time() - t))
         return self._sub ## gets displayed in the window
-
+    
 
 
 
 
     def decideMove ( self ):
+        t = time.time()
         if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
             if time.time() - self.lastRefTime >= self.REFPING:
                 self.resetRef()
@@ -360,7 +362,7 @@ class WormFinder ( object ):
                     self.resetRef()
                     self._colWorm = -1
                     self._rowWorm = -1
-
+                logger.info('decide move runtime: %0.3f' % (time.time() - t ))
 
 
 

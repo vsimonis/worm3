@@ -20,7 +20,7 @@ class Tracker ( object ):
         self._sampleFreq = 0.1 #in sec
         
         ### Set Camera params
-        self.resolution = (1280, 960 )
+        self.resolution = (1080, 1080 )
 
         source = {
             0:0, 
@@ -52,7 +52,7 @@ class Tracker ( object ):
             self._windowManager, 
             self.mirroredPreview, self.resolution)
 
-#        actualCols, actualRows = self._captureManager.getResolution()
+        actualCols, actualRows = self._captureManager.getResolution()
         ## from here on out use this resolution 
         
         ### Arguments for finder
@@ -63,13 +63,13 @@ class Tracker ( object ):
             'window' : 3,
             'boundBoxRow' : 500,
             'boundBoxCol' : 500,
-            'limRow' : 200,
-            'limCol' : 200,
+            'limRow' : 100,
+            'limCol' : 100,
             'MAXONEFRAME': 500,
             'REFPING' : 120,
             'MAXREF': 1000,
-            'capCols': 640,
-            'capRows': 480,
+            'capCols':actualCols,
+            'capRows': actualRows,
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
