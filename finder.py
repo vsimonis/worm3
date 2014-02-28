@@ -378,11 +378,11 @@ class WormFinder ( object ):
         green = [0, 255, 0]
         red = [0, 0, 255]
         blue = [255, 0, 0]
-       # utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
-       # utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
-        #utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), green)
-        utils.drawPoint(img, 200, 300, green)
-        utils.drawPoint(img, 320, 240, red)
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
+        utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
+        utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), green)
+        #utils.drawPoint(img, 200, 300, green)
+       # utils.drawPoint(img, 320, 240, red)
        
     def drawDebuggingPointCropped( self, img ):
         #BRG
