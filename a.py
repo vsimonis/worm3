@@ -20,7 +20,7 @@ class Tracker ( object ):
         self._sampleFreq = 0.1 #in sec
         
         ### Set Camera params
-        self.resolution = (1080, 1080 )
+        self.resolution = (640, 480 )
 
         source = {
             0:0, 
@@ -61,12 +61,12 @@ class Tracker ( object ):
             'gsize' :  45,
             'gsig' : 9,
             'window' : 3,
-            'boundBoxRow' : 500,
-            'boundBoxCol' : 500,
-            'limRow' : 100,
-            'limCol' : 100,
+            'boundBoxRow' : 100,
+            'boundBoxCol' : 100,
+            'limRow' : 60,
+            'limCol' : 60,
             'MAXONEFRAME': 500,
-            'REFPING' : 120,
+            'REFPING' : 600000,
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
@@ -120,7 +120,8 @@ class Tracker ( object ):
                     self._wormFinder.drawDebuggingPointCropped( frame )         
                 if self.finderArgs['method'] == 'lazyd':
                     self._wormFinder.drawDebuggingPointCroppedDemo( frame )
-
+                if self.finderArgs['method'] == 'test': 
+                    self._wormFinder.drawDebug( frame )
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
 
@@ -149,12 +150,12 @@ class Tracker ( object ):
 
         elif keycode == 27: #escape
             self._windowManager.destroyWindow()
-            if not self.isDebug:
-                try:
-                    self._wormFinder.servos.disableMotors()
-                    self._wormFinder.servos.closeSerial()
-                except Exception as e:
-                    logt.exception(str(e))
+            #if not self.isDebug:
+            try:
+                self._wormFinder.servos.disableMotors()
+                self._wormFinder.servos.closeSerial()
+            except Exception as e:
+                logt.exception(str(e))
 def main():
 
     LOGGING_LEVELS = {'critical': logging.CRITICAL,
