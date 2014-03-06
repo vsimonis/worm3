@@ -37,7 +37,7 @@ class CaptureManager( object ):
         self._fpsEstimate = None
         #logc.debug('done initializing capture')
         
-       # self.setResolution()
+        #self.setResolution()
 #        self.setExposure( 1 )
 #        self.getExposure()
 
@@ -161,7 +161,7 @@ class CaptureManager( object ):
     def _writeVideoFrame( self ):
         if not self.isWritingVideo:
             return
-
+        
         if self._videoWriter is None:
             fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
             if fps <= 0.0:
@@ -177,8 +177,9 @@ class CaptureManager( object ):
             logc.warning('size used: %d x %d' % (size[0], size[1]) )
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
-                                                 self._videoEncoding, fps, size )
-            self._videoWriter.write(self._frame)
+                                                 self._videoEncoding, fps, size, False )
+        self._videoWriter.write(self._frame)
+        print 'Write this frame'
 
     def isDebug ( self ):
         return logc.getEffectiveLevel() <= logging.INFO

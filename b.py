@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 import utils
 import time
-#import cv
+
 
 logt = logging.getLogger('')
 
@@ -20,7 +20,7 @@ class Tracker ( object ):
         self._sampleFreq = 0.1 #in sec
         
         ### Set Camera params
-        self.resolution = (640, 480 )
+        self.resolution = (1920,960 )#(640, 480 )
 
         source = {
             0:0, 
@@ -144,7 +144,7 @@ class Tracker ( object ):
         elif keycode == 9: #tab
             if not self._captureManager.isWritingVideo:
                 self._captureManager.startWritingVideo(
-                    'worm%s.avi' % time.ctime(time.time()) , 
+                    'worm%s.avi' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time())),
                     cv2.cv.CV_FOURCC('M','J','P','G'))
             else:
                 self._captureManager.stopWritingVideo()

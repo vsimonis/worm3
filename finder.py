@@ -8,6 +8,19 @@ from easyEBB import easyEBB
 import cv2
 import logging
 
+
+# COLORS
+
+#BRG
+BLUE = [255, 0, 0]
+GREEN = [0, 255, 0]
+RED = [0, 0, 255]
+
+#gray scale
+WHITE = 255
+BLACK = 0
+       
+
 logger = logging.getLogger('finder')
 
 class WormFinder ( object ):
@@ -41,7 +54,7 @@ class WormFinder ( object ):
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
-        if not self.isDebug():
+        if not self.isDebug() and self.method != 'test' :
             self.servos = easyEBB()#(self.capCols, self.capRows), (5,5), 5)
 
     """ 
@@ -150,83 +163,6 @@ class WormFinder ( object ):
             self._meanRowDistances = int(np.mean(self._rowDistances))
 #        logger.info('%0.3f s\tFind worm lazy' % (time.time() - t) )
 
-    """
-    DEBUGGING
-    """
-
-    '''
-    Debugging Points
-    '''
-
-    def drawDebuggingPoint( self, img ):
-
-        #BRG
-        green = [0, 255, 0]
-        red = [0, 0, 255]
-        blue = [255, 0, 0]
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
-        utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
-        utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), green)
-        #utils.drawPoint(img, 200, 300, green)
-       # utils.drawPoint(img, 320, 240, red)
-       
-    def drawDebuggingPointCropped( self, img ):
-        #BRG
-        green = [0, 255, 0]
-        red = [0, 0, 255]
-        blue = [255, 0, 0]
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
-        #logger.debug('drawing: col %d\trow:%d' % ( self._colRefCenter, self._rowRefCenter) )
-        utils.drawPoint(img, 
-                        int(self._colRefCenter), 
-                        int(self._rowRefCenter), 
-                        blue)
-        utils.drawPoint(img, 
-                        int(self._colRefCenter - self._meanColDistances),
-                        int( self._rowRefCenter - self._meanRowDistances), 
-                        green)
-        utils.drawRect(img, 
-                       (int(self.cmin), int(self.rmin)), 
-                       (int(self.cmax),int( self.rmax)), 
-                       green)
-        utils.drawRect(img, 
-                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
-                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                        red)
-
-    def drawDebuggingPointCroppedDemo( self, img ):
-        #BRG
-        green = [0, 255, 0]
-        red = [0, 0, 255]
-        blue = [255, 0, 0]
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), red)
-        utils.drawPoint(img, int(self._colRef), int(self._rowRef), blue)
-        utils.drawRect(img, (int(self.cmin), int(self.rmin)), 
-                       (int(self.cmax),int( self.rmax)), green)
-
-
-
-    def drawDebuggingPointGS( self, img ):
-        #BRG       
-        utils.drawPoint(img, self._colWorm, self._rowWorm, 255)
-        utils.drawPoint(img, self._colRef, self._rowRef, 0)
-        utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, 255)
-
-    '''
-    Debugging Methods
-    '''
-            
-    def isDebug( self ):
-        return logger.getEffectiveLevel() <= logging.DEBUG
-
-
-    def drawDebug( self, img ):
-        #BRG
-        green = [0, 255, 0]
-        red = [0, 0, 255]
-        blue = [255, 0, 0]
-        utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), green)
-        utils.drawPoint(img, 200, 300, red)
 
 
  
@@ -310,7 +246,88 @@ class WormFinder ( object ):
            # logger.info('%0.4f s\tFind Worm Cropped Demo' % (time.time() - t) )
         else:
             return
+
+    """
+    DEBUGGING
+    """
+
+    '''
+    Debugging Points
+    '''
+
+    def drawDebuggingPoint( self, img ):
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
+        utils.drawPoint(img, int(self._colRef), int(self._rowRef), BLUE)
+        utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), GREEN)
+        #utils.drawPoint(img, 200, 300, green)
+       # utils.drawPoint(img, 320, 240, red)
     
+    def drawDebuggingPointCroppedBW( self, img ):
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), BLACK)
+        #utils.drawPoint(img, 
+        #                int(self._colRefCenter), 
+        #                int(self._rowRefCenter), 
+        #                blue)
+        utils.drawPoint(img, 
+                        int(self._colRefCenter - self._meanColDistances),
+                        int( self._rowRefCenter - self._meanRowDistances), 
+                        WHITE)
+        utils.drawRect(img, 
+                       (int(self.cmin), int(self.rmin)), 
+                       (int(self.cmax),int( self.rmax)), 
+                       BLACK)
+        utils.drawRect(img, 
+                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
+                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
+                        WHITE)
+
+
+
+    def drawDebuggingPointCropped( self, img ):
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
+        utils.drawPoint(img, 
+                        int(self._colRefCenter), 
+                        int(self._rowRefCenter), 
+                        blue)
+        utils.drawPoint(img, 
+                        int(self._colRefCenter - self._meanColDistances),
+                        int( self._rowRefCenter - self._meanRowDistances), 
+                        green)
+        utils.drawRect(img, 
+                       (int(self.cmin), int(self.rmin)), 
+                       (int(self.cmax),int( self.rmax)), 
+                       green)
+        utils.drawRect(img, 
+                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
+                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
+                        red)
+
+    def drawDebuggingPointCroppedDemo( self, img ):
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
+        utils.drawPoint(img, int(self._colRef), int(self._rowRef), BLUE)
+        utils.drawRect(img, (int(self.cmin), int(self.rmin)), 
+                       (int(self.cmax),int( self.rmax)), GREEN)
+
+
+
+    def drawDebuggingPointGS( self, img ):
+        utils.drawPoint(img, self._colWorm, self._rowWorm, WHITE)
+        utils.drawPoint(img, self._colRef, self._rowRef, BLACK)
+        utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, WHITE)
+
+    '''
+    Debugging Methods
+    '''
+            
+    def isDebug( self ):
+        return logger.getEffectiveLevel() <= logging.DEBUG
+
+
+    def drawDebug( self, img ):
+        #BRG
+        utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLACK)
+        utils.drawPoint(img, 200, 300, WHITE)
+   
 
     #@property
     def hasReference ( self ):
@@ -395,19 +412,19 @@ class WormFinder ( object ):
         t = time.time()
 
         if self.method == 'test' :
-            self._img = self.rgb2grayV( img )
+            self._img = img #self.rgb2grayV( img )
             self._sub = self._img
 
         if self.method == 'lazy' or self.method == 'lazyc'or self.method == 'lazyd':
             #logger.debug('Confirm lazy')
             if not self.hasReference(): #is this OK???
                 #logger.debug('Retrieve New Reference')
-                self._ref = self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
+                self._ref = img # self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
                 self._sub = np.zeros(self._ref.shape) ##For display
                 self.lastRefTime = time.time()
 
             else:
-                self._img = self.rgb2grayV( img )           
+                self._img = img # self.rgb2grayV( img )           
                 try:
                     options[self.method]()
                 except KeyError:
