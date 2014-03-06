@@ -20,7 +20,7 @@ class Tracker ( object ):
         self._sampleFreq = 0.1 #in sec
         
         ### Set Camera params
-        self.resolution = (1920,960 )#(640, 480 )
+        self.resolution = (640, 480 )
 
         source = {
             0:0, 
@@ -61,8 +61,8 @@ class Tracker ( object ):
             'gsize' :  45,
             'gsig' : 9,
             'window' : 3,
-            'boundBoxRow' : 100,
-            'boundBoxCol' : 100,
+            'boundBoxRow' : 150,
+            'boundBoxCol' : 150,
             'limRow' : 60,
             'limCol' : 60,
             'MAXONEFRAME': 500,
@@ -85,7 +85,9 @@ class Tracker ( object ):
             self._bugWindowManager.createWindow()
 
         while self._windowManager.isWindowCreated:    
+            
             self._captureManager.enterFrame()
+            t1 = time.time()
             frame = self._captureManager.frame
 
             if time.time() - self._lastCheck >= self._sampleFreq:
@@ -125,7 +127,7 @@ class Tracker ( object ):
                     self._wormFinder.drawDebug( frame )
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
-
+            logt.info('frame processing took: %0.6f' % (time.time() - t1))
     @property
     def isDebug( self ):
         return logt.getEffectiveLevel() <= logging.INFO

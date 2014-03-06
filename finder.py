@@ -98,7 +98,7 @@ class WormFinder ( object ):
            # logger.debug('Blur time: %0.4f' % (time.time() - t1) )
 
             
-            r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
+            r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
 
             self._colWorm, self._rowWorm = c[0], r[0]
             self._rowWorm += self.rmin
@@ -211,7 +211,7 @@ class WormFinder ( object ):
             self._sub  = cv2.GaussianBlur( self._sub, 
                                            (self.gsize, self.gsize) , self.gsig )
 
-            r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
+            r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
 
             self._colWorm, self._rowWorm = c[0], r[0]
             self._rowWorm += self.rmin
@@ -268,10 +268,10 @@ class WormFinder ( object ):
         #                int(self._colRefCenter), 
         #                int(self._rowRefCenter), 
         #                blue)
-        utils.drawPoint(img, 
-                        int(self._colRefCenter - self._meanColDistances),
-                        int( self._rowRefCenter - self._meanRowDistances), 
-                        WHITE)
+        #utils.drawPoint(img, 
+        #                int(self._colRefCenter - self._meanColDistances),
+        #                int( self._rowRefCenter - self._meanRowDistances), 
+        #                WHITE)
         utils.drawRect(img, 
                        (int(self.cmin), int(self.rmin)), 
                        (int(self.cmax),int( self.rmax)), 
@@ -279,7 +279,7 @@ class WormFinder ( object ):
         utils.drawRect(img, 
                        (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
                        (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                        WHITE)
+                       BLACK)
 
 
 
