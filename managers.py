@@ -149,13 +149,13 @@ class CaptureManager( object ):
     def startWritingVideo( self, filename, encoding ):
         self._videoFilename = filename
         self._videoEncoding = encoding
-        logc.info( 'Start Writing Video: %s' % filename )
+        logc.warning( 'Start Writing Video: %s' % filename )
 
     def stopWritingVideo ( self ):
         self._videoFilename = None
         self._videoEncoding = None
         self._videoWriter = None
-        logc.info( 'Stop Writing Video' )
+        logc.warning( 'Stop Writing Video' )
         
 
     def _writeVideoFrame( self ):
@@ -177,9 +177,9 @@ class CaptureManager( object ):
             logc.warning('size used: %d x %d' % (size[0], size[1]) )
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
-                                                 self._videoEncoding, fps, size, False )
+                                                 self._videoEncoding, fps, size, True )
         self._videoWriter.write(self._frame)
-        print 'Write this frame'
+        #print 'Write this frame'
 
     def isDebug ( self ):
         return logc.getEffectiveLevel() <= logging.INFO

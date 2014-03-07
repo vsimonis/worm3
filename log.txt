@@ -3575,3 +3575,54 @@ AttributeError: 'module' object has no attribute 'cv'
 2014-02-26 15:30:38	INFO	finder		runtime: 0.064
 2014-02-26 15:30:38	DEBUG	finder		Worm: col:639		row:286
 2014-02-26 15:30:38	INFO	finder		runtime: 0.059
+2014-03-07 12:47:34	DEBUG	scan		Starting find EBB
+2014-03-07 12:47:34	DEBUG	scan		checking endpoint: /sys/bus/usb/devices/2-1.2.2.2/2-1.2.2.2:1.0/tty
+2014-03-07 12:47:34	DEBUG	scan		Checking ttyname: ttyACM0
+2014-03-07 12:47:42	WARNING	capture		Start Writing Video: worm2014_03_07-12-47-42.avi
+2014-03-07 12:47:42	WARNING	capture		fps estimate used: 15
+2014-03-07 12:47:42	WARNING	capture		size used: 640 x 480
+2014-03-07 12:47:54	WARNING	finder		MOVE!!!
+2014-03-07 12:47:54	WARNING	eggbot		Centering Worm
+2014-03-07 12:47:55	WARNING	finder		you just moved, try again later
+2014-03-07 12:47:58	WARNING	finder		MOVE!!!
+2014-03-07 12:47:58	WARNING	eggbot		Centering Worm
+2014-03-07 12:47:59	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:02	WARNING	finder		MOVE!!!
+2014-03-07 12:48:02	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:03	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:06	WARNING	finder		MOVE!!!
+2014-03-07 12:48:06	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:07	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:10	WARNING	finder		MOVE!!!
+2014-03-07 12:48:10	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:11	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:14	WARNING	finder		MOVE!!!
+2014-03-07 12:48:14	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:16	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:19	WARNING	finder		MOVE!!!
+2014-03-07 12:48:19	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:20	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:23	WARNING	finder		MOVE!!!
+2014-03-07 12:48:23	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:24	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:28	WARNING	finder		MOVE!!!
+2014-03-07 12:48:28	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:29	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:32	WARNING	finder		MOVE!!!
+2014-03-07 12:48:32	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:33	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:35	WARNING	capture		Stop Writing Video
+2014-03-07 12:48:36	WARNING	finder		MOVE!!!
+2014-03-07 12:48:36	WARNING	eggbot		Centering Worm
+2014-03-07 12:48:37	WARNING	finder		you just moved, try again later
+2014-03-07 12:48:38	WARNING	capture		Start Writing Video: worm2014_03_07-12-48-38.avi
+2014-03-07 12:48:38	WARNING	capture		fps estimate used: 12
+2014-03-07 12:48:38	WARNING	capture		size used: 640 x 480
+2014-03-07 12:48:40	WARNING	capture		Stop Writing Video
+2014-03-07 12:48:40	WARNING	finder		MOVE!!!
+2014-03-07 12:48:40	WARNING	eggbot		Centering Worm
+2014-03-07 12:49:16	ERROR	root		'WormFinder' object has no attribute 'servos'
+Traceback (most recent call last):
+  File "b.py", line 166, in onKeypress
+    self._wormFinder.servos.disableMotors()
+AttributeError: 'WormFinder' object has no attribute 'servos'

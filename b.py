@@ -135,7 +135,7 @@ class Tracker ( object ):
                         self._wormFinder.drawDebugBW( frame )
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
-            logt.info('frame processing took: %0.6f' % (time.time() - t1))
+            #logt.info('frame processing took: %0.6f' % (time.time() - t1))
     @property
     def isDebug( self ):
         return logt.getEffectiveLevel() <= logging.INFO
