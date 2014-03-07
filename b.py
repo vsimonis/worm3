@@ -29,7 +29,7 @@ class Tracker ( object ):
             3:'screencast.avi', 
             4:'screencast 1.avi'
             }
-        
+        self.color = True
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -70,6 +70,7 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
+            'color' : True
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
@@ -98,11 +99,11 @@ class Tracker ( object ):
                     self._wormFinder.decideMove()                
                     self._lastCheck = time.time()
                     
-                    if self.isDebug:
-                        #subN = np.zeros(self.localSub.shape)
-                        #cv2.normalize(self.localSub, 
-                                      #subN, 0, 255, cv2.NORM_MINMAX)            
-                       # self.localSub = subN.astype(np.uint8) #uint8
+                    if self.isDebug and self.color:
+                        subN = np.zeros(self.localSub.shape)
+                        cv2.normalize(self.localSub, 
+                                      subN, 0, 255, cv2.NORM_MINMAX)            
+                        self.localSub = subN.astype(np.uint8) #uint8
                         self._bugWindowManager.show(self.localSub)
                 
                 ###### FULL ######
@@ -119,12 +120,19 @@ class Tracker ( object ):
                 if self.finderArgs['method'] == 'lazy':
                     self._wormFinder.drawDebuggingPoint( frame )                
                 if self.finderArgs['method'] == 'lazyc':
-                    self._wormFinder.drawDebuggingPointCroppedBW( frame )         
+                    if not self.color:
+                        self._wormFinder.drawDebuggingPointCroppedBW( frame )       
+                    else:
+                        self._wormFinder.drawDebuggingPointCropped( frame )       
+
                     #self._wormFinder.drawDebuggingPointCropped( frame )         #color camera
                 if self.finderArgs['method'] == 'lazyd':
                     self._wormFinder.drawDebuggingPointCroppedDemo( frame )
-                if self.finderArgs['method'] == 'test': 
-                    self._wormFinder.drawDebug( frame )
+                if self.finderArgs['method'] == 'test' or self.finderArgs['method'] == 'conf': 
+                    if self.color:
+                        self._wormFinder.drawDebug( frame )
+                    else:
+                        self._wormFinder.drawDebugBW( frame )
             self._captureManager.exitFrame()
             self._windowManager.processEvents()
             logt.info('frame processing took: %0.6f' % (time.time() - t1))

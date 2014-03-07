@@ -40,7 +40,7 @@ class WormFinder ( object ):
                      'boundBoxRow', 'boundBoxCol',
                      'limRow', 'limCol',
                      'MAXONEFRAME', 'REFPING', 'MAXREF', 
-                     'capRows','capCols' ]:
+                     'capRows','capCols', 'color']:
                 self.__setattr__(k, kwargs[k])
 
         self.start = time.time()
@@ -323,12 +323,16 @@ class WormFinder ( object ):
         return logger.getEffectiveLevel() <= logging.DEBUG
 
 
-    def drawDebug( self, img ):
+    def drawDebugBW( self, img ):
         #BRG
         utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLACK)
         utils.drawPoint(img, 200, 300, WHITE)
    
-
+    def drawDebug( self, img ):
+        #BRG
+        utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLUE)
+        utils.drawPoint(img, 200, 300, RED)
+   
     #@property
     def hasReference ( self ):
         return self._ref is not None
@@ -402,6 +406,7 @@ class WormFinder ( object ):
         #logger.debug('enter process frame')
         options = {
             'test' : self.wormTest,
+            'conf' : self.wormTest,
             'lazy' : self.findWormLazy,
             'lazyc': self.findWormLazyCropped,
             'lazyd': self.findWormLazyCroppedDemo,
@@ -411,20 +416,29 @@ class WormFinder ( object ):
             }
         t = time.time()
 
-        if self.method == 'test' :
-            self._img = img #self.rgb2grayV( img )
+        if self.method == 'test' or self.method == 'conf':
+            if self.color:
+                self._img = self.rgb2grayV( img )
+            else:
+                self._img = img #self.rgb2grayV( img )
             self._sub = self._img
 
         if self.method == 'lazy' or self.method == 'lazyc'or self.method == 'lazyd':
             #logger.debug('Confirm lazy')
             if not self.hasReference(): #is this OK???
                 #logger.debug('Retrieve New Reference')
-                self._ref = img # self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
+                if self.color:
+                    self._ref = self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
+                else:
+                    self._ref = img
                 self._sub = np.zeros(self._ref.shape) ##For display
                 self.lastRefTime = time.time()
 
             else:
-                self._img = img # self.rgb2grayV( img )           
+                if self.color:
+                    self._img = self.rgb2grayV( img )           
+                else:
+                    self._img = img # self.rgb2grayV( img )           
                 try:
                     options[self.method]()
                 except KeyError:
