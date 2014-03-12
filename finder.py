@@ -67,7 +67,7 @@ class WormFinder ( object ):
 
         if not self.isDebug() and self.method != 'test' :
             self.servos = easyEBB()#(self.capCols, self.capRows), (5,5), 5)
-
+            time.sleep(2)
     """ 
     FIND WORMS
     """
@@ -140,9 +140,12 @@ class WormFinder ( object ):
                                            (self.gsize, self.gsize) , self.gsig )
            # logger.debug('Blur time: %0.4f' % (time.time() - t1) )
 
-            
-            r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
+            if not self.color:
+                r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
 
+            else:
+                r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
+                
             self._colWorm, self._rowWorm = c[0], r[0]
             self._rowWorm += self.rmin
             self._colWorm += self.cmin
@@ -498,7 +501,7 @@ class WormFinder ( object ):
             return
 
         if time.time() - self.breakStart <= self.breakT:
-            logger.warning("you're still on break")
+           # logger.warning("you're still on break")
             return
 
         if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
