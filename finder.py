@@ -19,11 +19,17 @@ RED = [0, 0, 255]
 #gray scale
 WHITE = 255
 BLACK = 0
-       
+
+nHess = 300       
+nFeat = 0
+mserMin = 40
+mserMax = 600
+mserDelta = 6
 
 logger = logging.getLogger('finder')
 
 class WormFinder ( object ):
+    
     '''
     arguments given:
     - method
@@ -44,13 +50,18 @@ class WormFinder ( object ):
                 self.__setattr__(k, kwargs[k])
 
         self.start = time.time()
-        self.delay = 20
+        self.delay = 4
         self.breakT = 3
         self.breakStart = time.time()
         self.justMoved = False
         self.setupCropping()
         self.setupFindingStructures()
-        
+
+        self.surf = None
+        self.sift = None
+        self.mser = None
+        self.mserFD = None
+
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
@@ -60,6 +71,33 @@ class WormFinder ( object ):
     """ 
     FIND WORMS
     """
+    def surfImp (self):
+        if self.surf is None:
+            self.surf = cv2.SURF(nHess)
+        keypts = self.surf.detect(self._img)
+        self._sub = cv2.drawKeypoints(self._img, keypts, None, BLUE ,4 )
+    
+    def siftImp(self):
+        if self.sift is None:
+            self.sift = cv2.SIFT() #nFeat
+        keypts = self.sift.detect(self._img, None)
+        self._sub = cv2.drawKeypoints(self._img, keypts, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)#, None, (255,0,0), 4)
+        
+
+    def mserImp(self):
+        vis = self._img.copy()
+        if self.mser is None:
+            self.mser = cv2.MSER(mserDelta, mserMin, mserMax)
+        #if self.mserFD is None:
+        #    self.mserFD = cv2.FeatureDetector_create('MSER')
+        #kpts = self.mserFD.detect(self._img)
+    
+        regions = self.mser.detect(self._img, None)
+        hulls = [cv2.convexHull(p.reshape(-1,1,2)) for p in regions]
+        cv2.polylines(vis, hulls, 1, GREEN)
+        self._sub = vis
+        #desc = DescriptorExtractor_create(
+
 
     def findWormLazyCropped ( self ):
         t = time.time()
@@ -68,7 +106,12 @@ class WormFinder ( object ):
 
             self._sub = self._img - self._ref
             
-#            if time.time() - self.start > self.delay:
+            self._sub = cv2.subtract(self._ref, self._img)
+#            self._sub = np.asarray(self._img[:,:]) - np.asarray(self._ref[:,:])
+#            out = np.zeros(self._sub.shape)
+#            out = cv2.normalize(self._sub, out, 0, 255, cv2.NORM_MINMAX)
+#            self._sub = out
+#            self._sub = cv2.absdiff(self._img, self._ref)
             lc, lr = self._sub.shape
             
             if self._colRefCenter - self.boundBoxCol/2 - self.extra > 0:
@@ -132,19 +175,20 @@ class WormFinder ( object ):
         t = time.time()
         if self.hasReference():
             self._sub = self._img - self._ref
-
+            self._sub = cv2.absdiff(self._img, self._ref)
+            self._sub = cv2.subtract(self._ref, self._img)
             #Gaussian blur
             self._sub  = cv2.GaussianBlur( self._sub, 
                                            (self.gsize, self.gsize) , self.gsig )
 
             #only process ref image first time 'round
             if not self.hasReferenceLocation: 
-                r, c = np.nonzero ( self._sub == np.max( self._sub ) )
+                r, c = np.nonzero ( self._sub == np.min( self._sub ) )
                 self._colRef, self._rowRef = c[0], r[0]
                 logger.debug( 'Reference: col:%d\t\trow:%d' % 
                           ( self._colRef , self._rowRef ))
             
-            r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
+            r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
             self._colWormPrev, self._rowWormPrev = self._colWorm, self._rowWorm
             self._colWorm, self._rowWorm = c[0], r[0]
             #self._colWorm = self.capCols - self._colWorm
@@ -172,7 +216,8 @@ class WormFinder ( object ):
         t = time.time()
         if self.hasReference():            
             self._sub = self._img - self._ref
-
+            self._sub = cv2.absdiff(self._img, self._ref)
+            self._sub = cv2.subtract(self._ref, self._img)
             #only process ref image first time 'round
             if not self.hasReferenceLocation: 
                 self._sub  = cv2.GaussianBlur( 
@@ -211,7 +256,7 @@ class WormFinder ( object ):
             self._sub  = cv2.GaussianBlur( self._sub, 
                                            (self.gsize, self.gsize) , self.gsig )
 
-            r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
+            r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
 
             self._colWorm, self._rowWorm = c[0], r[0]
             self._rowWorm += self.rmin
@@ -288,19 +333,19 @@ class WormFinder ( object ):
         utils.drawPoint(img, 
                         int(self._colRefCenter), 
                         int(self._rowRefCenter), 
-                        blue)
+                        BLUE)
         utils.drawPoint(img, 
                         int(self._colRefCenter - self._meanColDistances),
                         int( self._rowRefCenter - self._meanRowDistances), 
-                        green)
+                        GREEN)
         utils.drawRect(img, 
                        (int(self.cmin), int(self.rmin)), 
                        (int(self.cmax),int( self.rmax)), 
-                       green)
+                       GREEN)
         utils.drawRect(img, 
                        (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
                        (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                        red)
+                        RED)
 
     def drawDebuggingPointCroppedDemo( self, img ):
         utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
@@ -345,22 +390,9 @@ class WormFinder ( object ):
     def lenDistanceArray ( self ):
         return len(self._colDistances)
 
-    @staticmethod
-    def rgb2grayV ( imgIn ): #not sure self goes here
-        """
-        """
-        try:
-            imgIn = np.array(imgIn)#.astype(float)
-            imgOut = 1.0 / 3 * ( imgIn[:,:,0] + imgIn[:,:,1] + imgIn[:,:,2] )
-        except ValueError:
-            logging.exception('not a 3-D array')
-        except IndexError:
-            sys.exit(0)
-        
-        return imgOut
-
-
-
+    @property
+    def isColor (self ):
+        return self.color
 
     def findWormFull ( self ):
         t = time.time()
@@ -399,6 +431,7 @@ class WormFinder ( object ):
 
 
     def wormTest ( self ):
+        self._sub = self._img
         return
 
 
@@ -412,38 +445,43 @@ class WormFinder ( object ):
             'lazyd': self.findWormLazyCroppedDemo,
             'full' : self.findWormFull, #segmentation
             'pca'  : self.findWormPCA, 
-            'box'  : self.findWormBox
+            'box'  : self.findWormBox,
+            'surf' : self.surfImp, 
+            'sift' : self.siftImp,
+            'mser' : self.mserImp
             }
         t = time.time()
-
-        if self.method == 'test' or self.method == 'conf':
-            if self.color:
-                self._img = self.rgb2grayV( img )
-            else:
-                self._img = img #self.rgb2grayV( img )
-            self._sub = self._img
-
-        if self.method == 'lazy' or self.method == 'lazyc'or self.method == 'lazyd':
-            #logger.debug('Confirm lazy')
+        
+        ### LAZYS ###
+        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
             if not self.hasReference(): #is this OK???
-                #logger.debug('Retrieve New Reference')
-                if self.color:
-                    self._ref = self.rgb2grayV( img ) ###USE OPENCV RGB2GRAY
+                if self.isColor:
+                    self._ref = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
                 else:
                     self._ref = img
                 self._sub = np.zeros(self._ref.shape) ##For display
                 self.lastRefTime = time.time()
-
             else:
-                if self.color:
-                    self._img = self.rgb2grayV( img )           
+                if self.isColor:
+                    self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
                 else:
-                    self._img = img # self.rgb2grayV( img )           
+                    self._img = img
                 try:
                     options[self.method]()
                 except KeyError:
                     self.findWormLazy() #default
-        #logger.info('%0.4f s\tTotal: process frame' %( time.time() - t))
+
+        ### Non-lazies
+        else:
+            if self.isColor:
+                self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
+            else:
+                self._img = img
+            try:
+                options[self.method]()
+            except KeyError:
+                self.findWormLazy() #default
+
         return self._sub ## gets displayed in the window
     
 
