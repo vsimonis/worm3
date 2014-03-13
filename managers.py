@@ -31,7 +31,7 @@ class CaptureManager( object ):
         self._videoFilename = None
         self._videoEncoding = None
         self._videoWriter = None
-
+        self.gotFrame = True
         self._startTime = None
         self._framesElapsed = long(0)
         self._fpsEstimate = None
@@ -73,8 +73,14 @@ class CaptureManager( object ):
     def frame( self ): 
         if self._enteredFrame and self._frame is None:
             ###_, self._frame = self._capture.retrieve( channel = self.channel )
-            _, self._frame = self._capture.read()
+            self.gotFrame, self._frame = self._capture.retrieve()
+            h, w, d = self._frame.shape
+            print 'size: %d x %d x %d' % (h, w, d)
+            print 'frame retval?: %s' % str(self.gotFrame)
+
         return self._frame
+        #if not self._gotFrame:
+        #    return      
 
 
     @property
@@ -92,8 +98,7 @@ class CaptureManager( object ):
         #Check that previous frame is exited
         assert not self._enteredFrame, \
             'previous enterFrame() has no matching exitFrame()'
-
-
+        
         if self._capture is not None:
             self._enteredFrame = self._capture.grab()
 

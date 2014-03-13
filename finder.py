@@ -1,5 +1,6 @@
 import sys
 import numpy as np
+import pandas as pd
 import utils
 import time
 from imgProc import imgProc
@@ -61,6 +62,9 @@ class WormFinder ( object ):
         self.sift = None
         self.mser = None
         self.mserFD = None
+        
+        #self.Desc = None
+        self.Desc = None
 
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
@@ -71,18 +75,36 @@ class WormFinder ( object ):
     """ 
     FIND WORMS
     """
+    def writeOut( self, name ):
+        
+        labels = pd.io.parsers.read_csv('annotationH299.csv',header = 0)
+        print labels
+
+        arr = np.array( self.Desc)
+#        print arr.shape
+        data = pd.DataFrame(self.Desc)
+        
+        data.to_csv("%s.csv" % name, index=False, header = False)
+
     def surfImp (self):
         if self.surf is None:
             self.surf = cv2.SURF(nHess)
-        keypts = self.surf.detect(self._img)
+        keypts, desc  = self.surf.detectAndCompute(self._img, None)
+#        print desc
         self._sub = cv2.drawKeypoints(self._img, keypts, None, BLUE ,4 )
-    
+        if self.Desc is None:
+            self.Desc = np.array(desc)
+        #np.insert(self.Desc, len(self.Desc) + 1, desc, axis = 0)
+        else:
+            self.Desc = np.vstack([self.Desc, desc])
+ #       print self.Desc
+
     def siftImp(self):
         if self.sift is None:
             self.sift = cv2.SIFT() #nFeat
-        keypts = self.sift.detect(self._img, None)
+        keypts, desc = self.sift.detectAndCompute(self._img, None)
         self._sub = cv2.drawKeypoints(self._img, keypts, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)#, None, (255,0,0), 4)
-        
+        self.Desc.append(desc)
 
     def mserImp(self):
         vis = self._img.copy()
@@ -144,7 +166,7 @@ class WormFinder ( object ):
                 r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
 
             else:
-                r, c = np.nonzero ( self._sub == np.min( self._sub ) ) #worm location
+                r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
                 
             self._colWorm, self._rowWorm = c[0], r[0]
             self._rowWorm += self.rmin
@@ -181,12 +203,12 @@ class WormFinder ( object ):
             self._sub = cv2.absdiff(self._img, self._ref)
             self._sub = cv2.subtract(self._ref, self._img)
             #Gaussian blur
-            self._sub  = cv2.GaussianBlur( self._sub, 
-                                           (self.gsize, self.gsize) , self.gsig )
+            #self._sub  = cv2.GaussianBlur( self._sub, 
+            #                               (self.gsize, self.gsize) , self.gsig )
 
             #only process ref image first time 'round
             if not self.hasReferenceLocation: 
-                r, c = np.nonzero ( self._sub == np.min( self._sub ) )
+                r, c  = np.nonzero ( self._sub == np.min( self._sub ) )
                 self._colRef, self._rowRef = c[0], r[0]
                 logger.debug( 'Reference: col:%d\t\trow:%d' % 
                           ( self._colRef , self._rowRef ))
