@@ -31,7 +31,6 @@ def data_demo(cap, vid):
         dh, dw = desc.shape
 
         kpdata = []
-
         for k in kp:
             temp = (k.pt[0], k.pt[1], k.size, k.angle, k.response, k.octave, k.class_id)
             kpdata.append(temp)
@@ -47,7 +46,7 @@ def data_demo(cap, vid):
         else:
             data = np.vstack((data, desc))
         
-        drawn =  cv2.drawKeypoints(gray, kp)#, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        drawn =  cv2.drawKeypoints(gray, kp, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
         vid.write(drawn)
         cv2.imshow(window_nm, drawn)
         key = cv2.waitKey(30)
@@ -58,7 +57,7 @@ def data_demo(cap, vid):
     
     data = pd.DataFrame(data)
     #data['label'] = labels.Label    
-    data.to_csv('surf-h299-1.csv')
+    data.to_csv('surf-h299-next.csv')
     cap.release()
     vid.release()
     cv2.destroyAllWindows()

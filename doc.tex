@@ -1,0 +1,124 @@
+\documentclass[fullpage]{report}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+
+ \title{DPU WormTracker}
+ \author{Valerie Simonis}
+% \maketitle
+
+
+% \tableofcontents
+% \chapter{Problem Description}
+
+\chapter{Installation}
+\section{GitHub}
+\subsection{Setup}
+\begin{tabbing}
+\verb|sudo apt-get install git|~~~~~~~~~~~~~~~~~~~~~~~~~~\=Install git \\
+\verb|git init|\>Setup as git capable repository \\
+\verb|git config --global user.name "name"|\>Configure machine to have an author\\
+\verb|git config --global user.email "email"|\>Configure machine to have an author\verb|git remote -v|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\=List local remotes \\
+\end{tabbing}
+
+
+\section{Emacs Shortcuts}
+\subsection{Motion}
+\begin{tabbing}
+line:~~~~~~~~~\=\verb|C-a|~~~~~~\=\verb|C-e|~~~~~~\=(beginning/end)\\
+character:\>\verb|C-f|\>\verb|C-b|\>(forward/backward)\\
+word:\>\verb|ESC-f|\>\verb|ESC-b|\>(forward/backward)\\
+\end{tabbing} 
+
+
+\chapter{Current System}
+% \section{Hardware}
+
+
+\section{Software}
+\subsection{Techniques}
+These are some of the general techniques that are being used in the structure/implementation of the \verb|WormTracker|
+\begin{enumerate}
+\item Logging
+\item Passing execution parameters through the command line
+\item Qt (User Interface)
+\item GitHub for versioning and code distribution. Current branch being used is iss20
+\end{enumerate}
+\subsection{Classes/Files}
+\begin{itemize}
+\item \verb|install-opencv-2_4_8.sh|: shell script to have identical OpenCV installations across machines
+\item \verb|tracker.py|: the master class executed for functionality of tracker. Defines \verb|Tracker| class. Initializes Qt Windows, passes arguments to the \verb|finder|.
+\item \verb|easyEBB.py|: management class for the EiBotBoard (motor control board)
+\item \verb|eggbot_scanlinux.py|: class used to search USB devices connected for the EiBotBoard. Modified from Inkscape Python extension for EiBotBoard.
+\item \verb|finder.py|: class containing all of the methods used to locate the worm in an image and make decisions about whether or not it needs to move. 
+\item \verb|managers.py|: management class for the Qt display and recording
+\item \verb|imgProc.py|: depreciated
+
+
+\end{itemize}
+
+\subsection{Command line arguments}
+NOTE: some of the execution methods and logging levels have certain UI behaviors attached to them. \\
+\noindent
+Sample execution of the tracker program is as follows: \vspace{5 mm}
+\verb|sudo python tracker.py -m lazyc -l warning -s 0|\\
+\vspace{5mm}\noindent
+NOTE: \verb|sudo| needed to be able to interact with the stepper motors
+
+\subsubsection{Source (-s)}
+These are numbered as follows:
+\begin{enumerate}
+\setcounter{enumi}{-1}
+\item Camera source 0 (webcam on laptop or USB camera on Intel NUC)
+\item Camera source 1 (USB camera on laptop)
+\item \verb|led_move1.avi|
+\item \verb|screencast.avi|
+\item \verb|shortNoBox.avi|
+\item \verb|longNoBox.avi|
+\item \verb|H299.avi|
+\end{enumerate}
+\noindent
+A sources 2-7 are useful to test execution of tracker without using live worms. An improvement in the tracker from a previous version can be obvious when running it on 
+
+\subsubsection{Execution Methods (-m)}
+These are 4-5 letter specifications (command line \verb|-m| flag) specifying certain elements of operation of the  \vspace{5 mm}
+\begin{enumerate}
+\item \verb|surf|
+\item \verb|sift|
+\item \verb|lazy|
+\item \verb|lazyc|
+\item \verb|lazyd|
+\item \verb|full|
+\item \verb|test|
+\end{enumerate}
+
+The default method is specified line 208 in \verb|tracker.py| as is currently \verb|lazy|
+
+\subsubsection{Logging Levels (-l)}
+These are standard and will impact what information is seen in the console. There are also UI considerations and dependencies on the execution method. 
+\begin{itemize}
+\item \verb|critical| associated with value 50. 
+\item \verb|error|
+\item \verb|warning|
+\item \verb|info|
+\item \verb|debug|
+\end{itemize}
+
+\subsubsection{Recommended combinations of -m -l and -s depending on goals}
+
+\chapter{Improvements}
+\section{Hardware}
+\section{Software}
+Overall important things to change:
+\begin{enumerate}
+\item Make the system multithreaded. The findworm
+\end{enumerate}
+\subsection{findworm}
+\subsection{Interactions with hardware}
+It is important to remember that any time the stepper motors are engaged there is about a 1s recovery time to return to the 
+\begin{enumerate}
+\item Camera: due to OpenCV issues with the camera delivering video in \verb|GRAY-8| part of the OpenCV C class 
+\end{enumerate}
+
+
+\end{document}

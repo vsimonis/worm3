@@ -199,8 +199,8 @@ class WormFinder ( object ):
     def findWormLazy ( self ):
         t = time.time()
         if self.hasReference():
-            self._sub = self._img - self._ref
-            self._sub = cv2.absdiff(self._img, self._ref)
+#            self._sub = self._img - self._ref
+#            self._sub = cv2.absdiff(self._img, self._ref)
             self._sub = cv2.subtract(self._ref, self._img)
             #Gaussian blur
             #self._sub  = cv2.GaussianBlur( self._sub, 
