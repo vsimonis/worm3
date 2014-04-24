@@ -2,7 +2,6 @@
 \usepackage[margin=1in]{geometry}
 \begin{document}
 
-
  \title{DPU WormTracker}
  \author{Valerie Simonis}
 % \maketitle
@@ -119,6 +118,40 @@ It is important to remember that any time the stepper motors are engaged there i
 \begin{enumerate}
 \item Camera: due to OpenCV issues with the camera delivering video in \verb|GRAY-8| part of the OpenCV C class 
 \end{enumerate}
+
+
+\subsubsection{Specification of the camera solution}
+
+The file to change is located at the following path (on LT-Valerie)\\
+\verb|home\install\opencv-2.4.8\modules\highgui\bin\cap_libv4l.cpp| \\
+\\
+The lines to change and how to change them are outlined in the table below: \\
+\\
+\begin{tabular}{l | l | l}
+\hline
+724 & \verb|capture->form.fmt.pix.pixelformat = V4L2_PIX_FMT_BGR24;| \\
+724 & \verb|capture->form.fmt.pix.pixelformat = V4L2_PIX_FMT_GREY;| \\ \hline
+734 & \verb|if (V4L2_PIX_FMT_BGR24 != capture->form.fmt.pix.pixelformat) {|\\
+734 & \verb|if (V4L2_PIX_FMT_GREY != capture->form.fmt.pix.pixelformat) {|\\ \hline
+845 & \verb|IPL_DEPTH_8U, 3, IPL_ORIGIN_TL, 4 );|\\
+845 & \verb|IPL_DEPTH_8U, 1, IPL_ORIGIN_TL, 4 );|\\ \hline
+931 & \verb|capture->imageProperties.palette = VIDEO_PALETTE_RGB24;| \\
+931 & \verb|capture->imageProperties.palette = VIDEO_PALETTE_GREY;| \\ \hline
+943 & \verb|if (capture->imageProperties.palette != VIDEO_PALETTE_RGB24) {| \\
+943 & \verb|if (capture->imageProperties.palette != VIDEO_PALETTE_GREY) {| \\ \hline
+982 & \verb|IPL_DEPTH_8U, 3, IPL_ORIGIN_TL, 4 );|\\
+982 & \verb|IPL_DEPTH_8U, 1, IPL_ORIGIN_TL, 4 );|\\ \hline
+1258 & \verb|IPL_DEPTH_8U, 3, IPL_ORIGIN_TL, 4 );|\\
+1258 & \verb|IPL_DEPTH_8U, 1, IPL_ORIGIN_TL, 4 );|\\ \hline
+1272 & \verb|IPL_DEPTH_8U, 3, IPL_ORIGIN_TL, 4 );|\\
+1272 & \verb|IPL_DEPTH_8U, 1, IPL_ORIGIN_TL, 4 );|\\ \hline
+
+
+\end{tabular}
+
+
+
+
 
 
 \end{document}
