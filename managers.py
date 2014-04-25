@@ -37,9 +37,9 @@ class CaptureManager( object ):
         self._fpsEstimate = None
         #logc.debug('done initializing capture')
         
-        #self.setResolution()
-#        self.setExposure( 1 )
-#        self.getExposure()
+        self.setResolution()
+        self.setExposure( 1 )
+        self.getExposure()
 
     def setExposure( self, setting ):
         try:
@@ -169,6 +169,7 @@ class CaptureManager( object ):
         
         if self._videoWriter is None:
             fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
+            print("fps: %d" % fps)
             if fps <= 0.0:
                 if self._framesElapsed < 20: 
                     # wait for more frames to get good estimate
