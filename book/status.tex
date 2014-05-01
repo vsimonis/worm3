@@ -1,0 +1,123 @@
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+\documentclass{article}
+\usepackage{spverbatim}
+\begin{document}
+\title{Nematodes: To do}
+\maketitle
+
+\setcounter{enumi}{0}
+\setcounter{section}{0}
+\section{General}
+\begin{itemize}
+\item Plan is to have 3 trackers that can work concurrently.
+\end{itemize}
+
+
+\section{May 9th}
+\subsection{Poster}
+\begin{itemize} 
+\item 36x48
+\item Start from colloquium presentation
+\item narrow down Hoky's research question
+\item Tracker: humans can't observe worms for 45 min and record and quantify their movement with the precision and detail required to provide evidence supporting a hypothesis. We wish to record nematodes moving (specifically wild type off food and candidate mutants on food) and identify behavior sequences. These behaviors are already well-defined.
+\item Knowing your audience: In general, people at the session will have neither Cell and Molecular Biology background nor a Computer Science background. These will be faculty members from DPU and RFUMS working on a range of projects including: Social Health, Nursing, etc...
+\item In this light, any technical information provided (from either side) needs to be well explained, accessible yet engaging and interesting. 
+\end{itemize}
+
+
+
+
+\subsubsection{Research questions}
+\begin{enumerate}
+\item \textbf{Which motor neurons cause \textit{off-food} behavior of \textit{C. elegans}?}
+\item Hypothesis: Certain mutants on food behave like wild type \textit{C. elegans} off food.
+\item Identify the neurotransmitters and neurons recognizing absence of food
+\end{enumerate}
+
+
+
+\subsection{``Live'' Demo}
+\begin{itemize}
+\item Where EXACTLY is this poster session taking place? Depending on the environment we will have a live worm or play the Tracker from a video.
+\item Regardless, plan is to get a \textit{good} video on May 2nd.
+\item Will use 15cm plate
+\item Should demonstrate ability to track long term. 
+\item ``Oh and by the way, can the tracker be done in 2 weeks?''
+\end{itemize}
+
+
+\subsubsection{Functional improvements}
+\begin{itemize}
+\item Plan for a normal start sequence
+\item Have a toggle for Tracking \verb|on| vs \verb|off|: this relates to the initialization sequence to quickly start tracking once the nematode is found. 
+\item Make a decision about which camera to use moving forward. It has been suggested to use both. 
+\item Expect to have to tweak some parameters.; 
+\item Choose a resolution
+\end{itemize}
+
+\subsubsection{Cosmetic improvements}
+\begin{itemize}
+\item Currently, \verb|debugWindow| shows the Gaussian blur. May be more interesting to have the \verb|liveWindow| show raw feed and the \verb|debugWindow| show the boxes and dots. 
+\item Have some indication of whether recording is happening or not
+\end{itemize}
+
+\section{Status}
+\subsection{Errors}
+\begin{table}[h]
+\begin{tabular}{l | l | p{8cm} }
+File & Line num & Desc\\ \hline
+\verb|tracker.py| & 161 (\verb|shutDown()|) &\verb|File annotationH299.csv does not exist.| Leftover from surf/sift programs. Take this out\\
+\verb|finder.py|  & 80 (\verb|writeOut()|) & [blank]\\ \hline
+\end{tabular}
+\caption{Current errors to fix}
+\label{tab:errors}
+\end{table}
+
+\subsection{Modes to run in}
+
+\subsection{class WormFinder}
+\subsubsection{Methods}
+\begin{itemize}
+\item \verb|findWormLazyCropped()|: 
+\item \verb|findWormLazy()|: 
+\item \verb|findWormLazyCroppedDemo()|: 
+\item \verb|processFrame(img)|: dispatches (see \ref{tab:options})
+\end{itemize}
+
+
+\begin{table}[h]
+\begin{tabular}{|p{10cm}|}
+\hline
+\begin{verbatim} 
+options = {
+            'test' : self.wormTest,
+            'conf' : self.wormTest,
+            'lazy' : self.findWormLazy,
+            'lazyc': self.findWormLazyCropped,
+            'lazyd': self.findWormLazyCroppedDemo,
+            'full' : self.findWormFull, #segmentation
+            'pca'  : self.findWormPCA, 
+            'box'  : self.findWormBox,
+            'surf' : self.surfImp, 
+            'sift' : self.siftImp,
+            'mser' : self.mserImp
+            }
+\end{verbatim} \\
+\hline
+\end{tabular}
+\caption{processFrame modes (linked to -m) }
+\label{tab:options}
+\end{table}
+
+
+%Tavle \ref{tab:options}
+
+
+
+
+\end{document}
