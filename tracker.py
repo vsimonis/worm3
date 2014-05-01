@@ -33,7 +33,7 @@ class Tracker ( object ):
             6: 'longNoBox.avi',
             7: 'H299.avi'
             }
-        self.color = True
+        self.color = False
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -74,13 +74,15 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
-            'color' : True
+            'color' : False
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
 
         ##### Debugging
         self._bugWindowManager = WindowManager( 'Debugger', self.onKeypress )
+
+
 
     def run( self ):
 
@@ -158,7 +160,7 @@ class Tracker ( object ):
         if self._captureManager.isWritingVideo:
             self._captureManager.stopWritingVideo()
         try:
-            self._wormFinder.writeOut('%s-%s' % (self.finderArgs['method'], self.captureSource))
+#            self._wormFinder.writeOut('%s-%s' % (self.finderArgs['method'], self.captureSource))
             self._wormFinder.servos.disableMotors()
             self._wormFinder.servos.closeSerial()
         except Exception as e:
@@ -205,7 +207,7 @@ def main():
     logging_level = LOGGING_LEVELS.get(options.logging_level, logging.NOTSET)
     
     if options.tracker_method is None:
-        method = 'lazy'
+        method = 'lazyc'
     else:
         method = options.tracker_method          
 

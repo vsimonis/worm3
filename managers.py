@@ -74,9 +74,15 @@ class CaptureManager( object ):
         if self._enteredFrame and self._frame is None:
             ###_, self._frame = self._capture.retrieve( channel = self.channel )
             self.gotFrame, self._frame = self._capture.retrieve()
-            h, w, d = self._frame.shape
-            print 'size: %d x %d x %d' % (h, w, d)
-            print 'frame retval?: %s' % str(self.gotFrame)
+            s = self._frame.shape
+            if len(s) == 2:
+                h, w = self._frame.shape
+                d = 0
+            else:
+                h, w, d = self._frame.shape
+
+            logc.debug( 'size: %d x %d x %d' % (h, w, d))
+            logc.debug('frame retval?: %s' % str(self.gotFrame))
 
         return self._frame
         #if not self._gotFrame:
@@ -169,7 +175,7 @@ class CaptureManager( object ):
         
         if self._videoWriter is None:
             fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
-            print("fps: %d" % fps)
+            logc.info("fps: %d" % fps)
             if fps <= 0.0:
                 if self._framesElapsed < 20: 
                     # wait for more frames to get good estimate

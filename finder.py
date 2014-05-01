@@ -75,51 +75,6 @@ class WormFinder ( object ):
     """ 
     FIND WORMS
     """
-    def writeOut( self, name ):
-        
-        labels = pd.io.parsers.read_csv('annotationH299.csv',header = 0)
-        print labels
-
-        arr = np.array( self.Desc)
-#        print arr.shape
-        data = pd.DataFrame(self.Desc)
-        
-        data.to_csv("%s.csv" % name, index=False, header = False)
-
-    def surfImp (self):
-        if self.surf is None:
-            self.surf = cv2.SURF(nHess)
-        keypts, desc  = self.surf.detectAndCompute(self._img, None)
-#        print desc
-        self._sub = cv2.drawKeypoints(self._img, keypts, None, BLUE ,4 )
-        if self.Desc is None:
-            self.Desc = np.array(desc)
-        #np.insert(self.Desc, len(self.Desc) + 1, desc, axis = 0)
-        else:
-            self.Desc = np.vstack([self.Desc, desc])
- #       print self.Desc
-
-    def siftImp(self):
-        if self.sift is None:
-            self.sift = cv2.SIFT() #nFeat
-        keypts, desc = self.sift.detectAndCompute(self._img, None)
-        self._sub = cv2.drawKeypoints(self._img, keypts, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)#, None, (255,0,0), 4)
-        self.Desc.append(desc)
-
-    def mserImp(self):
-        vis = self._img.copy()
-        if self.mser is None:
-            self.mser = cv2.MSER(mserDelta, mserMin, mserMax)
-        #if self.mserFD is None:
-        #    self.mserFD = cv2.FeatureDetector_create('MSER')
-        #kpts = self.mserFD.detect(self._img)
-    
-        regions = self.mser.detect(self._img, None)
-        hulls = [cv2.convexHull(p.reshape(-1,1,2)) for p in regions]
-        cv2.polylines(vis, hulls, 1, GREEN)
-        self._sub = vis
-        #desc = DescriptorExtractor_create(
-
 
     def findWormLazyCropped ( self ):
         t = time.time()
@@ -194,6 +149,108 @@ class WormFinder ( object ):
             return
 
 
+    def processFrame ( self, img ):
+        #logger.debug('enter process frame')
+        options = {
+            'test' : self.wormTest,
+            'conf' : self.wormTest,
+            'lazy' : self.findWormLazy,
+            'lazyc': self.findWormLazyCropped,
+            'lazyd': self.findWormLazyCroppedDemo,
+            'full' : self.findWormFull, #segmentation
+            'pca'  : self.findWormPCA, 
+            'box'  : self.findWormBox,
+#            'surf' : self.surfImp, 
+#            'sift' : self.siftImp,
+#            'mser' : self.mserImp
+            }
+        t = time.time()
+        
+        ### LAZYS ###
+        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
+            if not self.hasReference(): #is this OK???
+                if self.isColor:
+                    self._ref = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
+                else:
+                    self._ref = img
+                self._sub = np.zeros(self._ref.shape) ##For display
+                self.lastRefTime = time.time()
+            else:
+                if self.isColor:
+                    self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
+                else:
+                    self._img = img
+                try:
+                    options[self.method]()
+                except KeyError:
+                    self.findWormLazyCropped() #default
+
+        ### Non-lazies
+        else:
+            if self.isColor:
+                self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
+            else:
+                self._img = img
+            try:
+                options[self.method]()
+            except KeyError:
+                self.findWormLazy() #default
+
+        return self._sub ## gets displayed in the window
+    
+
+    def decideMove ( self ):
+        t = time.time()
+        if not ( t - self.start >= self.delay ):
+            return
+
+        if self.justMoved:
+            logger.warning('you just moved, try again later')
+            return
+
+        if time.time() - self.breakStart <= self.breakT:
+           # logger.warning("you're still on break")
+            return
+
+        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
+            if time.time() - self.lastRefTime >= self.REFPING:
+                self.resetRef()
+                logger.warning('New reference based on PING')
+
+            if self._colRef < 0 and self.method =='lazy':
+                return 
+            
+            if not self.hasReference and self.method == 'lazyc':
+                logger.warning('Not this this sucker, you just moved')
+
+            ### Possible move: make sure
+
+            elif ( abs(self._meanColDistances) > self.limCol or abs(self._meanRowDistances) > self.limRow ):
+                ## Check previous location of worm
+                if abs ( self._rowWormPrev - self._rowWorm ) > self.MAXONEFRAME or abs( self._colWormPrev - self._colWorm ) > self.MAXONEFRAME:
+                    logger.info('Impossible location: too far from previous')
+                   # self._rowWorm = self._rowWormPrev
+                   # self._colWorm = self._colWormPrev
+                    self._colDistances = []
+                    self._rowDistances = []
+                    return
+                ## Check relative position to reference
+                #elif ( abs ( self._rowRef - self._rowWorm) > self.MAXREF or abs ( self._colRef - self._colWorm) > self.MAXREF):
+                #    logger.info('Impossible location: too far from ref')
+                #    return
+                else:
+                    logger.warning('MOVE!!!')
+#                    if not self.isDebug:
+                    try:
+                        self.servos.centerWorm(100, self._colWorm, self._rowWorm)
+                    except:
+                        pass
+                    self.justMoved = True
+                    self.breakStart = time.time()
+                    self.resetRef()
+                    self._colWorm = -1
+                    self._rowWorm = -1
+                #logger.info('decide move runtime: %0.3f' % (time.time() - t ))
 
 
     def findWormLazy ( self ):
@@ -416,7 +473,7 @@ class WormFinder ( object ):
         return len(self._colDistances)
 
     @property
-    def isColor (self ):
+    def isColor ( self ):
         return self.color
 
     def findWormFull ( self ):
@@ -458,116 +515,6 @@ class WormFinder ( object ):
     def wormTest ( self ):
         self._sub = self._img
         return
-
-
-    def processFrame ( self, img ):
-        #logger.debug('enter process frame')
-        options = {
-            'test' : self.wormTest,
-            'conf' : self.wormTest,
-            'lazy' : self.findWormLazy,
-            'lazyc': self.findWormLazyCropped,
-            'lazyd': self.findWormLazyCroppedDemo,
-            'full' : self.findWormFull, #segmentation
-            'pca'  : self.findWormPCA, 
-            'box'  : self.findWormBox,
-            'surf' : self.surfImp, 
-            'sift' : self.siftImp,
-            'mser' : self.mserImp
-            }
-        t = time.time()
-        
-        ### LAZYS ###
-        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
-            if not self.hasReference(): #is this OK???
-                if self.isColor:
-                    self._ref = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
-                else:
-                    self._ref = img
-                self._sub = np.zeros(self._ref.shape) ##For display
-                self.lastRefTime = time.time()
-            else:
-                if self.isColor:
-                    self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
-                else:
-                    self._img = img
-                try:
-                    options[self.method]()
-                except KeyError:
-                    self.findWormLazy() #default
-
-        ### Non-lazies
-        else:
-            if self.isColor:
-                self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
-            else:
-                self._img = img
-            try:
-                options[self.method]()
-            except KeyError:
-                self.findWormLazy() #default
-
-        return self._sub ## gets displayed in the window
-    
-
-
-
-
-    def decideMove ( self ):
-        t = time.time()
-        if not ( t - self.start >= self.delay ):
-            return
-
-        if self.justMoved:
-            logger.warning('you just moved, try again later')
-            return
-
-        if time.time() - self.breakStart <= self.breakT:
-           # logger.warning("you're still on break")
-            return
-
-        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
-            if time.time() - self.lastRefTime >= self.REFPING:
-                self.resetRef()
-                logger.warning('New reference based on PING')
-
-            if self._colRef < 0 and self.method =='lazy':
-                return 
-            
-            if not self.hasReference and self.method == 'lazyc':
-                logger.warning('Not this this sucker, you just moved')
-
-            ### Possible move: make sure
-
-            elif ( abs(self._meanColDistances) > self.limCol or abs(self._meanRowDistances) > self.limRow ):
-                ## Check previous location of worm
-                if abs ( self._rowWormPrev - self._rowWorm ) > self.MAXONEFRAME or abs( self._colWormPrev - self._colWorm ) > self.MAXONEFRAME:
-                    logger.info('Impossible location: too far from previous')
-                   # self._rowWorm = self._rowWormPrev
-                   # self._colWorm = self._colWormPrev
-                    self._colDistances = []
-                    self._rowDistances = []
-                    return
-                ## Check relative position to reference
-                #elif ( abs ( self._rowRef - self._rowWorm) > self.MAXREF or abs ( self._colRef - self._colWorm) > self.MAXREF):
-                #    logger.info('Impossible location: too far from ref')
-                #    return
-                else:
-                    logger.warning('MOVE!!!')
-#                    if not self.isDebug:
-                    try:
-                        self.servos.centerWorm(100, self._colWorm, self._rowWorm)
-                    except:
-                        pass
-                    self.justMoved = True
-                    self.breakStart = time.time()
-                    self.resetRef()
-                    self._colWorm = -1
-                    self._rowWorm = -1
-                #logger.info('decide move runtime: %0.3f' % (time.time() - t ))
-
-
-
 
  
 
@@ -618,3 +565,52 @@ class WormFinder ( object ):
         self._ref = None
         self._sub = None
         self.lastRefTime = time.time()
+    """
+    MSER/SIFT Implementations 
+    """
+
+#     def writeOut( self, name ):
+        
+#         labels = pd.io.parsers.read_csv('annotationH299.csv',header = 0)
+#         print labels
+
+#         arr = np.array( self.Desc)
+# #        print arr.shape
+#         data = pd.DataFrame(self.Desc)
+        
+#         data.to_csv("%s.csv" % name, index=False, header = False)
+
+#     def surfImp (self):
+#         if self.surf is None:
+#             self.surf = cv2.SURF(nHess)
+#         keypts, desc  = self.surf.detectAndCompute(self._img, None)
+# #        print desc
+#         self._sub = cv2.drawKeypoints(self._img, keypts, None, BLUE ,4 )
+#         if self.Desc is None:
+#             self.Desc = np.array(desc)
+#         #np.insert(self.Desc, len(self.Desc) + 1, desc, axis = 0)
+#         else:
+#             self.Desc = np.vstack([self.Desc, desc])
+#  #       print self.Desc
+
+#     def siftImp(self):
+#         if self.sift is None:
+#             self.sift = cv2.SIFT() #nFeat
+#         keypts, desc = self.sift.detectAndCompute(self._img, None)
+#         self._sub = cv2.drawKeypoints(self._img, keypts, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)#, None, (255,0,0), 4)
+#         self.Desc.append(desc)
+
+#     def mserImp(self):
+#         vis = self._img.copy()
+#         if self.mser is None:
+#             self.mser = cv2.MSER(mserDelta, mserMin, mserMax)
+#         #if self.mserFD is None:
+#         #    self.mserFD = cv2.FeatureDetector_create('MSER')
+#         #kpts = self.mserFD.detect(self._img)
+    
+#         regions = self.mser.detect(self._img, None)
+#         hulls = [cv2.convexHull(p.reshape(-1,1,2)) for p in regions]
+#         cv2.polylines(vis, hulls, 1, GREEN)
+#         self._sub = vis
+#         #desc = DescriptorExtractor_create(
+

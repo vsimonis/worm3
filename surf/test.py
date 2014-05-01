@@ -24,7 +24,7 @@ def data_demo(cap, vid):
         if not ret:
             break
 
-        gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+        gray = frame# cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
 
         kp, desc = surf.detectAndCompute(gray, None)
 
@@ -65,7 +65,7 @@ def data_demo(cap, vid):
 if __name__ == '__main__':
     #print __doc__
 
-    cap = cv2.VideoCapture('H299.avi')
+    cap = cv2.VideoCapture(1)#'H299.avi')
 
     vid = cv2.VideoWriter('H299-surf.avi', 
                           cv2.cv.CV_FOURCC('M','J','P','G'), 
