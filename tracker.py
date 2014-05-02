@@ -163,16 +163,20 @@ class Tracker ( object ):
             if self.motorsOn:
                 self.motorsOn = False#_captureManager.writeImage('screenshot.png')
                 self._wormFinder.servos.disableMotors()
+                cv2.displayOverlay('Overlay','Motors disabled', 0)
             else:
                 self.motorsOn = True
                 self._wormFinder.servos.enableMotors()
+                cv2.displayOverlay('Overlay','Motors enabled', 0)
         elif keycode == 9: #tab
-            if not self._captureManager.isWritingVideo:
-                self._captureManager.startWritingVideo(
+            if not self._cap.isWritingVideo:
+                self._cap.startWritingVideo(
                     'worm%s.avi' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time())),
                     cv2.cv.CV_FOURCC('M','J','P','G'))
+                cv2.displayOverlay('Overlay','Writing Video', 0)
             else:
-                self._captureManager.stopWritingVideo()
+                self._cap.stopWritingVideo()
+                cv2.displayOverlay('Overlay','Not writing Video', 0)
 
         elif keycode == 27: #escape
             self.shutDown()
