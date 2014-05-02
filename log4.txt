@@ -1,7 +1,0 @@
-2014-03-07 13:32:48	DEBUG	scan		Starting find EBB
-2014-03-07 13:32:48	DEBUG	scan		checking endpoint: /sys/bus/usb/devices/2-1.2.2.2/2-1.2.2.2:1.0/tty
-2014-03-07 13:32:48	DEBUG	scan		Checking ttyname: ttyACM0
-2014-03-07 13:32:56	WARNING	capture		Start Writing Video: worm2014_03_07-13-32-56.avi
-2014-03-07 13:32:57	WARNING	capture		fps estimate used: 15
-2014-03-07 13:32:57	WARNING	capture		size used: 640 x 480
-2014-03-07 13:35:33	WARNING	capture		Stop Writing Video

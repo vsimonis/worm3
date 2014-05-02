@@ -55,6 +55,8 @@ class WormFinder ( object ):
         self.breakT = 3
         self.breakStart = time.time()
         self.justMoved = False
+        self.launch = 0
+        self.launchMAX = 10
         self.setupCropping()
         self.setupFindingStructures()
 
@@ -75,45 +77,42 @@ class WormFinder ( object ):
     """ 
     FIND WORMS
     """
-    def toEnableMotors( self):
-        self.servos.enableMotors()
-
-    def toDisableMotors( self):
-        self.servos.disableMotors()
+    def centerCrop (self):
+    
+        if self._colRefCenter - self.boundBoxCol/2 - self.extra > 0:
+            self.cmin = self._colRefCenter - self.boundBoxCol/2 - self.extra
+        else:
+            self.cmin = self.extra
+        if self._colRefCenter + self.boundBoxCol/2 + self.extra < self.capCols:
+            self.cmax = self._colRefCenter + self.boundBoxCol/2 + self.extra
+        else:
+            self.cmax = self.capCols - self.extra
+        if self._rowRefCenter - self.boundBoxRow/2 - self.extra > 0:
+            self.rmin = self._rowRefCenter - self.boundBoxRow/2 - self.extra
+        else:
+            self.rmin = self.extra
+        if self._rowRefCenter + self.boundBoxRow/2 + self.extra < self.capRows:
+            self.rmax = self._rowRefCenter + self.boundBoxRow/2 + self.extra
+        else:
+            self.rmax = self.capRows - self.extra
 
     def findWormLazyCropped ( self ):
         t = time.time()
-
+        
         if self.hasReference():
 
             self._sub = self._img - self._ref
             
             self._sub = cv2.subtract(self._ref, self._img)
-#            self._sub = np.asarray(self._img[:,:]) - np.asarray(self._ref[:,:])
-#            out = np.zeros(self._sub.shape)
-#            out = cv2.normalize(self._sub, out, 0, 255, cv2.NORM_MINMAX)
-#            self._sub = out
-#            self._sub = cv2.absdiff(self._img, self._ref)
             lc, lr = self._sub.shape
             
-            if self._colRefCenter - self.boundBoxCol/2 - self.extra > 0:
-                self.cmin = self._colRefCenter - self.boundBoxCol/2 - self.extra
-            else:
-                self.cmin = self.extra
-            if self._colRefCenter + self.boundBoxCol/2 + self.extra < self.capCols:
-                self.cmax = self._colRefCenter + self.boundBoxCol/2 + self.extra
-            else:
-                self.cmax = self.capCols - self.extra
-            if self._rowRefCenter - self.boundBoxRow/2 - self.extra > 0:
-                self.rmin = self._rowRefCenter - self.boundBoxRow/2 - self.extra
-            else:
-                self.rmin = self.extra
-            if self._rowRefCenter + self.boundBoxRow/2 + self.extra < self.capRows:
-                self.rmax = self._rowRefCenter + self.boundBoxRow/2 + self.extra
-            else:
-                self.rmax = self.capRows - self.extra
+            self.centerCrop()
+
+            # Crops only after 10 frames after 'launch period' (ie: space bar)
+            if self.launch >= self.launchMAX:
                 #time to crop!
-            self._sub = self._sub[self.rmin : self.rmax, self.cmin : self.cmax]
+                self._sub = self._sub[self.rmin : self.rmax, self.cmin : self.cmax]
+            logger.info('Launch is %d' % self.launch)
  
 
             # Gaussian Blur
@@ -129,14 +128,16 @@ class WormFinder ( object ):
                 r, c = np.nonzero ( self._sub == np.max( self._sub ) ) #worm location
                 
             self._colWorm, self._rowWorm = c[0], r[0]
-            self._rowWorm += self.rmin
-            self._colWorm += self.cmin
+            if self.launch >= self.launchMAX:
+                self._rowWorm += self.rmin
+                self._colWorm += self.cmin
             self._colWormPrev, self._rowWormPrev = self._colWorm, self._rowWorm
             
             #logger.debug( 'Worm: col:%d\t\trow:%d' % 
 #                          ( self._colWorm , self._rowWorm ))
 
             self.justMoved = False
+            self.launch += 1
 
             ### Distance from center
             self._colDistances.append(self._colRefCenter - self._colWorm)
@@ -210,7 +211,7 @@ class WormFinder ( object ):
             return
 
         if self.justMoved:
-            logger.warning('you just moved, try again later')
+            logger.info('you just moved, try again later')
             return
 
         if time.time() - self.breakStart <= self.breakT:
@@ -220,7 +221,7 @@ class WormFinder ( object ):
         if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
             if time.time() - self.lastRefTime >= self.REFPING:
                 self.resetRef()
-                logger.warning('New reference based on PING')
+                logger.info('New reference based on PING')
 
             if self._colRef < 0 and self.method =='lazy':
                 return 
@@ -244,7 +245,7 @@ class WormFinder ( object ):
                 #    logger.info('Impossible location: too far from ref')
                 #    return
                 else:
-                    logger.warning('MOVE!!!')
+                    logger.info('MOVE!!!')
 #                    if not self.isDebug:
                     try:
                         self.servos.centerWorm(100, self._colWorm, self._rowWorm)
@@ -413,6 +414,27 @@ class WormFinder ( object ):
                        (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
                        BLACK)
 
+    def drawDebuggingPointCroppedBWlaunch( self, img ):
+        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), BLACK)
+        #utils.drawPoint(img, 
+        #                int(self._colRefCenter), 
+        #                int(self._rowRefCenter), 
+        #                blue)
+        #utils.drawPoint(img, 
+        #                int(self._colRefCenter - self._meanColDistances),
+        #                int( self._rowRefCenter - self._meanRowDistances), 
+        #                WHITE)
+        #Search space: whole image
+        utils.drawRect(img, 
+                       (5, int(self.capRows) - 5), 
+                       (5,int( self.capCols) - 5), 
+                       BLACK)
+
+        # Decision space
+        utils.drawRect(img, 
+                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
+                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
+                       BLACK)
 
 
     def drawDebuggingPointCropped( self, img ):
@@ -446,14 +468,18 @@ class WormFinder ( object ):
         utils.drawPoint(img, self._colWorm, self._rowWorm, WHITE)
         utils.drawPoint(img, self._colRef, self._rowRef, BLACK)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, WHITE)
+    
+    def drawTextStatus( self, img, recording, motors ):
+        cv2.putText(img,  "recording: %r || motors: %r" % (recording, motors), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0))
+        
 
     '''
     Debugging Methods
     '''
             
     def isDebug( self ):
-        return logger.getEffectiveLevel() <= logging.DEBUG
-
+        return logger.getEffectiveLevel() <= logging.INFO
+    
 
     def drawDebugBW( self, img ):
         #BRG
@@ -524,6 +550,7 @@ class WormFinder ( object ):
  
 
     def resetRef( self ):
+        self.launch = 0
         self._ref = None
         self._colRef = -1
         self._rowRef = -1

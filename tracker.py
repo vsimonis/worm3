@@ -1,6 +1,7 @@
 import logging
 import optparse
 import sys
+import copy
 
 from managers import WindowManager, CaptureManager
 from finder import WormFinder
@@ -74,7 +75,7 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
-            'color' : False
+            'color' : True
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
@@ -82,9 +83,6 @@ class Tracker ( object ):
         ##### Debugging
         self._overlayWindow = WindowManager( 'Overlay', self.onKeypress )
         self.motorsOn = False
-
-
-
 
 
 
@@ -113,16 +111,20 @@ class Tracker ( object ):
             self._rawWindow.show(frame)
 
             # If tracking is enabled or motors are on, start tracking
-            
-            if time.time() - self._lastCheck >= self._sampleFreq and self.motorsOn :
+            if time.time() - self._lastCheck >= self._sampleFreq:
                 if self.finderArgs['method'] == 'lazyc':
                     self.gaussian = self._wormFinder.processFrame( frame )
-                    self.overlayImage = frame
-                    self._wormFinder.decideMove()
+                    self.overlayImage = copy.deepcopy(frame)
+                    if self.motorsOn:
+                        self._wormFinder.decideMove()
                     self._lastCheck = time.time()
-                    self._overlayWindow.show(self.overlayImage)
-                    self._wormFinder.drawDebuggingPointCroppedBW( self.overlayImage )       
-                    
+                    if self._wormFinder.launch >= self._wormFinder.launchMAX:
+                        self._wormFinder.drawDebuggingPointCroppedBW( self.overlayImage )       
+                        self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
+                    else: 
+                        self._wormFinder.drawDebuggingPointCroppedBWlaunch( self.overlayImage )       
+                        self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
+                    self._overlayWindow.show(self.overlayImage)                    
 
                 if self.finderArgs['method'] == 'test' or self.finderArgs['method'] == 'conf': 
                     if self.color:
@@ -160,29 +162,33 @@ class Tracker ( object ):
         '''
 
         if keycode == 32: #space
+
             if self.motorsOn:
                 self.motorsOn = False#_captureManager.writeImage('screenshot.png')
-                self._wormFinder.servos.disableMotors()
-                cv2.displayOverlay('Overlay','Motors disabled', 0)
+                if not self.isDebug:
+                    self._wormFinder.servos.disableMotors()
+                        #cv2.displayOverlay('Overlay','Motors disabled', 0)
             else:
                 self.motorsOn = True
-                self._wormFinder.servos.enableMotors()
-                cv2.displayOverlay('Overlay','Motors enabled', 0)
+                self._wormFinder.launch = 0
+                if not self.isDebug:
+                    self._wormFinder.servos.enableMotors()
+                    #cv2.displayOverlay('Overlay','Motors enabled', 0)
+
         elif keycode == 9: #tab
             if not self._cap.isWritingVideo:
                 self._cap.startWritingVideo(
                     'worm%s.avi' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time())),
                     cv2.cv.CV_FOURCC('M','J','P','G'))
-                cv2.displayOverlay('Overlay','Writing Video', 0)
+#                cv2.displayOverlay('Overlay','Writing Video', 0)
             else:
                 self._cap.stopWritingVideo()
-                cv2.displayOverlay('Overlay','Not writing Video', 0)
+#                cv2.displayOverlay('Overlay','Not writing Video', 0)
 
         elif keycode == 27: #escape
             self.shutDown()
             
 def main():
-
     LOGGING_LEVELS = {'critical': logging.CRITICAL,
              'error': logging.ERROR,
              'warning': logging.WARNING,
@@ -197,8 +203,7 @@ def main():
 
     (options, args) = parser.parse_args()
 
-    logging_level = LOGGING_LEVELS.get(options.logging_level, logging.NOTSET)
-    
+    ### Set default run
     if options.tracker_method is None:
         method = 'lazyc'
     else:
@@ -208,10 +213,19 @@ def main():
         source = 0
     else:
         source = options.source
+    
+    logging_level = LOGGING_LEVELS.get(options.logging_level, logging.WARNING)
+
+
+#    if options.logging_level is None:
+#        options.logging_level = LOGGING_LEVELS.get(options.logging_level, logging.WARNING)
         
+#    if options.logging_file is None:
+#        options.logging_file = 'worm%s.log' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time()))
+
     ## Set up logging
     logging.basicConfig(
-        level=logging_level, 
+        level = logging_level, 
         filename=options.logging_file,
         format='%(asctime)s\t%(levelname)s\t%(name)s\t\t%(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
