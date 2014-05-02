@@ -48,15 +48,15 @@ class Tracker ( object ):
 
         ##### Windows
 
-        self._windowManager = WindowManager( 'Tracker', self.onKeypress )
+        self._rawWindow = WindowManager( 'RawFeed', self.onKeypress )
 
         ### Capture -- resolution set here
-        self._captureManager = CaptureManager( 
+        self._cap = CaptureManager( 
             cv2.VideoCapture(self.captureSource), 
-            self._windowManager, 
+            self._rawWindow, 
             self.mirroredPreview, self.resolution)
 
-        actualCols, actualRows = self._captureManager.getResolution()
+        actualCols, actualRows = self._cap.getResolution()
         ## from here on out use this resolution 
         
         ### Arguments for finder
@@ -80,85 +80,69 @@ class Tracker ( object ):
         self._wormFinder = WormFinder( **self.finderArgs )     
 
         ##### Debugging
-        self._bugWindowManager = WindowManager( 'Debugger', self.onKeypress )
+        self._overlayWindow = WindowManager( 'Overlay', self.onKeypress )
+        self.motorsOn = False
+
+
+
 
 
 
     def run( self ):
 
-        self._windowManager.createWindow()
+        # Show windows
+        self._rawWindow.createWindow()
+        self._overlayWindow.createWindow()
 
-        if self.isDebug and self.finderArgs['method'] != 'test':
-            self._bugWindowManager.createWindow()
+        while self._rawWindow.isWindowCreated:
+            self._cap.enterFrame()
+            frame = self._cap.frame
 
-        while self._windowManager.isWindowCreated:    
+            # Probably not useful, removes errors when playing from video
+#            if not self._captureManager.gotFrame:
+#                self.shutDown()
+#                break
+
+            # Display raw frame to rawWindow
             
-            self._captureManager.enterFrame()
             t1 = time.time()
             # Get frame
-            frame = self._captureManager.frame
+            frame = self._cap.frame
 
-            if not self._captureManager.gotFrame:
-                self.shutDown()
-                break
+            # Show frame to raw feed
+            self._rawWindow.show(frame)
 
-            if time.time() - self._lastCheck >= self._sampleFreq:
-                
-                ###### SURF & SIFT  ######
-                if self.finderArgs['method'] == 'surf' or self.finderArgs['method'] == 'sift' or self.finderArgs['method'] == 'mser':
-                    self.localSub = self._wormFinder.processFrame( frame )
-                    self._bugWindowManager.show(self.localSub)
-                    
-                ###### LAZY ######
-                if self.finderArgs['method'] == 'lazy' or  self.finderArgs['method'] == 'lazyc' or self.finderArgs['method'] == 'lazyd':
-                    ### Possibly move this to a different thread :(
-                    self.localSub = self._wormFinder.processFrame( frame )
-                    self._wormFinder.decideMove()                
-                    self._lastCheck = time.time()
-                    
-                    if self.isDebug and self.color:
-                        #print self.localSub
-                        self._bugWindowManager.show(self.localSub)
-                
-                ###### FULL ######
-                if self.finderArgs['method'] == 'full':
-                    a = time.time()
-                    self.localSub = self._wormFinder.processFrame( frame )
-                    #print 'TIME: %d' % (time.time() - a)
-                    self._wormFinder.decideMove()                
-                    self._lastCheck = time.time()                    
-                    if self.isDebug:
-                        self._bugWindowManager.show(self.localSub)
-
-            if self.isDebug:
-                if self.finderArgs['method'] == 'lazy':
-                    self._wormFinder.drawDebuggingPoint( frame )                
+            # If tracking is enabled or motors are on, start tracking
+            
+            if time.time() - self._lastCheck >= self._sampleFreq and self.motorsOn :
                 if self.finderArgs['method'] == 'lazyc':
-                    if not self.color:
-                        self._wormFinder.drawDebuggingPointCroppedBW( frame )       
-                    else:
-                        self._wormFinder.drawDebuggingPointCropped( frame )       
-
-                if self.finderArgs['method'] == 'lazyd':
-                    self._wormFinder.drawDebuggingPointCroppedDemo( frame )
+                    self.gaussian = self._wormFinder.processFrame( frame )
+                    self.overlayImage = frame
+                    self._wormFinder.decideMove()
+                    self._lastCheck = time.time()
+                    self._overlayWindow.show(self.overlayImage)
+                    self._wormFinder.drawDebuggingPointCroppedBW( self.overlayImage )       
+                    
 
                 if self.finderArgs['method'] == 'test' or self.finderArgs['method'] == 'conf': 
                     if self.color:
                         self._wormFinder.drawDebug( frame )
                     else:
                         self._wormFinder.drawDebugBW( frame )
-            self._captureManager.exitFrame()
-            self._windowManager.processEvents()
+
+            self._cap.exitFrame()
+            self._rawWindow.processEvents()
             #logt.info('frame processing took: %0.6f' % (time.time() - t1))
+    
     @property
     def isDebug( self ):
         return logt.getEffectiveLevel() <= logging.INFO
 
     def shutDown( self ):
-        self._windowManager.destroyWindow()
+        self._rawWindow.destroyWindow()
         #if not self.isDebug:
-        if self._captureManager.isWritingVideo:
-            self._captureManager.stopWritingVideo()
+        if self._cap.isWritingVideo:
+            self._cap.stopWritingVideo()
         try:
 #            self._wormFinder.writeOut('%s-%s' % (self.finderArgs['method'], self.captureSource))
             self._wormFinder.servos.disableMotors()
@@ -169,14 +153,19 @@ class Tracker ( object ):
     def onKeypress ( self, keycode ):
         '''
         Keypress options
-        <SPACE> --- screenshot
+        <SPACE> --- Motors On
         < TAB > --- start/stop recording screencast
         < ESC > --- quit
 
         '''
 
         if keycode == 32: #space
-            self._captureManager.writeImage('screenshot.png')
+            if self.motorsOn:
+                self.motorsOn = False#_captureManager.writeImage('screenshot.png')
+                self._wormFinder.servos.disableMotors()
+            else:
+                self.motorsOn = True
+                self._wormFinder.servos.enableMotors()
         elif keycode == 9: #tab
             if not self._captureManager.isWritingVideo:
                 self._captureManager.startWritingVideo(

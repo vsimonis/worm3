@@ -75,6 +75,11 @@ class WormFinder ( object ):
     """ 
     FIND WORMS
     """
+    def toEnableMotors( self):
+        self.servos.enableMotors()
+
+    def toDisableMotors( self):
+        self.servos.disableMotors()
 
     def findWormLazyCropped ( self ):
         t = time.time()

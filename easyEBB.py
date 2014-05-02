@@ -36,7 +36,7 @@ class easyEBB:
                      (self.colNumPix, self.rowNumPix) )
 
         self.pixUmStepConversions(stepMode)
-        self.enableMotors()
+        #self.enableMotors()
         
     def pixUmStepConversions( self, stepMode ):
         """ 
@@ -132,7 +132,7 @@ class easyEBB:
         if self.serialPort == None:
             logging.exception( "Servos: Unable to find serial port")
             sys.exit(0)
-
+        
     def closeSerial( self ):
         """
         Closes the serial connection to the EiBotBoard
