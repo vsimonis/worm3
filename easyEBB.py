@@ -14,7 +14,7 @@ logger = logging.getLogger('eggbot')
 UMSTEP = 200
 
 class easyEBB:
-    def __init__( self, resolution = (640,480), sizeMM = (6.8,5.1), stepMode = 5 ):
+    def __init__( self, resolution = (1280,960), sizeMM = (7.9,5.8), stepMode = 5 ):
         """
         Initializes an easyEBB object
         """

@@ -23,7 +23,7 @@ class Tracker ( object ):
         
         ### Set Camera params
         #self.resolution = (640, 480 )
-        self.resolution = (1080, 1080)
+        self.resolution = (1280, 960)
         source = {
             0:0, 
             1:1, 
@@ -75,7 +75,7 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
-            'color' : True
+            'color' : False
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
@@ -173,6 +173,8 @@ class Tracker ( object ):
                 self._wormFinder.launch = 0
                 if not self.isDebug:
                     self._wormFinder.servos.enableMotors()
+                    self._wormFinder.launch = 0
+                    time.sleep(2)
                     #cv2.displayOverlay('Overlay','Motors enabled', 0)
 
         elif keycode == 9: #tab
