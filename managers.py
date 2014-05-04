@@ -189,7 +189,7 @@ class CaptureManager( object ):
             logc.warning('size used: %d x %d' % (size[0], size[1]) )
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
-                                                 self._videoEncoding, fps, size, True )
+                                                 self._videoEncoding, fps, size, False )
         self._videoWriter.write(self._frame)
         #print 'Write this frame'
 

@@ -32,9 +32,10 @@ class Tracker ( object ):
             4:'screencast 1.avi',
             5: 'shortNoBox.avi',
             6: 'longNoBox.avi',
-            7: 'H299.avi'
+            7: 'H299.avi',
+            8: 'testRec.avi'
             }
-        self.color = False
+        self.color = True
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -75,7 +76,7 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
-            'color' : False
+            'color' : True
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
@@ -181,7 +182,7 @@ class Tracker ( object ):
             if not self._cap.isWritingVideo:
                 self._cap.startWritingVideo(
                     'worm%s.avi' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time())),
-                    cv2.cv.CV_FOURCC('M','J','P','G'))
+                    cv2.cv.CV_FOURCC(*'MJPG'))
 #                cv2.displayOverlay('Overlay','Writing Video', 0)
             else:
                 self._cap.stopWritingVideo()
