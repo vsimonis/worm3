@@ -38,9 +38,30 @@ class CaptureManager( object ):
         #logc.debug('done initializing capture')
         
         self.setResolution()
-        self.setExposure( 1 )
-        self.getExposure()
+        #self.setExposure( 1 )
+        #self.getExposure()
+        #b = self.getBrightness()
+        #self.setBrightness(b)
+        
 
+        
+    def getBrightness( self ):
+        try:
+            brightness = self._capture.get( cv2.cv.CV_CAP_PROP_BRIGHTNESS )
+            logc.info('Received brightness %s' % str(brightness) )
+        except Exception as e:
+            logc.exception(str(e))
+            pass
+
+    def setBrightness( self, setting):
+        try:     
+            self._capture.set( cv2.cv.CV_CAP_PROP_BRIGHTNESS, float(setting) )
+            logc.info('Tried to set brightness %s' % str(setting) ) 
+        except Exception as e:
+            logc.exception(str(e))
+            pass
+        
+        
     def setExposure( self, setting ):
         try:
             self._capture.set( cv2.cv.CV_CAP_PROP_EXPOSURE, setting )

@@ -2,7 +2,7 @@ import os
 import logging
 
 logger = logging.getLogger('scan')
-logger.setLevel(logging.DEBUG)
+#logger.setLevel(logging.DEBUG)
 
 DEV_TREE = '/dev'
 USB_DEVICE_TREE = '/sys/bus/usb/devices'
