@@ -35,7 +35,7 @@ class Tracker ( object ):
             7: 'H299.avi',
             8: 'testRec.avi'
             }
-        self.color = True
+        self.color = False
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -76,7 +76,7 @@ class Tracker ( object ):
             'MAXREF': 1000,
             'capCols':actualCols,
             'capRows': actualRows,
-            'color' : True
+            'color' : self.color
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
