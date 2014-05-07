@@ -56,7 +56,8 @@ class WormFinder ( object ):
         self.breakStart = time.time()
         self.justMoved = False
         self.launch = 0
-        self.launchMAX = 40
+        self.launchMAX = 20
+
         self.setupCropping()
         self.setupFindingStructures()
 
@@ -114,7 +115,7 @@ class WormFinder ( object ):
             self._sub = self._img - self._ref
             self._sub = cv2.subtract(self._ref, self._img)
             lc, lr = self._sub.shape
-            logger.info('Launch is %d' % self.launch)
+            #logger.info('Launch is %d' % self.launch)
  
             # Gaussian Blur
             self._sub  = cv2.GaussianBlur( self._sub, 
@@ -492,7 +493,7 @@ class WormFinder ( object ):
         utils.drawRect(img, 
                        (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
                        (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                       WHITE)
+                       BLACK)
 
 
     def drawDebuggingPointCropped( self, img ):
@@ -523,12 +524,12 @@ class WormFinder ( object ):
 
 
     def drawDebuggingPointGS( self, img ):
-        utils.drawPoint(img, self._colWorm, self._rowWorm, WHITE)
+        utils.drawPoint(img, self._colWorm, self._rowWorm, BLACK)
         utils.drawPoint(img, self._colRef, self._rowRef, BLACK)
         utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, WHITE)
     
     def drawTextStatus( self, img, recording, motors ):
-        cv2.putText(img,  "recording: %r || motors: %r || launch: %d" % (recording, motors, self.launch), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, WHITE)
+        cv2.putText(img,  "recording: %r || motors: %r || launch: %d" % (recording, motors, self.launch), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, BLACK)
         
 
     '''
@@ -542,7 +543,7 @@ class WormFinder ( object ):
     def drawDebugBW( self, img ):
         #BRG
         utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLACK)
-        utils.drawPoint(img, 200, 300, WHITE)
+        utils.drawPoint(img, 200, 300, BLACK)
    
     def drawDebug( self, img ):
         #BRG

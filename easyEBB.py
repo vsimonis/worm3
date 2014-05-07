@@ -14,7 +14,7 @@ logger = logging.getLogger('eggbot')
 UMSTEP = 200
 
 class easyEBB:
-    def __init__( self, resolution = (1280,960), sizeMM = (7.9,5.8), stepMode = 5 ):
+    def __init__( self, resolution = (1280,960), sizeMM = (7.70,5.7), stepMode = 5 ):
         """
         Initializes an easyEBB object
         """
@@ -98,12 +98,16 @@ class easyEBB:
          given in pixels
          """
          
-         logger.warning('Centering Worm')
+         #logger.warning('Centering Worm')
          xInstPix = self.colMid - colWormPix
          yInstPix = self.rowMid - rowWormPix
+
+         
          
          rowSteps = int(yInstPix / self.colPixStep)
          colSteps = int(xInstPix / self.rowPixStep)
+         
+         logger.warning('From (col,row): (%d, %d) to (%d,%d) steps: (%d, %d)' % (colWormPix, rowWormPix,  self.colMid, self.rowMid, colSteps, -rowSteps))
          self.move( duration, colSteps, -rowSteps) #adjusted for orientation
 
         

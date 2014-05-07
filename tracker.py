@@ -58,7 +58,7 @@ class Tracker ( object ):
             cv2.VideoCapture(self.captureSource), 
             self._rawWindow, 
             self.mirroredPreview, self.resolution)
-
+        
         actualCols, actualRows = self._cap.getResolution()
         ## from here on out use this resolution 
         
@@ -70,8 +70,8 @@ class Tracker ( object ):
             'window' : 3,
             'boundBoxRow' : 150,
             'boundBoxCol' : 150,
-            'limRow' : 60,
-            'limCol' : 60,
+            'limRow' : 100,
+            'limCol' : 100,
             'MAXONEFRAME': 500,
             'REFPING' : 600000,
             'MAXREF': 1000,
@@ -234,8 +234,12 @@ def main():
         format='%(asctime)s\t%(levelname)s\t%(name)s\t\t%(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
-
-    logt = logging.getLogger('')
+    
+    console = logging.StreamHandler()
+    console.setLevel(logging_level)
+    formatter = logging.Formatter('%(asctime)s\t%(levelname)s\t%(name)s\t\t%(message)s')
+    console.setFormatter(formatter)
+    logt = logging.getLogger('').addHandler(console)
     t = Tracker(method,source)
     
     t.run()
