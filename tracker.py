@@ -33,9 +33,10 @@ class Tracker ( object ):
             5: 'shortNoBox.avi',
             6: 'longNoBox.avi',
             7: 'H299.avi',
-            8: 'testRec.avi'
+            8: 'testRec.avi',
+            9: 'longDemo.avi'
             }
-        self.color = False
+        self.color = True
         self.captureSource = source[int(src)]
         
         ### Timing initialization
