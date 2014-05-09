@@ -16,6 +16,8 @@ import logging
 BLUE = [255, 0, 0]
 GREEN = [0, 255, 0]
 RED = [0, 0, 255]
+WHITE3 = [255, 255, 255]
+BLACK3 = [0,0,0]
 
 #gray scale
 WHITE = 255
@@ -79,33 +81,20 @@ class WormFinder ( object ):
     FIND WORMS
     """
 
-    def lazy (self):
+    def lazy (self ):
+        return
+
+
+
+    def lazyDemo (self):
         if self.launch <= self.launchMAX:
             self.findWormWholeI()
-
         else: 
             self.findWormLazyCropped()
 
 
-    def centerCrop (self):
-    
-        if self._colRefCenter - self.boundBoxCol/2 - self.extra > 0:
-            self.cmin = self._colRefCenter - self.boundBoxCol/2 - self.extra
-        else:
-            self.cmin = self.extra
-        if self._colRefCenter + self.boundBoxCol/2 + self.extra < self.capCols:
-            self.cmax = self._colRefCenter + self.boundBoxCol/2 + self.extra
-        else:
-            self.cmax = self.capCols - self.extra
-        if self._rowRefCenter - self.boundBoxRow/2 - self.extra > 0:
-            self.rmin = self._rowRefCenter - self.boundBoxRow/2 - self.extra
-        else:
-            self.rmin = self.extra
-        if self._rowRefCenter + self.boundBoxRow/2 + self.extra < self.capRows:
-            self.rmax = self._rowRefCenter + self.boundBoxRow/2 + self.extra
-        else:
-            self.rmax = self.capRows - self.extra
 
+        
 
     def findWormWholeI ( self ):
         t = time.time()
@@ -156,7 +145,7 @@ class WormFinder ( object ):
 
     def findWormLazyCropped ( self ):
         t = time.time()
-        
+    
         if self.hasReference():
 
             self._sub = self._img - self._ref
@@ -164,12 +153,12 @@ class WormFinder ( object ):
             self._sub = cv2.subtract(self._ref, self._img)
             lc, lr = self._sub.shape
             
-            self.centerCrop()
+            self.crop(self.getCenterPoint())
 
             #time to crop!
             self._sub = self._sub[self.rmin : self.rmax, self.cmin : self.cmax]
             
-            logger.info('Launch is %d' % self.launch)
+            logger.debug('Launch is %d' % self.launch)
  
 
             # Gaussian Blur
@@ -211,6 +200,48 @@ class WormFinder ( object ):
         else:
             return
 
+    def crop ( self, p ):
+        # extra is padding around edge. why?
+        '''
+        cmin, rmin .---------. cmax, rmin
+                   |         | 
+                   |    p    |
+                   |         |
+        cmin, rmax .---------. cmax, rmax
+        '''
+        pcol = p[0]
+        prow = p[1]
+
+        ### COLUMNS
+        if pcol - self.boundBoxCol/2 - self.extra > 0:
+            self.cmin = pcol - self.boundBoxCol/2 - self.extra
+        else:
+            self.cmin = self.extra
+        if pcol + self.boundBoxCol/2 + self.extra < self.capCols:
+            self.cmax = pcol + self.boundBoxCol/2 + self.extra
+        else:
+            self.cmax = self.capCols - self.extra
+            
+        ### ROWS
+        if prow - self.boundBoxRow/2 - self.extra > 0:
+            self.rmin = prow - self.boundBoxRow/2 - self.extra
+        else:
+            self.rmin = self.extra
+        if prow + self.boundBoxRow/2 + self.extra < self.capRows:
+            self.rmax = prow + self.boundBoxRow/2 + self.extra
+        else:
+            self.rmax = self.capRows - self.extra
+
+
+
+    """
+    DISPATCH
+    lazyd -> keep decision boundary restricted to center of the image
+    lazy  -> use full image
+    
+    """
+
+
 
     def processFrame ( self, img ):
         #logger.debug('enter process frame')
@@ -219,7 +250,8 @@ class WormFinder ( object ):
             'conf' : self.wormTest,
             'lazy' : self.findWormLazy,
             'lazyc': self.lazy, 
-            'lazyd': self.findWormLazyCroppedDemo,
+            'lazyd': self.lazyDemo
+#            'lazyd': self.findWormLazyCroppedDemo,
 #            'full' : self.findWormFull, #segmentation
 #            'pca'  : self.findWormPCA, 
 #            'box'  : self.findWormBox,
@@ -446,87 +478,56 @@ class WormFinder ( object ):
     '''
     Debugging Points
     '''
+    def getWormPoint ( self ):
+        return (int(self._colWorm), int (self._rowWorm))
+    
+    def getRefPoint ( self ):
+        return (int(self._colRef), int(self._rowRef))
+
+    def getThisPoint ( self ):
+       return (int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances))
+
+    def getDecisionRect ( self ) : 
+        #(topleft, bottomright)
+        return ( (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
+                (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)) )
+
+    def getCropRect ( self ):
+        return ((int(self.cmin), int(self.rmin)), 
+                (int(self.cmax),int( self.rmax)))
+                      
+    def getCenterPoint ( self ) :
+        return (int(self._colRefCenter), (self._rowRefCenter))
+    
+    def getMeanWormPoint (self) :
+        return (int(self._colRefCenter - self._meanColDistances),
+                int( self._rowRefCenter - self._meanRowDistances))
+        
+    def drawDebugCropped( self, img ):
+        if self.color: 
+            utils.drawPoint(img, self.getWormPoint(), RED)
+            #utils.drawPoint(img, self.getCenterPoint(), BLUE)
+            #utils.drawPoint(img, self.getThisPoint(), BLUE)
+            #utils.drawPoint(img, self.getMeanWormPoint(), GREEN)
+            utils.drawRect(img, self.getCropRect(), BLACK)
+            utils.drawRect(img, self.getDecisionRect(), RED)
+
+        else: 
+            utils.drawPoint(img, self.getWormPoint(), WHITE)
+            #utils.drawPoint(img, self.getCenterPoint(), BLUE)
+            #utils.drawPoint(img, self.getThisPoint(), WHITE)
+            utils.drawRect(img, self.getDecisionRect(), BLACK)
+
+        if self.launch >= self.launchMAX:
+            utils.drawRect(img, self.getCropRect(), BLACK)
+
 
     def drawDebuggingPoint( self, img ):
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
-        utils.drawPoint(img, int(self._colRef), int(self._rowRef), BLUE)
-        utils.drawPoint(img, int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances), GREEN)
-        #utils.drawPoint(img, 200, 300, green)
-       # utils.drawPoint(img, 320, 240, red)
+        utils.drawPoint(img, self.getWormPoint(), RED)
+        utils.drawPoint(img, self.getRefPoint(), BLUE)
+        utils.drawPoint(img, self.getMeanWormPoint() , GREEN)
     
-    def drawDebuggingPointCroppedBW( self, img ):
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), WHITE)
-        #utils.drawPoint(img, 
-        #                int(self._colRefCenter), 
-        #                int(self._rowRefCenter), 
-        #                blue)
-        #utils.drawPoint(img, 
-        #                int(self._colRefCenter - self._meanColDistances),
-        #                int( self._rowRefCenter - self._meanRowDistances), 
-        #                WHITE)
-        utils.drawRect(img, 
-                       (int(self.cmin), int(self.rmin)), 
-                       (int(self.cmax),int( self.rmax)), 
-                       BLACK)
-        utils.drawRect(img, 
-                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
-                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                       BLACK)
 
-    def drawDebuggingPointCroppedBWlaunch( self, img ):
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), WHITE)
-        #utils.drawPoint(img, 
-        #                int(self._colRefCenter), 
-        #                int(self._rowRefCenter), 
-        #                blue)
-        #utils.drawPoint(img, 
-        #                int(self._colRefCenter - self._meanColDistances),
-        #                int( self._rowRefCenter - self._meanRowDistances), 
-        #                WHITE)
-        #Search space: whole image
-        utils.drawRect(img, 
-                       (5, int(self.capRows) - 5), 
-                       (5,int( self.capCols) - 5), 
-                       BLACK)
-
-        # Decision space
-        utils.drawRect(img, 
-                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
-                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                       BLACK)
-
-
-    def drawDebuggingPointCropped( self, img ):
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
-        utils.drawPoint(img, 
-                        int(self._colRefCenter), 
-                        int(self._rowRefCenter), 
-                        BLUE)
-        utils.drawPoint(img, 
-                        int(self._colRefCenter - self._meanColDistances),
-                        int( self._rowRefCenter - self._meanRowDistances), 
-                        GREEN)
-        utils.drawRect(img, 
-                       (int(self.cmin), int(self.rmin)), 
-                       (int(self.cmax),int( self.rmax)), 
-                       GREEN)
-        utils.drawRect(img, 
-                       (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
-                       (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)),
-                        RED)
-
-    def drawDebuggingPointCroppedDemo( self, img ):
-        utils.drawPoint(img, int(self._colWorm), int(self._rowWorm), RED)
-        utils.drawPoint(img, int(self._colRef), int(self._rowRef), BLUE)
-        utils.drawRect(img, (int(self.cmin), int(self.rmin)), 
-                       (int(self.cmax),int( self.rmax)), GREEN)
-
-
-
-    def drawDebuggingPointGS( self, img ):
-        utils.drawPoint(img, self._colWorm, self._rowWorm, BLACK)
-        utils.drawPoint(img, self._colRef, self._rowRef, BLACK)
-        utils.drawPoint(img, self._colRef - self._meanColDistances, self._rowRef - self._meanRowDistances, WHITE)
     
     def drawTextStatus( self, img, recording, motors ):
         cv2.putText(img,  "recording: %r || motors: %r || launch: %d" % (recording, motors, self.launch), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, BLACK)
@@ -540,15 +541,15 @@ class WormFinder ( object ):
         return logger.getEffectiveLevel() <= logging.INFO
     
 
-    def drawDebugBW( self, img ):
+    def drawTest( self, img ):
         #BRG
-        utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLACK)
-        utils.drawPoint(img, 200, 300, BLACK)
-   
-    def drawDebug( self, img ):
-        #BRG
-        utils.drawPoint(img, int(self._colRefCenter), int(self._rowRefCenter), BLUE)
-        utils.drawPoint(img, 200, 300, RED)
+        if self.color: 
+            utils.drawPoint(img, self.getCenterPoint(), BLUE)
+            utils.drawPoint(img, 200, 300, RED)
+
+        else:
+            utils.drawPoint(img, self.getWormPoint(), BLACK)
+            utils.drawPoint(img, 200, 300, BLACK)
    
     #@property
     def hasReference ( self ):

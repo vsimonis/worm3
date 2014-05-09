@@ -114,29 +114,25 @@ class Tracker ( object ):
 
             # If tracking is enabled or motors are on, start tracking
             if time.time() - self._lastCheck >= self._sampleFreq:
-                if self.finderArgs['method'] == 'lazyc':
+                if self.finderArgs['method'] in ['lazyc', 'lazyd']:
                     self.gaussian = self._wormFinder.processFrame( frame )
                     self.overlayImage = copy.deepcopy(frame)
                     if self.motorsOn:
                         self._wormFinder.decideMove()
                     self._lastCheck = time.time()
-                    if self._wormFinder.launch >= self._wormFinder.launchMAX:
-                        self._wormFinder.drawDebuggingPointCroppedBW( self.overlayImage )       
-                        self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
-                    else: 
-                        self._wormFinder.drawDebuggingPointCroppedBWlaunch( self.overlayImage )       
-                        self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
+                    self._wormFinder.drawDebugCropped( self.overlayImage)
+                    self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
+                    
                     self._overlayWindow.show(self.overlayImage)                    
 
-                if self.finderArgs['method'] == 'test' or self.finderArgs['method'] == 'conf': 
-                    if self.color:
-                        self._wormFinder.drawDebug( frame )
-                    else:
-                        self._wormFinder.drawDebugBW( frame )
+                if self.finderArgs['method'] in ['test','conf']: 
+                    self._wormFinder.drawTest( frame )
+                    
+                    
 
             self._cap.exitFrame()
             self._rawWindow.processEvents()
-            #logt.info('frame processing took: %0.6f' % (time.time() - t1))
+            logt.warning('frame processing took: %0.6f' % (time.time() - t1))
     
     @property
     def isDebug( self ):
