@@ -63,20 +63,21 @@ class Tracker ( object ):
         ## from here on out use this resolution 
         
         ### Arguments for finder
+        # --> Pairs are always COLS, ROWS !!!!!!!
         self.finderArgs = {
             'method' : method,
             'gsize' :  45,
             'gsig' : 9,
             'window' : 3,
-            'boundBoxRow' : 150,
-            'boundBoxCol' : 150,
-            'limRow' : 100,
-            'limCol' : 100,
+
+
             'MAXONEFRAME': 500,
             'REFPING' : 600000,
             'MAXREF': 1000,
-            'capCols':actualCols,
-            'capRows': actualRows,
+
+            'captureSize' : (actualCols, actualRows)
+            'cropRegion' : utils.Rect(150,150)         # Area to crop
+            'decisionBoundary' : utils.Rect(1000, 800) # Decision boundary 
             'color' : self.color
             }
 
