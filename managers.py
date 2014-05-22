@@ -148,17 +148,17 @@ class CaptureManager( object ):
         else: 
             timeElapsed = time.time() - self._startTime
             self._fpsEstimate = self._framesElapsed / timeElapsed
-            #logc.info('fps estimate: %d' % self._fpsEstimate )
+            logc.info('fps estimate: %d' % self._fpsEstimate )
         self._framesElapsed += 1
 
 
         #Draw to the window
-        if self._previewWindowManager is not None: 
-            if self._shouldMirrorPreview:
-                mirroredFrame = numpy.fliplr(self._frame).copy()
-                self._previewWindowManager.show(mirroredFrame)
-            else: 
-                self._previewWindowManager.show(self._frame)
+        #if self._previewWindowManager is not None: 
+        #    if self._shouldMirrorPreview:
+        #        mirroredFrame = numpy.fliplr(self._frame).copy()
+        #        self._previewWindowManager.show(mirroredFrame)
+        #    else: 
+        #        self._previewWindowManager.show(self._frame)
 
 
         #Write image file
@@ -255,7 +255,7 @@ class WindowManager ( object ):
         return self._isWindowCreated
 
     def createWindow ( self ):
-        cv2.namedWindow( self._windowName)###, cv2.cv.CV_WINDOW_NORMAL)
+        cv2.namedWindow( self._windowName, cv2.cv.CV_WINDOW_NORMAL)
         self._isWindowCreated = True 
 
     def show ( self, frame ):

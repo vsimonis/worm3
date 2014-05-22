@@ -17,7 +17,7 @@ logt = logging.getLogger('')
 class Tracker ( object ):
     
     def __init__( self, method, src ):
-
+        
         ### Sensitivity of tracker params
         self._sampleFreq = 0.1 #in sec
         
@@ -60,8 +60,11 @@ class Tracker ( object ):
             self.mirroredPreview, self.resolution)
         
         actualCols, actualRows = self._cap.getResolution()
+        self.centerPt = utils.Point(actualCols / 2, actualRows / 2)
+
         ## from here on out use this resolution 
-        
+        boundCols = 1000
+        boundRows = 800
         ### Arguments for finder
         # --> Pairs are always COLS, ROWS !!!!!!!
         self.finderArgs = {
@@ -75,16 +78,18 @@ class Tracker ( object ):
             'REFPING' : 600000,
             'MAXREF': 1000,
 
-            'captureSize' : (actualCols, actualRows)
-            'cropRegion' : utils.Rect(150,150)         # Area to crop
-            'decisionBoundary' : utils.Rect(1000, 800) # Decision boundary 
+            'captureSize' : utils.Rect(actualCols, actualRows,self.centerPt),
+            'cropRegion' : utils.Rect(100,100,self.centerPt) ,
+            'decisionBoundary' : utils.Rect(boundCols, boundRows, self.centerPt),
             'color' : self.color
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
 
         ##### Debugging
+        self._gaussianWindow = WindowManager('Gaussian', self.onKeypress) 
         self._overlayWindow = WindowManager( 'Overlay', self.onKeypress )
+ 
         self.motorsOn = False
 
 
@@ -94,7 +99,7 @@ class Tracker ( object ):
         # Show windows
         self._rawWindow.createWindow()
         self._overlayWindow.createWindow()
-
+        i = 0
         while self._rawWindow.isWindowCreated:
             self._cap.enterFrame()
             frame = self._cap.frame
@@ -115,25 +120,31 @@ class Tracker ( object ):
 
             # If tracking is enabled or motors are on, start tracking
             if time.time() - self._lastCheck >= self._sampleFreq:
-                if self.finderArgs['method'] in ['lazyc', 'lazyd']:
+                if self.finderArgs['method'] in ['lazyc', 'lazyd', 'lazy']:
                     self.gaussian = self._wormFinder.processFrame( frame )
+                    
                     self.overlayImage = copy.deepcopy(frame)
-                    if self.motorsOn:
-                        self._wormFinder.decideMove()
+#                    if self.motorsOn:
+                    self._wormFinder.decideMove()
                     self._lastCheck = time.time()
                     self._wormFinder.drawDebugCropped( self.overlayImage)
                     self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
                     
-                    self._overlayWindow.show(self.overlayImage)                    
+                    self._overlayWindow.show(self.overlayImage)
+                    if self.gaussian is not None:
+                        self._gaussianWindow.show(self.gaussian)
+                        cv2.imwrite('g-%d.jpg' % i, self.gaussian )
+                        cv2.imwrite('o-%d.jpg' % i, self.overlayImage )
+
 
                 if self.finderArgs['method'] in ['test','conf']: 
                     self._wormFinder.drawTest( frame )
                     
                     
-
+            i += 1
             self._cap.exitFrame()
             self._rawWindow.processEvents()
-            logt.warning('frame processing took: %0.6f' % (time.time() - t1))
+            logt.info('frame processing took: %0.6f' % (time.time() - t1))
     
     @property
     def isDebug( self ):
@@ -141,11 +152,10 @@ class Tracker ( object ):
 
     def shutDown( self ):
         self._rawWindow.destroyWindow()
-        #if not self.isDebug:
+
         if self._cap.isWritingVideo:
             self._cap.stopWritingVideo()
         try:
-#            self._wormFinder.writeOut('%s-%s' % (self.finderArgs['method'], self.captureSource))
             self._wormFinder.servos.disableMotors()
             self._wormFinder.servos.closeSerial()
         except Exception as e:
@@ -166,7 +176,7 @@ class Tracker ( object ):
                 self.motorsOn = False#_captureManager.writeImage('screenshot.png')
                 if not self.isDebug:
                     self._wormFinder.servos.disableMotors()
-                        #cv2.displayOverlay('Overlay','Motors disabled', 0)
+
             else:
                 self.motorsOn = True
                 self._wormFinder.launch = 0
@@ -174,17 +184,17 @@ class Tracker ( object ):
                     self._wormFinder.servos.enableMotors()
                     self._wormFinder.launch = 0
                     time.sleep(2)
-                    #cv2.displayOverlay('Overlay','Motors enabled', 0)
+
 
         elif keycode == 9: #tab
             if not self._cap.isWritingVideo:
                 self._cap.startWritingVideo(
                     'worm%s.avi' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time())),
                     cv2.cv.CV_FOURCC(*'MJPG'))
-#                cv2.displayOverlay('Overlay','Writing Video', 0)
+
             else:
                 self._cap.stopWritingVideo()
-#                cv2.displayOverlay('Overlay','Not writing Video', 0)
+
 
         elif keycode == 27: #escape
             self.shutDown()
@@ -216,13 +226,6 @@ def main():
         source = options.source
     
     logging_level = LOGGING_LEVELS.get(options.logging_level, logging.WARNING)
-
-
-#    if options.logging_level is None:
-#        options.logging_level = LOGGING_LEVELS.get(options.logging_level, logging.WARNING)
-        
-#    if options.logging_file is None:
-#        options.logging_file = 'worm%s.log' % time.strftime("%Y_%m_%d-%H-%M-%S", time.localtime(time.time()))
 
     ## Set up logging
     logging.basicConfig(

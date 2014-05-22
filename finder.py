@@ -42,156 +42,170 @@ class WormFinder ( object ):
                      'captureSize', 'cropRegion', 'decisionBoundary',
                      'color']:
                 self.__setattr__(k, kwargs[k])
-        
+
+        self.trackerConnected = False
 
         ### Timing ###
-        self.start = time.time()
-        self.delay = 4
-        self.breakT = 3
-        self.breakStart = time.time()
-        self.justMoved = False
         self.lastRefTime = time.time()        
-
-        self.launch = 0
-        self.launchMAX = 20
-
+        self.pauseFrame = 0 #cropping wise
+        self.nPauseFrames = 20 #cropping wise
+        
+        self.breakDuration = 3 # motor wise
+        self.breakStart = time.time()
 
         ### Worm Finding
         ## points
-        self.wormLocation = Point(-1 , -1 ) 
-        self.wormLocationPrevious = Point( -1, -1)
+        self.wormLocation = utils.Point(-1 , -1 ) 
+        self.wormLocationPrevious = utils.Point( -1, -1)
+        self.frameCenter = utils.Point(self.captureSize.ncols / 2, self.captureSize.nrows / 2)
+
         ## images 
         self.refImg = None
         self.subImg = None
         self.croppedImg = None
 
-        self._colDistances = []
-        self._rowDistances = []
-
-        
         ### Cropping ###
-
         self.cmin = 0
-        self.cmax = self.captureSize['col']
+        self.cmax = self.captureSize.ncols
         self.rmin = 0
-        self.rmax = self.captureSize['row']
- 
+        self.rmax = self.captureSize.nrows
+
+
 
         ### Logging ###
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
-        if not self.isDebug() and self.method != 'conf' :
-            self.servos = easyEBB()#(self.capCols, self.capRows), (5,5), 5)
-            time.sleep(2)
-
-#@property
-    def hasReference ( self ):
-        return self.ref is not None
-
-#    @property
-#    def hasReferenceLocation ( self ):
-#        return self._colRef  >= 0
+        if self.initializeMotors: 
+            self.servos = easyEBB()
+    
+    """
+    Impacting Program Flow
+    """
+    @property
+    def initializeMotors( self ):
+        if self.method == 'conf' or not self.trackerConnected:
+            return False
+        else: 
+            return True
 
     @property
-    def lenDistanceArray ( self ):
-        return len(self._colDistances)
+    def hasReference ( self ):
+        return self.refImg is not None
 
     @property
     def isColor ( self ):
         return self.color
 
     def resetRef( self ):
-        self.launch = 0
-        self.ref = None
-    
+        self.pauseFrame = 0
+        self.refImg = None
+                ### Cropping ###
+        self.cmin = 0
+        self.cmax = self.captureSize.ncols
+        self.rmin = 0
+        self.rmax = self.captureSize.nrows
 
 
     """ 
     FIND WORMS
     """
-
+    def wormTest ( self ): 
+        return
+    
     def lazy (self ):
-        self.findWormLazy(self.getWormPoint())
+        self.findWorm(self.wormLocation)
     
     def lazyDemo (self):
-        self.findWorm(self.getCenterPoint())
+        self.findWorm(self.frameCenter)
 
     def findWorm ( self, cropPoint ):
         t = time.time()
     
-        if self.hasReference():
+        if self.hasReference:
             # Subtract images 
-            self.sub = cv2.subtract(self._ref, self._img)
+            self.subImg = cv2.subtract(self.refImg, self._img)
 
             # If timing is right, crop!
-            if self.launch > self.launchMAX:
-                self.sub = self.crop(cropPoint)
-
+            if self.croppedSearchSpace():
+                self.calculateCrop(cropPoint) # crop with cropPoint as center
+                # perform crop
+                self.subImg = self.subImg[self.rmin : self.rmax, self.cmin : self.cmax]
+           
             # Gaussian Blur
-            self.sub  = cv2.GaussianBlur( self.sub, 
+            self.subImg  = cv2.GaussianBlur( self.subImg, 
                                            (self.gsize, self.gsize) , self.gsig )
             # Worm Location
-            r, c = np.nonzero ( self._sub == np.max( self._sub ) )
-            self.wormLocation.update( c[0] += self.cmin, r[0] += self.rmin)
-            self.wormLocationPrevious.update( self.wormLocation.gimme() )
+            r, c = np.nonzero ( self.subImg == np.max( self.subImg ) )
+            self.wormLocation.update( c[0] + self.cmin, r[0] + self.rmin)
+            self.wormLocationPrevious.update( self.wormLocation.col, self.wormLocation.row )
             
-            self.justMoved = False
+            self.pauseFrame += 1
+            self.justMoved = False #necessary?
+
+        else:
+            return
+    
+    def findWorm ( self, cropPoint ):
+        t = time.time()
+        if self.hasReference:
+            # Subtract images 
+            self.subImg = cv2.subtract(self.refImg, self._img)
+
+            # If timing is right, crop!
+            if self.croppedSearchSpace():
+                self.calculateCrop(cropPoint) # crop with cropPoint as center
+                # perform crop
+                self.subImg = self.subImg[self.rmin : self.rmax, self.cmin : self.cmax]
+           
+            # Gaussian Blur
+            self.subImg  = cv2.GaussianBlur( self.subImg, 
+                                           (self.gsize, self.gsize) , self.gsig )
+            # Worm Location
+            r, c = np.nonzero ( self.subImg == np.max( self.subImg ) )
+            self.wormLocation.update( c[0] + self.cmin, r[0] + self.rmin)
+            self.wormLocationPrevious.update( self.wormLocation.col, self.wormLocation.row )
             
-            self.launch += 1
+            self.pauseFrame += 1
+            self.justMoved = False #necessary?
 
-            ### Distance from center
-            self._colDistances.append(self._colRefCenter - self.wormLocation.col)
-            self._rowDistances.append(self._rowRefCenter - self.wormLocation.row)
+        else:
+            return
+    
+    def lazyNoCrop(self):
+        self.findWormNoCropping( 'nada')
 
-            if ( self.lenDistanceArray > self.window ):
-                self._colDistances = self._colDistances[1:] #pop
-                self._rowDistances = self._rowDistances[1:] #pop
+    def findWormNoCropping ( self, cropPoint ):
+        t = time.time()
+    
+        if self.hasReference:
+            # Subtract images 
+            self.subImg = cv2.subtract(self.refImg, self._img)
 
+            # Gaussian Blur
+            self.subImg  = cv2.GaussianBlur( self.subImg, 
+                                           (self.gsize, self.gsize) , self.gsig )
+            # Worm Location
+            r, c = np.nonzero ( self.subImg == np.max( self.subImg ) )
+            self.wormLocation.update( c[0] + self.cmin, r[0] + self.rmin)
+            self.wormLocationPrevious.update( self.wormLocation.col, self.wormLocation.row )
+            
+            self.pauseFrame += 1
+            self.justMoved = False #necessary?
 
-            self._meanColDistances = int(np.mean(self._colDistances))
-            self._meanRowDistances = int(np.mean(self._rowDistances))
-            #logger.info('%0.4f s\tfind worm Lazy Cropped runtime' % (time.time() - t) )
         else:
             return
 
-    def crop ( self, p, img ):
-        rpad = (self.captureSize['row'] - self.cropRegion['row']) // 2 
-        cpad = (self.captureSize['col'] - self.cropRegion['col']) // 2
-        extra = 50
-        
-       # extra is padding around edge
-        '''
-        cmin, rmin .---------. cmax, rmin
-                   |         | 
-                   |    p    |
-                   |         |
-        cmin, rmax .---------. cmax, rmax
-        '''
-        pcol = p[0]
-        prow = p[1]
+    def croppedSearchSpace ( self ):
+        return self.pauseFrame > self.nPauseFrames
 
-        ### COLUMNS
-        if pcol - self.cropRegion['col'] / 2 - extra > 0:
-            self.cmin = pcol - self.cropRegion['col'] / 2 - extra
-        else:
-            self.cmin = extra
-        if pcol + self.cropRegion['col'] / 2 + extra < self.captureSize['col']:
-            self.cmax = pcol + self.captureSize['col'] / 2 + extra
-        else:
-            self.cmax = self.captureSize['col'] - extra
-            
-        ### ROWS
-        if prow - self.cropRegion['row'] / 2 - extra > 0:
-            self.rmin = prow - self.cropRegion['row'] / 2 - extra
-        else:
-            self.rmin = extra
-        if prow + self.cropRegion['row'] / 2 + extra < self.captureSize['row']:
-            self.rmax = prow + self.captureSize['row'] / 2 + extra
-        else:
-            self.rmax = self.captureSize['row'] - extra
-                
-        return 
+    def calculateCrop ( self, p ):
+        self.cropRegion.update(p)
+        self.cmin = self.cropRegion.left
+        self.cmax = self.cropRegion.right
+        self.rmin = self.cropRegion.top
+        self.rmax = self.cropRegion.bottom
+
     """
     DISPATCH
     lazyd -> keep decision boundary restricted to center of the image
@@ -200,33 +214,25 @@ class WormFinder ( object ):
     """
 
     def processFrame ( self, img ):
-        #logger.debug('enter process frame')
+
         options = {
             'test' : self.wormTest,
             'conf' : self.wormTest,
-            'lazy' : self.findWormLazy,
+            'lazy' : self.lazyNoCrop,
             'lazyc': self.lazy, 
             'lazyd': self.lazyDemo
-#            'lazyd': self.findWormLazyCroppedDemo,
-#            'full' : self.findWormFull, #segmentation
-#            'pca'  : self.findWormPCA, 
-#            'box'  : self.findWormBox,
-#            'surf' : self.surfImp, 
-#            'sift' : self.siftImp,
-#            'mser' : self.mserImp
             }
         t = time.time()
         
-        ### LAZYS ###
-        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
-            if not self.hasReference(): #is this OK???
+
+        if self.method in ['lazy','lazyc','lazyd']:
+            if not self.hasReference:
                 if self.isColor:
-                    self._ref = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
+                    self.refImg = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
                 else:
-                    self._ref = img
-                self._sub = np.zeros(self._ref.shape) ##For display
+                    self.refImg = img
                 self.lastRefTime = time.time()
-            else:
+            else: # Has reference, normal execution
                 if self.isColor:
                     self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
                 else:
@@ -236,69 +242,66 @@ class WormFinder ( object ):
                 except KeyError:
                     self.lazy() #default
 
-        ### Non-lazies
-        else:
-            if self.isColor:
-                self._img = cv2.cvtColor(img, cv2.cv.CV_RGB2GRAY)
-            else:
-                self._img = img
-            try:
-                options[self.method]()
-            except KeyError:
-                self.findWormLazy() #default
-
-        return self._sub ## gets displayed in the window
+        return self.subImg ## gets displayed in the window
     
 
     def decideMove ( self ):
         t = time.time()
-        if not ( t - self.start >= self.delay ):
+
+        if not self.hasReference:
+            return
+        if not self.breakOver():
             return
 
-        if self.justMoved:
-            logger.info('you just moved, try again later')
-            return
-
-        if time.time() - self.breakStart <= self.breakT:
-           # logger.warning("you're still on break")
-            return
-
-        if self.method == 'lazy' or self.method == 'lazyc' or self.method == 'lazyd':
+        if self.method in ['lazy','lazyc','lazyd']:
             if time.time() - self.lastRefTime >= self.REFPING:
                 self.resetRef()
                 logger.info('New reference based on PING')
 
-            if self._colRef < 0 and self.method =='lazy':
-                return 
-            
-            if not self.hasReference and self.method == 'lazyc':
-                logger.warning('Not this this sucker, you just moved')
-
             ### Possible move: make sure
-
-            if self.method == 'lazyc':
-                self.limCol = self.lgBoundaryCols
-                self.limRow = self.lgBoundaryRows
-
-
-            elif ( abs(self._meanColDistances) > self.decisionBoundary['col'] or abs(self._meanRowDistances) > self.decisionBoundary['row'] ):
+            if self.wormOutsideBoundary('point'):
                 ## Check previous location of worm
-                if abs ( self.wormLocationPrevious['row'] - self.wormLocation['row' ) > self.MAXONEFRAME or
-                         abs( self.wormLocationPrevious['col' - self.wormLocation['col'] ) > self.MAXONEFRAME:
-                    logger.info('Impossible location: too far from previous')
-
-                    self._colDistances = []
-                    self._rowDistances = []
-                    return
-                else:
-                    logger.info('MOVE!!!')
+                if not self.wormRidiculousLocation():
+                    logger.warning('MOVE!!!')
+                    self.justMoved = True
+                    self.resetRef()
+                    self.breakStart = time.time()
                     try:
-                        self.servos.centerWorm(100, self.wormLocation['col'], self.wormLocation['row'])
+                        self.servos.centerWorm(100, self.wormLocation.col, self.wormLocation.row)
                     except:
                         logger.warning('GRR')
-                    self.justMoved = True
-                    self.breakStart = time.time()
-                    self.resetRef()
+                else:
+                    logger.warning('Impossible location: too far from previous')
+        return
+                                                 
+    def breakOver( self ):
+        currentTime = time.time()
+        if currentTime - self.breakStart > self.breakDuration:
+            return True
+        else:
+            return False
+
+    def wormRidiculousLocation( self ):
+        farRow = abs ( self.wormLocationPrevious.row - self.wormLocation.row ) > self.MAXONEFRAME
+        farCol = abs ( self.wormLocationPrevious.col - self.wormLocation.col ) > self.MAXONEFRAME
+        #logger.warning('farRow: %r\tfarCol:%r' % (farRow, farCol))
+        return farRow or farCol
+    
+    def wormOutsideBoundary ( self, method ):
+        if method == 'point':
+            rowLeft = self.wormLocation.row < self.decisionBoundary.left
+            rowRight = self.wormLocation.row > self.decisionBoundary.right
+            colTop = self.wormLocation.col < self.decisionBoundary.top
+            colBottom =  self.wormLocation.col > self.decisionBoundary.bottom
+        
+        else: 
+            rowLeft = self.cropRegion.left < self.decisionBoundary.left
+            rowRight = self.cropRegion.right > self.decisionBoundary.right
+            colTop = self.cropRegion.bottom < self.decisionBoundary.top
+            colBottom = self.cropRegion.top > self.decisionBoundary.bottom
+        
+        return (rowLeft or rowRight) or (colTop or colBottom)
+
 
     """
     DEBUGGING
@@ -307,59 +310,15 @@ class WormFinder ( object ):
     '''
     Debugging Points
     '''
-    def getWormPoint ( self ):
-        return (int(self._colWorm), int (self._rowWorm))
-    
-    def getRefPoint ( self ):
-        return (int(self._colRef), int(self._rowRef))
-
-    def getThisPoint ( self ):
-       return (int(self._colRef - self._meanColDistances),int( self._rowRef - self._meanRowDistances))
-
-    def getDecisionRect ( self ) : 
-        #(topleft, bottomright)
-        return ( (int(self._colRefCenter - self.limCol), int(self._rowRefCenter - self.limRow)),
-                (int(self._colRefCenter +  self.limCol), int(self._rowRefCenter + self.limRow)) )
-
-    def getCropRect ( self ):
-        return ((int(self.cmin), int(self.rmin)), 
-                (int(self.cmax),int( self.rmax)))
-                      
-    def getCenterPoint ( self ) :
-        return (int(self._colRefCenter), (self._rowRefCenter))
-    
-    def getMeanWormPoint (self) :
-        return (int(self._colRefCenter - self._meanColDistances),
-                int( self._rowRefCenter - self._meanRowDistances))
-        
     def drawDebugCropped( self, img ):
         if self.color: 
-            utils.drawPoint(img, self.getWormPoint(), RED)
-            #utils.drawPoint(img, self.getCenterPoint(), BLUE)
-            #utils.drawPoint(img, self.getThisPoint(), BLUE)
-            #utils.drawPoint(img, self.getMeanWormPoint(), GREEN)
-            utils.drawRect(img, self.getCropRect(), BLACK)
-            utils.drawRect(img, self.getDecisionRect(), RED)
-
-        else: 
-            utils.drawPoint(img, self.getWormPoint(), WHITE)
-            #utils.drawPoint(img, self.getCenterPoint(), BLUE)
-            #utils.drawPoint(img, self.getThisPoint(), WHITE)
-            utils.drawRect(img, self.getDecisionRect(), BLACK)
-
-        if self.launch >= self.launchMAX:
-            utils.drawRect(img, self.getCropRect(), BLACK)
-
-
-    def drawDebuggingPoint( self, img ):
-        utils.drawPoint(img, self.getWormPoint(), RED)
-        utils.drawPoint(img, self.getRefPoint(), BLUE)
-        utils.drawPoint(img, self.getMeanWormPoint() , GREEN)
-    
-
-    
+            self.wormLocation.draw( img, RED)
+            self.decisionBoundary.draw( img, RED )
+            if self.croppedSearchSpace():
+                self.cropRegion.draw(img, BLACK)
+                
     def drawTextStatus( self, img, recording, motors ):
-        cv2.putText(img,  "recording: %r || motors: %r || launch: %d" % (recording, motors, self.launch), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, BLACK)
+        cv2.putText(img,  "recording: %r || motors: %r || croppedSearchSpace: %r || outside: %r" % (recording, motors, self.croppedSearchSpace(), self.wormOutsideBoundary('point')), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, BLACK)
         
 
     '''
@@ -367,7 +326,7 @@ class WormFinder ( object ):
     '''
             
     def isDebug( self ):
-        return logger.getEffectiveLevel() <= logging.INFO
+        return logger.getEffectiveLevel() <= logging.WARNING
     
 
     def drawTest( self, img ):
