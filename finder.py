@@ -76,8 +76,8 @@ class WormFinder ( object ):
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
-        #if self.initializeMotors: 
-        self.servos = easyEBB()
+        if self.initializeMotors: 
+            self.servos = easyEBB()
     
     """
     Impacting Program Flow
@@ -272,7 +272,9 @@ class WormFinder ( object ):
                         logger.warning('GRR')
                 else:
                     logger.warning('Impossible location: too far from previous')
+        logger.info('processing: %0.6f' % (time.time() - t))
         return
+
                                                  
     def breakOver( self ):
         currentTime = time.time()
@@ -338,10 +340,10 @@ class WormFinder ( object ):
         #BRG
         p = utils.Point(200,300)
         if self.color: 
-            utils.drawPoint(img, self.getCenterPoint(), BLUE)
-            utils.drawPoint(img,p, RED)
+            self.frameCenter.draw( img, BLUE )
+            p.draw( img, RED)
 
         else:
-            utils.drawPoint(img, self.getWormPoint(), BLACK)
-            utils.drawPoint(img, p, BLACK)
+            self.frameCenter.draw( img, BLACK )
+            p.draw( img, RED)
    

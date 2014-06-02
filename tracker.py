@@ -17,7 +17,9 @@ logt = logging.getLogger('')
 class Tracker ( object ):
     
     def __init__( self, method, src ):
-        
+        self.color = True
+        self.motorsOn = False
+
         ### Sensitivity of tracker params
         self._sampleFreq = 0.1 #in sec
         
@@ -36,7 +38,6 @@ class Tracker ( object ):
             8: 'testRec.avi',
             9: 'longDemo.avi'
             }
-        self.color = False
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -81,7 +82,8 @@ class Tracker ( object ):
             'captureSize' : utils.Rect(actualCols, actualRows,self.centerPt),
             'cropRegion' : utils.Rect(100,100,self.centerPt) ,
             'decisionBoundary' : utils.Rect(boundCols, boundRows, self.centerPt),
-            'color' : self.color
+            'color' : self.color,
+            'motorsOn': self.motorsOn
             }
 
         self._wormFinder = WormFinder( **self.finderArgs )     
@@ -90,7 +92,7 @@ class Tracker ( object ):
 #        self._gaussianWindow = WindowManager('Gaussian', self.onKeypress) 
         self._overlayWindow = WindowManager( 'Overlay', self.onKeypress )
  
-        self.motorsOn = False
+
 
 
 

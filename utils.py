@@ -16,7 +16,7 @@ class Rect ( object ):
         self.topleft.update(center.col - (self.incols / 2), center.row - (self.inrows / 2)) #center is a point
         self.bottomright.update(center.col + (self.incols / 2), center.row + (self.inrows / 2))
         self.center = center
-        print self.center
+        ##print self.center
 
     @property
     def right ( self ):
