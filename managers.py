@@ -255,7 +255,7 @@ class WindowManager ( object ):
         return self._isWindowCreated
 
     def createWindow ( self ):
-        cv2.namedWindow( self._windowName, cv2.cv.CV_WINDOW_NORMAL)
+        cv2.namedWindow( self._windowName)#, cv2.cv.CV_WINDOW_NORMAL)
         self._isWindowCreated = True 
 
     def show ( self, frame ):

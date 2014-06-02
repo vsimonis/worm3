@@ -36,7 +36,7 @@ class Tracker ( object ):
             8: 'testRec.avi',
             9: 'longDemo.avi'
             }
-        self.color = True
+        self.color = False
         self.captureSource = source[int(src)]
         
         ### Timing initialization
@@ -87,7 +87,7 @@ class Tracker ( object ):
         self._wormFinder = WormFinder( **self.finderArgs )     
 
         ##### Debugging
-        self._gaussianWindow = WindowManager('Gaussian', self.onKeypress) 
+#        self._gaussianWindow = WindowManager('Gaussian', self.onKeypress) 
         self._overlayWindow = WindowManager( 'Overlay', self.onKeypress )
  
         self.motorsOn = False
@@ -124,17 +124,17 @@ class Tracker ( object ):
                     self.gaussian = self._wormFinder.processFrame( frame )
                     
                     self.overlayImage = copy.deepcopy(frame)
-#                    if self.motorsOn:
-                    self._wormFinder.decideMove()
+                    if self.motorsOn:
+                        self._wormFinder.decideMove()
                     self._lastCheck = time.time()
                     self._wormFinder.drawDebugCropped( self.overlayImage)
                     self._wormFinder.drawTextStatus(self.overlayImage,self._cap.isWritingVideo, self.motorsOn)
                     
                     self._overlayWindow.show(self.overlayImage)
-                    if self.gaussian is not None:
-                        self._gaussianWindow.show(self.gaussian)
-                        cv2.imwrite('g-%d.jpg' % i, self.gaussian )
-                        cv2.imwrite('o-%d.jpg' % i, self.overlayImage )
+#                    if self.gaussian is not None:
+#                        self._gaussianWindow.show(self.gaussian)
+#                        cv2.imwrite('g-%d.jpg' % i, self.gaussian )
+#                        cv2.imwrite('o-%d.jpg' % i, self.overlayImage )
 
 
                 if self.finderArgs['method'] in ['test','conf']: 
@@ -144,7 +144,7 @@ class Tracker ( object ):
             i += 1
             self._cap.exitFrame()
             self._rawWindow.processEvents()
-            logt.info('frame processing took: %0.6f' % (time.time() - t1))
+            logt.info('processing: %0.6f' % (time.time() - t1))
     
     @property
     def isDebug( self ):

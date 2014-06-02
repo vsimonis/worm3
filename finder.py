@@ -76,15 +76,15 @@ class WormFinder ( object ):
         logger.debug('Debug level: %s' % logger.getEffectiveLevel() )
         logger.debug('is Debug?: %s' % str(self.isDebug()))
 
-        if self.initializeMotors: 
-            self.servos = easyEBB()
+        #if self.initializeMotors: 
+        self.servos = easyEBB()
     
     """
     Impacting Program Flow
     """
     @property
     def initializeMotors( self ):
-        if self.method == 'conf' or not self.trackerConnected:
+        if self.method == 'conf' or not self.motorsOn:
             return False
         else: 
             return True
@@ -316,7 +316,12 @@ class WormFinder ( object ):
             self.decisionBoundary.draw( img, RED )
             if self.croppedSearchSpace():
                 self.cropRegion.draw(img, BLACK)
-                
+        else:
+            self.wormLocation.draw( img, BLACK)
+            self.decisionBoundary.draw( img, BLACK )
+            if self.croppedSearchSpace():
+                self.cropRegion.draw(img, BLACK)
+
     def drawTextStatus( self, img, recording, motors ):
         cv2.putText(img,  "recording: %r || motors: %r || croppedSearchSpace: %r || outside: %r" % (recording, motors, self.croppedSearchSpace(), self.wormOutsideBoundary('point')), (30,30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, BLACK)
         
@@ -331,11 +336,12 @@ class WormFinder ( object ):
 
     def drawTest( self, img ):
         #BRG
+        p = utils.Point(200,300)
         if self.color: 
             utils.drawPoint(img, self.getCenterPoint(), BLUE)
-            utils.drawPoint(img, 200, 300, RED)
+            utils.drawPoint(img,p, RED)
 
         else:
             utils.drawPoint(img, self.getWormPoint(), BLACK)
-            utils.drawPoint(img, 200, 300, BLACK)
+            utils.drawPoint(img, p, BLACK)
    
