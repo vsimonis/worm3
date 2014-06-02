@@ -22,7 +22,7 @@ BLACK3 = [0,0,0]
 #gray scale
 WHITE = 255
 BLACK = 0
- 
+GRAY = 150 
 
 logger = logging.getLogger('finder')
 class WormFinder ( object ):
@@ -40,7 +40,7 @@ class WormFinder ( object ):
             if k in ['method', 'gsize', 'gsig', 'window', 
                      'MAXONEFRAME', 'REFPING', 'MAXREF', 
                      'captureSize', 'cropRegion', 'decisionBoundary',
-                     'color']:
+                     'color', 'motorsOn']:
                 self.__setattr__(k, kwargs[k])
 
         self.trackerConnected = False
@@ -84,7 +84,7 @@ class WormFinder ( object ):
     """
     @property
     def initializeMotors( self ):
-        if self.method == 'conf' or not self.motorsOn:
+        if self.method == 'conf' or not self.trackerConnected:
             return False
         else: 
             return True
@@ -142,10 +142,10 @@ class WormFinder ( object ):
             
             self.pauseFrame += 1
             self.justMoved = False #necessary?
-
+            
         else:
             return
-    
+        
     def findWorm ( self, cropPoint ):
         t = time.time()
         if self.hasReference:
@@ -344,6 +344,6 @@ class WormFinder ( object ):
             p.draw( img, RED)
 
         else:
-            self.frameCenter.draw( img, BLACK )
-            p.draw( img, RED)
+            self.frameCenter.draw( img, GRAY )
+            p.draw( img, GRAY)
    

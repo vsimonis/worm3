@@ -196,7 +196,7 @@ class CaptureManager( object ):
         
         if self._videoWriter is None:
             fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
-            logc.info("fps: %d" % fps)
+            logc.warning("fps: %d" % fps)
             if fps <= 0.0:
                 if self._framesElapsed < 20: 
                     # wait for more frames to get good estimate

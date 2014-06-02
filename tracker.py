@@ -64,8 +64,8 @@ class Tracker ( object ):
         self.centerPt = utils.Point(actualCols / 2, actualRows / 2)
 
         ## from here on out use this resolution 
-        boundCols = 1000
-        boundRows = 800
+        boundCols = 600
+        boundRows = 600
         ### Arguments for finder
         # --> Pairs are always COLS, ROWS !!!!!!!
         self.finderArgs = {
@@ -140,8 +140,9 @@ class Tracker ( object ):
 
 
                 if self.finderArgs['method'] in ['test','conf']: 
-                    self._wormFinder.drawTest( frame )
-                    
+#                    self.overlayImage = copy.deepcopy(frame)
+                    self._wormFinder.drawTest( frame ) #self.overlayImage)
+#                    self._overlayWindow.show(self.overlayImage)
                     
             i += 1
             self._cap.exitFrame()

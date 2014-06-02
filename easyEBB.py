@@ -14,7 +14,7 @@ logger = logging.getLogger('eggbot')
 UMSTEP = 200
 
 class easyEBB:
-    def __init__( self, resolution = (1280,960), sizeMM = (7.70), stepMode = 5 ):
+    def __init__( self, resolution = (1280,960), sizeMM = 10, stepMode = 5 ):
         """
         Initializes an easyEBB object
         """
@@ -22,7 +22,7 @@ class easyEBB:
         self.openSerial()
 
         ### Get size of window in mm and convert to um
-        self.colUM = sizeMM[0] * 1000. #length of cols (x) in um
+        self.colUM = sizeMM * 1000. #length of cols (x) in um
 #        self.rowUM = sizeMM[1] * 1000. #length of rows (y) in um
         
         logger.debug('Size in um:\tcol %0.3f\trow %0.3f' %
@@ -44,7 +44,7 @@ class easyEBB:
         to steps (unit of servos)
         """
         ### Find center of window
-        #self.rowMid = int(self.rowNumPix // 2) 
+        self.rowMid = int(self.rowNumPix // 2) 
         self.colMid = int(self.colNumPix // 2) 
         
         ### Get pixels per um ie (1 um = ? pixels )
