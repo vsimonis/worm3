@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{2c03b469-7250-43ac-b61b-1311a5346817}</ProjectGuid>
+        <ProjectHome />
+        <StartupFile>tracker.py</StartupFile>
+        <SearchPath />
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <InterpreterId>{e035b508-c975-44b5-a955-200b02240f07}</InterpreterId>
+        <InterpreterVersion>2.7</InterpreterVersion>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Compile Include="dotTest.py" />
+        <Compile Include="easyEBB.py" />
+        <Compile Include="eggbot_scanlinux.py" />
+        <Compile Include="finder.py" />
+        <Compile Include="imgProc.py" />
+        <Compile Include="managers.py" />
+        <Compile Include="tracker.py" />
+        <Compile Include="utils.py" />
+        <Content Include="doc\a.html" />
+        <Content Include="doc\easyEBB.html" />
+        <Content Include="doc\eggbot_scanlinux.html" />
+        <Content Include="doc\finder.html" />
+        <Content Include="doc\imgProc.html" />
+        <Content Include="doc\managers.html" />
+        <Content Include="doc\utils.html" />
+        <Compile Include="surf\an.py" />
+        <Compile Include="surf\analysis.py" />
+        <Compile Include="surf\dt.py" />
+        <Compile Include="surf\test.py" />
+        <Compile Include="surf\vis.py" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="doc" />
+        <Folder Include="surf" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterpreterReference Include="{e035b508-c975-44b5-a955-200b02240f07}\2.7" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

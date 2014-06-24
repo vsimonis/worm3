@@ -1,9 +1,9 @@
 import sys
 import numpy as np
-import pandas as pd
+#import pandas as pd
 import utils
 import time
-from imgProc import imgProc
+#from imgProc import imgProc
 from managers import WindowManager
 from easyEBB import easyEBB
 import cv2

@@ -37,46 +37,38 @@ class CaptureManager( object ):
         self._fpsEstimate = None
         #logc.debug('done initializing capture')
         
-        self.setResolution()
+        #self.setResolution()
         #self.setExposure( 1 )
         #self.getExposure()
         #b = self.getBrightness()
         #self.setBrightness(b)
         
 
-        
-    def getBrightness( self ):
-        try:
-            brightness = self._capture.get( cv2.cv.CV_CAP_PROP_BRIGHTNESS )
-            logc.info('Received brightness %s' % str(brightness) )
-        except Exception as e:
-            logc.exception(str(e))
-            pass
-
-    def setBrightness( self, setting):
-        try:     
-            self._capture.set( cv2.cv.CV_CAP_PROP_BRIGHTNESS, float(setting) )
-            logc.info('Tried to set brightness %s' % str(setting) ) 
-        except Exception as e:
-            logc.exception(str(e))
-            pass
-        
-        
-    def setExposure( self, setting ):
-        try:
-            self._capture.set( cv2.cv.CV_CAP_PROP_EXPOSURE, setting )
-            logc.info('Tried to set exposure %s' % str(setting) ) 
-        except Exception as e:
-            logc.exception(str(e))
-            pass
-        
-    def getExposure( self ):
-        try:
-            exp = self._capture.get( cv2.cv.CV_CAP_PROP_EXPOSURE )
-            logc.info('Received exposure %s' % str(exp) )
-        except Exception as e:
-            logc.exception(str(e))
-            pass
+def getProp( self, prop ):
+    props = { 
+             'mode': cv2.CAP_PROP_MODE,
+             'brightness': cv2.CAP_PROP_BRIGHTNESS,
+             'contrast': cv2.CAP_PROP_CONTRAST,
+             'saturation': cv2.CAP_PROP_SATURATION,
+             'hue':cv2.CAP_PROP_HUE,
+             'gain': cv2.CAP_PROP_GAIN,
+             'exposure': cv2.CAP_PROP_EXPOSURE,
+             'height': cv2.CAP_PROP_HEIGHT,  
+             'width': cv2.CAP_PROP_WIDTH
+             }
+def debugProps( self ):            
+    for prop, name in [(cv2.CAP_PROP_MODE, "Mode"),
+                       (cv2.CAP_PROP_BRIGHTNESS, "Brightness"),
+                       (cv2.CAP_PROP_CONTRAST, "Contrast"),
+                       (cv2.CAP_PROP_SATURATION, "Saturation"),
+                       (cv2.CAP_PROP_HUE, "Hue"),
+                       (cv2.CAP_PROP_GAIN, "Gain"),
+                       (cv2.CAP_PROP_EXPOSURE, "Exposure")]:
+        value = self._capture.get(prop)
+        if value == 0:
+            logc.warn(" - %s not available" % name)
+        else:
+            logc.warn(" - %s = %r" % (name, value))
 
     @property
     def channel( self ):
@@ -195,7 +187,7 @@ class CaptureManager( object ):
             return
         
         if self._videoWriter is None:
-            fps = self._capture.get( cv2.cv.CV_CAP_PROP_FPS ) 
+            fps = self._capture.get( cv2.CAP_PROP_FPS ) 
             logc.warning("fps: %d" % fps)
             if fps <= 0.0:
                 if self._framesElapsed < 20: 
@@ -205,8 +197,8 @@ class CaptureManager( object ):
                     logc.warning('fps estimate used: %d' % self._fpsEstimate )
                     fps = self._fpsEstimate            
 
-            size = ( int (self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_WIDTH )), 
-                     int( self._capture.get( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) ))
+            size = ( int (self._capture.get( cv2.CAP_PROP_FRAME_WIDTH )), 
+                     int( self._capture.get( cv2.CAP_PROP_FRAME_HEIGHT) ))
             logc.warning('size used: %d x %d' % (size[0], size[1]) )
 
             self._videoWriter = cv2.VideoWriter( self._videoFilename, 
@@ -222,9 +214,9 @@ class CaptureManager( object ):
 
     def getResolution ( self ):
         try:
-            self.actualCols = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
-            self.actualRows = self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
-            #f = self._capture.get( cv2.cv.CV_CAP_PROP_FPS )
+            self.actualCols = self._capture.get(cv2.CAP_PROP_FRAME_WIDTH)
+            self.actualRows = self._capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
+            #f = self._capture.get( cv2.CAP_PROP_FPS )
             logc.info( 'Get Props: cols:%d\trows:%d' % (self.actualCols, self.actualRows) )
             return self.actualCols, self.actualRows
         except Exception as e :
@@ -233,8 +225,8 @@ class CaptureManager( object ):
     def setResolution ( self ):
         logc.info( 'Set Props: cols:%d\trows:%d' % (self.desiredCols, self.desiredRows) )
         try:
-            self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_WIDTH, self.desiredCols)
-            self._capture.set( cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, self.desiredRows)
+            self._capture.set( cv2.CAP_PROP_FRAME_WIDTH, self.desiredCols)
+            self._capture.set( cv2.CAP_PROP_FRAME_HEIGHT, self.desiredRows)
         except Exception as e:
             logc.exception(e)
 
@@ -255,7 +247,7 @@ class WindowManager ( object ):
         return self._isWindowCreated
 
     def createWindow ( self ):
-        cv2.namedWindow( self._windowName)#, cv2.cv.CV_WINDOW_NORMAL)
+        cv2.namedWindow( self._windowName)#, cv2.WINDOW_NORMAL)
         self._isWindowCreated = True 
 
     def show ( self, frame ):
